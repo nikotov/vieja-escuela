@@ -16,6 +16,9 @@ import { MonsterSheet } from "./sheets/monster-sheet";
 import { VEItemSheet } from "./sheets/item-sheet";
 import { VEBaseActorSheet } from "./sheets/base-actor-sheet";
 import { RollDialog } from "./rolls/roll-dialog";
+import { LevelUpDialog } from "./sheets/level-up-dialog";
+import { applyDamage, applyEffects, chosenActors } from "./apply";
+import { addPresetChange, getEffectPresets } from "./effects";
 import { VERoll } from "./rolls/ve-roll";
 import { ROLL_HANDLERS } from "./rolls";
 import { makeRollConfig } from "./rolls/helpers";
@@ -33,7 +36,10 @@ export const api = {
   models: { CharacterData, MonsterData, ...ITEM_MODELS },
   documents: { VEActor, VEItem },
   sheets: { VEBaseActorSheet, CharacterSheet, MonsterSheet, VEItemSheet },
-  applications: { RollDialog },
+  applications: { RollDialog, LevelUpDialog },
+  /** Apply damage/effects to actors (relayed to the GM for actors the user doesn't own). */
+  apply: { applyDamage, applyEffects, chosenActors },
+  effects: { addPresetChange, getEffectPresets },
   dice: { VERoll },
   /** The default roll handlers (the live ones are in CONFIG.VE.rolls). */
   rolls: { ...ROLL_HANDLERS, makeRollConfig },

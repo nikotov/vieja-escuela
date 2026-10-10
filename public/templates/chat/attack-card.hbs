@@ -8,6 +8,12 @@
   {{#if outcome.critical}}<p class="hint">{{localize "VE.Roll.criticalHint"}}</p>{{/if}}
   {{#if outcome.fumble}}<p class="hint">{{localize "VE.Roll.fumbleHint"}}</p>{{/if}}
   <div class="card-buttons">
+    {{#if spellUuid}}
+      {{#if damage}}
+        <button type="button" data-ve-action="spellDamage" data-item-uuid="{{spellUuid}}"><i class="fas fa-burst"></i> {{localize "VE.Roll.damage"}} ({{damage}})</button>
+        {{#if outcome.critical}}<button type="button" data-ve-action="spellDamage" data-item-uuid="{{spellUuid}}" data-maximize="true"><i class="fas fa-star"></i> {{localize "VE.Roll.damageMax"}}</button>{{/if}}
+      {{/if}}
+    {{else}}
     <button type="button" data-ve-action="damage" {{#if item}}data-item-id="{{item.id}}"{{else}}data-attack-index="{{config.flags.attackIndex}}"{{/if}}>
       <i class="fas fa-burst"></i> {{localize "VE.Roll.damage"}} ({{damage}})
     </button>
@@ -20,6 +26,7 @@
       <button type="button" data-ve-action="damage" {{#if item}}data-item-id="{{item.id}}"{{else}}data-attack-index="{{config.flags.attackIndex}}"{{/if}} data-maximize="true">
         <i class="fas fa-star"></i> {{localize "VE.Roll.damageMax"}}
       </button>
+    {{/if}}
     {{/if}}
   </div>
 </div>

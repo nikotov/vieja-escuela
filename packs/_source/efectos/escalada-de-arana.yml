@@ -1,0 +1,37 @@
+_id: 89c6615738efc335
+_key: '!items!89c6615738efc335'
+name: Escalada de araña
+type: effect
+img: icons/svg/pawprint.svg
+system:
+  description: <p>Puedes caminar por paredes y techos durante un turno.</p>
+  category: spell
+effects:
+  - _id: bddb6d83e7351e14
+    _key: '!items.effects!89c6615738efc335.bddb6d83e7351e14'
+    name: Escalada de araña
+    img: icons/svg/pawprint.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Puedes caminar por paredes y techos durante un turno.</p>
+    origin: null
+    transfer: true
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: f60a31cd7d3b5dfb
+sort: 2200
+ownership:
+  default: 0

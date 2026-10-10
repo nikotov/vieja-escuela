@@ -1,0 +1,37 @@
+_id: 82cbf5d94f44a817
+_key: '!items!82cbf5d94f44a817'
+name: Piel de piedra
+type: effect
+img: icons/magic/defensive/armor-stone-skin.webp
+system:
+  description: <p>Ignoras 10 puntos de daño de cada ataque durante 1 hora (réstalos a mano).</p>
+  category: spell
+effects:
+  - _id: 5ea61a4add46943a
+    _key: '!items.effects!82cbf5d94f44a817.5ea61a4add46943a'
+    name: Piel de piedra
+    img: icons/magic/defensive/armor-stone-skin.webp
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 3600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Ignoras 10 puntos de daño de cada ataque durante 1 hora (réstalos a mano).</p>
+    origin: null
+    transfer: true
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: f60a31cd7d3b5dfb
+sort: 2400
+ownership:
+  default: 0

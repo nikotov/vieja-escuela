@@ -4,3 +4,34 @@
   <label class="checkbox">{{localize "VE.Spell.divine"}} <input type="checkbox" name="system.divine" {{checked system.divine}} /></label>
   <label>{{localize "VE.Spell.random"}} <input type="text" name="system.random" value="{{system.random}}" /></label>
 </div>
+
+<h3 class="ve-subheading">{{localize "VE.Spell.mechanics"}}</h3>
+<div class="form-grid">
+  <label>{{localize "VE.Spell.attack"}}
+    <select name="system.attack">
+      <option value="" {{#unless system.attack}}selected{{/unless}}>—</option>
+      <option value="melee" {{#if (eq system.attack "melee")}}selected{{/if}}>{{localize "VE.Spell.attackMelee"}}</option>
+      <option value="ranged" {{#if (eq system.attack "ranged")}}selected{{/if}}>{{localize "VE.Spell.attackRanged"}}</option>
+    </select>
+  </label>
+  <label>{{localize "VE.Weapon.attackBonus"}} <input type="number" name="system.attackBonus" value="{{system.attackBonus}}" data-dtype="Number" /></label>
+  <label class="checkbox">{{localize "VE.Spell.ignoreArmor"}} <input type="checkbox" name="system.ignoreArmor" {{checked system.ignoreArmor}} /></label>
+  <label>{{localize "VE.Weapon.damage"}} <input type="text" name="system.damage" value="{{system.damage}}" placeholder="5d6" /></label>
+  <label>{{localize "VE.Spell.healing"}} <input type="text" name="system.healing" value="{{system.healing}}" placeholder="1d6 + 1" /></label>
+  <label>{{localize "VE.Spell.saveAttribute"}}
+    <select name="system.save.attribute">
+      <option value="" {{#unless system.save.attribute}}selected{{/unless}}>—</option>
+      {{selectOptions (ve-localize-map (ve-attribute-labels)) selected=system.save.attribute}}
+    </select>
+  </label>
+  <label>{{localize "VE.Spell.saveEffect"}}
+    <select name="system.save.effect">
+      <option value="" {{#unless system.save.effect}}selected{{/unless}}>—</option>
+      <option value="half" {{#if (eq system.save.effect "half")}}selected{{/if}}>{{localize "VE.Spell.save.half"}}</option>
+      <option value="negates" {{#if (eq system.save.effect "negates")}}selected{{/if}}>{{localize "VE.Spell.save.negates"}}</option>
+    </select>
+  </label>
+  <label>{{localize "VE.Spell.rollFormula"}} <input type="text" name="system.roll.formula" value="{{system.roll.formula}}" placeholder="1d6" /></label>
+  <label class="wide">{{localize "VE.Spell.rollLabel"}} <input type="text" name="system.roll.label" value="{{system.roll.label}}" /></label>
+</div>
+<p class="hint">{{localize "VE.Spell.mechanicsHint"}}</p>

@@ -1,0 +1,72 @@
+<form class="ve-sheet ve-level-up-form" autocomplete="off">
+  <header class="ve-level-up-header">
+    <img src="{{actor.img}}" alt="" />
+    <div>
+      <h2>{{actor.name}}</h2>
+      <div class="ve-level-jump"><span>{{localize "VE.Stat.level"}} {{level}}</span> <i class="fas fa-arrow-right"></i> <strong>{{newLevel}}</strong></div>
+    </div>
+  </header>
+  {{#unless enoughXp}}
+    <p class="ve-hint warning"><i class="fas fa-triangle-exclamation"></i> {{localize "VE.LevelUp.forced"}} ({{xp}} / {{xpNext}} {{localize "VE.Stat.xp"}})</p>
+  {{/unless}}
+
+  <section class="ve-section">
+    <h3>{{localize "VE.LevelUp.progress"}}</h3>
+    <div class="ve-progress-rows">
+      {{#each rows}}
+        <div class="ve-progress {{#if up}}up{{/if}}"><label>{{label}}</label><span>{{before}}</span><i class="fas fa-arrow-right"></i><strong>{{after}}</strong></div>
+      {{/each}}
+    </div>
+  </section>
+
+  <section class="ve-section">
+    <h3>{{localize "VE.Stat.hp"}}</h3>
+    <div class="ve-hp-roll">
+      <button type="button" data-action="rollHp" data-formula="{{formula}}"><i class="fas fa-dice"></i> {{localize "VE.LevelUp.rollHp"}} ({{formula}})</button>
+      <span class="ve-hp-result">+<span data-role="hpResult">?</span></span>
+    </div>
+    <p class="ve-hint">{{localize "VE.LevelUp.hpHint"}}</p>
+  </section>
+
+  <section class="ve-section" data-points="{{points}}">
+    <h3>{{localize "VE.Sheet.skills"}} <span class="ve-counter">{{localize "VE.LevelUp.pointsLeft"}}: <strong data-role="remaining">{{points}}</strong></span></h3>
+    <div class="ve-skill-picks">
+      {{#each skills}}
+        <label class="ve-skill-pick {{#if maxed}}maxed{{/if}}">
+          <input type="checkbox" name="skill.{{key}}" data-skill="{{key}}" data-maxed="{{maxed}}" />
+          <span>{{label}}</span>
+          <span class="ve-skill-value">{{value}}</span>
+        </label>
+      {{/each}}
+    </div>
+  </section>
+
+  {{#if classTalents.length}}
+    <section class="ve-section">
+      <h3>{{localize "VE.LevelUp.granted"}}</h3>
+      <p>{{#each classTalents}}<span class="ve-tag">{{this}}</span> {{/each}}</p>
+    </section>
+  {{/if}}
+
+  {{#if bonusTalent}}
+    <section class="ve-section">
+      <h3>{{localize "VE.LevelUp.chooseTalent"}}</h3>
+      <select name="talent">
+        <option value="">—</option>
+        {{#each talents}}<option value="{{uuid}}">{{name}}</option>{{/each}}
+      </select>
+    </section>
+  {{/if}}
+
+  {{#if background}}
+    <section class="ve-section">
+      <h3>{{localize "VE.LevelUp.newBackgroundTitle"}}</h3>
+      <input type="text" name="background" placeholder="{{localize 'VE.LevelUp.backgroundPlaceholder'}}" />
+      <p class="ve-hint">{{localize "VE.LevelUp.newBackground"}}</p>
+    </section>
+  {{/if}}
+
+  <footer class="ve-level-up-footer">
+    <button type="submit"><i class="fas fa-angles-up"></i> {{localize "VE.LevelUp.confirm"}}</button>
+  </footer>
+</form>

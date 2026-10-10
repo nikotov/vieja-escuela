@@ -1,3 +1,6 @@
+/**
+ * Character sheet (ActorSheet v1).
+ */
 import { SYSTEM_ID } from "../constants";
 import type { SheetTab } from "../config";
 import type { ArmorSystem, CharacterSystem, GearSystem, WeaponSystem } from "../data/types";

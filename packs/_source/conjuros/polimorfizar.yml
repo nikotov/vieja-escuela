@@ -9,7 +9,41 @@ system:
   pod: 7
   divine: false
   random: ''
-effects: []
+  attack: ''
+  attackBonus: 0
+  ignoreArmor: false
+  damage: ''
+  healing: ''
+  save:
+    attribute: ''
+    effect: ''
+  roll:
+    formula: ''
+    label: ''
+effects:
+  - _id: c5cd6117b31ed470
+    _key: '!items.effects!veSplPolimorfiza.c5cd6117b31ed470'
+    name: Polimorfizar
+    img: icons/svg/mystery-man-black.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 3600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Transformado en otra criatura durante 1 hora.</p>
+    origin: null
+    transfer: false
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
 flags: {}
 folder: veFldConjNivel40
 sort: 4800

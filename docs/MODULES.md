@@ -22,7 +22,13 @@ Hooks.once("vieja-escuela.init", (api) => {
 | Change modifier tables | `CONFIG.VE.modifierTables.mytable = {label, bands: [{max, mod}, …]}`; it then appears in the setting |
 | Add a skill or attribute | `CONFIG.VE.skills.mykey = {label}` / `CONFIG.VE.attributes.mykey = {label, abbr}`. Schemas are built from these lazily |
 | Change a constant | e.g. `CONFIG.VE.xpPerLevel`, `defenseBase`, `heavyArmorMov`, `coinsPerLoad`, `attackAttributes`, `difficulties`, `backgroundRelevance`, `morale` |
-| Change how a roll works | Replace or wrap `CONFIG.VE.rolls.<name>` (`perform`, `skill`, `attribute`, `instinct`, `morale`, `attack`, `damage`, `spell`, `levelUp`). Actor methods always call through here |
+| Change how a roll works | Replace or wrap `CONFIG.VE.rolls.<name>` (`perform`, `skill`, `attribute`, `instinct`, `morale`, `attack`, `damage`, `spell`, `spellAttack`, `spellDamage`, `spellSaves`, `levelUp`). Actor methods always call through here |
+| Change the level-up wizard | `CONFIG.VE.applications.LevelUpDialog = MyApp`. It collects choices and calls `CONFIG.VE.rolls.levelUp(actor, {force, hpRoll, skills, talentUuid, background})` |
+| Add a condition to the token HUD | Push `{id, name, img, description, changes?, duration?}` onto `CONFIG.VE.statusEffects` (merged into `CONFIG.statusEffects` at setup) |
+| Grant advantage/disadvantage from an effect | ADD to `system.edge.<all\|attack\|skill\|instinct\|attacked>` or `system.edge.attributes.<attr>`: +1 = advantage, -1 = disadvantage. Counters add up and cancel out. `attacked` applies to attacks made against the actor |
+| Give spells (or other item types) effects that apply to targets | Add the item type to `CONFIG.VE.appliedEffectItemTypes`; its effects are created with `transfer: false` |
+| Add Efecto categories | `CONFIG.VE.effectCategories.mykey = "i18n.key"` |
+| Apply damage or effects from your own code | `api.apply.applyDamage(actor, amount)` and `api.apply.applyEffects(actors, effects, origin)`. Changes to actors the user doesn't own are relayed to the active GM over the system socket. `api.apply.chosenActors()` returns the selected tokens' actors, or the targeted ones |
 | Change the roll dialog | `CONFIG.VE.applications.RollDialog = MyDialog`. It needs `static configure(config): Promise<boolean>`, which mutates the config |
 | Change the roll class | `CONFIG.VE.Roll = MyRoll` (needs a `natural` getter) |
 | Restyle a chat card or sheet | Point a key in `CONFIG.VE.templates` (`checkCard`, `attackCard`, `damageCard`, `spellCard`, `levelUpCard`, `rollDialog`, `characterSheet`, `monsterSheet`, `itemSheet`, `itemParts.<type>`) at your own `.hbs` |

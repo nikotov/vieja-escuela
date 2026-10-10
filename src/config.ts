@@ -5,6 +5,7 @@ import { BUILTIN_RULESETS, type Ruleset } from "./rulesets";
 import { MODIFIER_TABLES, PROGRESSION_TABLES } from "./rulesets/tables";
 import { TEMPLATE_ROOT } from "./constants";
 import { RollDialog } from "./rolls/roll-dialog";
+import { LevelUpDialog } from "./sheets/level-up-dialog";
 import { ROLL_HANDLERS, type RollHandlers } from "./rolls";
 import { CHAT_ACTIONS, type ChatAction } from "./rolls/chat";
 import { VERoll } from "./rolls/ve-roll";
@@ -275,6 +276,78 @@ export function createConfig() {
         group: "VE.Preset.groupStats",
       },
       {
+        id: "advAttack",
+        label: "VE.Preset.advAttack",
+        key: "system.edge.attack",
+        mode: ADD,
+        valueType: "number",
+        default: "1",
+        group: "VE.Preset.groupEdges",
+      },
+      {
+        id: "edgeSkill",
+        label: "VE.Preset.edgeSkill",
+        key: "system.edge.skill",
+        mode: ADD,
+        valueType: "number",
+        default: "1",
+        group: "VE.Preset.groupEdges",
+      },
+      {
+        id: "edgeInstinct",
+        label: "VE.Preset.edgeInstinct",
+        key: "system.edge.instinct",
+        mode: ADD,
+        valueType: "number",
+        default: "1",
+        group: "VE.Preset.groupEdges",
+      },
+      {
+        id: "edgeAll",
+        label: "VE.Preset.edgeAll",
+        key: "system.edge.all",
+        mode: ADD,
+        valueType: "number",
+        default: "-1",
+        group: "VE.Preset.groupEdges",
+      },
+      {
+        id: "edgeAttacked",
+        label: "VE.Preset.edgeAttacked",
+        key: "system.edge.attacked",
+        mode: ADD,
+        valueType: "number",
+        default: "1",
+        group: "VE.Preset.groupEdges",
+      },
+      {
+        id: "rollBonus",
+        label: "VE.Preset.rollBonus",
+        key: "system.rollBonus",
+        mode: ADD,
+        valueType: "number",
+        default: "1",
+        group: "VE.Preset.groupCombat",
+      },
+      {
+        id: "dmgExtra",
+        label: "VE.Preset.dmgExtra",
+        key: "system.dmg.extra",
+        mode: EFFECT_MODES.OVERRIDE,
+        valueType: "text",
+        default: "1d8",
+        group: "VE.Preset.groupCombat",
+      },
+      {
+        id: "heavyArmor",
+        label: "VE.Preset.heavyArmor",
+        key: "system.heavyArmorTraining",
+        mode: EFFECT_MODES.OVERRIDE,
+        valueType: "boolean",
+        default: "true",
+        group: "VE.Preset.groupStats",
+      },
+      {
         id: "magic",
         label: "VE.Preset.magic",
         key: "system.magic",
@@ -300,6 +373,69 @@ export function createConfig() {
       grimorio: { label: "VE.Theme.grimorio", cssClass: "ve-theme-grimorio" },
       cuero: { label: "VE.Theme.cuero", cssClass: "ve-theme-cuero" },
     } as Record<string, Theme>,
+
+    /** Categories for Efecto items (and folders in the Efectos compendium). */
+    effectCategories: {
+      condition: "VE.EffectCategory.condition",
+      spell: "VE.EffectCategory.spell",
+      potion: "VE.EffectCategory.potion",
+      other: "VE.EffectCategory.other",
+    } as Record<string, string>,
+
+    /**
+     * Conditions added to the token HUD (merged into CONFIG.statusEffects at init). Toggling one
+     * creates an Active Effect with these changes. `overloaded` is applied automatically.
+     */
+    statusEffects: [
+      {
+        id: "overloaded",
+        name: "VE.Status.overloaded",
+        img: "icons/svg/anchor.svg",
+        description: "VE.Status.overloadedHint",
+        changes: [
+          { key: "system.edge.attack", mode: ADD, value: "-1" },
+          { key: "system.edge.attributes.des", mode: ADD, value: "-1" },
+        ],
+      },
+      {
+        id: "openGuard",
+        name: "VE.Status.openGuard",
+        img: "icons/svg/daze.svg",
+        description: "VE.Status.openGuardHint",
+        duration: { rounds: 1 },
+        changes: [{ key: "system.edge.attacked", mode: ADD, value: "1" }],
+      },
+      {
+        id: "charging",
+        name: "VE.Status.charging",
+        img: "icons/svg/thrust.svg",
+        description: "VE.Status.chargingHint",
+        duration: { rounds: 1 },
+        changes: [{ key: "system.def.bonus", mode: ADD, value: "-3" }],
+      },
+      {
+        id: "incapacitated",
+        name: "VE.Status.incapacitated",
+        img: "icons/svg/unconscious.svg",
+        description: "VE.Status.incapacitatedHint",
+      },
+      {
+        id: "stabilized",
+        name: "VE.Status.stabilized",
+        img: "icons/svg/heal.svg",
+        description: "VE.Status.stabilizedHint",
+      },
+      {
+        id: "surprised",
+        name: "VE.Status.surprised",
+        img: "icons/svg/terror.svg",
+        description: "VE.Status.surprisedHint",
+        duration: { rounds: 1 },
+      },
+    ] as Record<string, any>[],
+
+    /** Item types whose effects apply to targets (not to the owner), so they are never transferred. */
+    appliedEffectItemTypes: ["spell"] as string[],
 
     talentSources: {
       general: "VE.Talent.general",
@@ -335,6 +471,7 @@ export function createConfig() {
 
     applications: {
       RollDialog,
+      LevelUpDialog,
     },
 
     /** Roll class used for d20 rolls (also registered in CONFIG.Dice.rolls). */
@@ -347,6 +484,8 @@ export function createConfig() {
       damageCard: tpl("chat/damage-card.hbs"),
       spellCard: tpl("chat/spell-card.hbs"),
       levelUpCard: tpl("chat/level-up-card.hbs"),
+      effectCard: tpl("chat/effect-card.hbs"),
+      levelUpDialog: tpl("dialog/level-up.hbs"),
       characterSheet: tpl("actor/character-sheet.hbs"),
       /** Left column of the character sheet (attributes, skills, backgrounds). */
       characterSidebar: tpl("actor/parts/character-sidebar.hbs"),
@@ -362,6 +501,7 @@ export function createConfig() {
         spell: tpl("item/parts/spell.hbs"),
         class: tpl("item/parts/class.hbs"),
         race: tpl("item/parts/race.hbs"),
+        effect: tpl("item/parts/effect.hbs"),
       } as Record<string, string>,
       /** Extra partials preloaded at startup. */
       partials: [

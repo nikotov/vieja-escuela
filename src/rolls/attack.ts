@@ -1,3 +1,6 @@
+/**
+ * Weapon and monster attacks (d20 vs the target's Defense) and damage rolls.
+ */
 import { HOOKS, call, callAll } from "../hooks";
 import { signed } from "../rules/modifiers";
 import type { WeaponSystem } from "../data/types";
@@ -55,7 +58,7 @@ export async function rollAttack(actor: Actor, { itemId, attackIndex, ...options
     base = {
       title: format("VE.Roll.attackTitle", { name: attack.name }),
       terms: [
-        { label: localize("VE.Stat.levelAbbr"), value: s.atq },
+        { label: localize("VE.Stat.atqAbbr"), value: s.atq.value },
         { label: attack.name, value: attack.bonus },
       ],
       context: { attack, damage: attack.damage },
@@ -69,6 +72,7 @@ export async function rollAttack(actor: Actor, { itemId, attackIndex, ...options
       type: "attack",
       actor,
       target: targetDef,
+      targetActor: target,
       targetLabel: target ? format("VE.Roll.defenseOf", { name: target.name }) : localize("VE.Stat.def"),
       template: "attackCard",
     },
@@ -107,12 +111,16 @@ export async function rollDamage(actor: Actor, options: DamageOptions = {}) {
     if (w.addStr && strMod) parts.push(String(strMod));
     if (w.damageBonus) parts.push(String(w.damageBonus));
     if (s.dmg?.bonus) parts.push(String(s.dmg.bonus));
+    if (s.dmg?.extra) parts.push(s.dmg.extra);
     if (options.twoHanded && w.hands === "versatile") parts.push("1");
   } else {
     const attack = monsterSystem(actor).attacks[options.attackIndex ?? 0];
     if (!attack) return null;
     label = attack.name;
     parts.push(attack.damage || "1");
+    const m = monsterSystem(actor);
+    if (m.dmg?.bonus) parts.push(String(m.dmg.bonus));
+    if (m.dmg?.extra) parts.push(m.dmg.extra);
   }
   if (options.maximize) parts.push("1");
 

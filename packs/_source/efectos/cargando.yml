@@ -1,0 +1,42 @@
+_id: 7ae77da0117e7179
+_key: '!items!7ae77da0117e7179'
+name: Cargando
+type: effect
+img: icons/svg/thrust.svg
+system:
+  description: '<p>Has cargado al combate (ventaja en tu primer ataque): -3 a la Defensa hasta el principio de tu siguiente asalto.</p>'
+  category: condition
+effects:
+  - _id: deac66f475348613
+    _key: '!items.effects!7ae77da0117e7179.deac66f475348613'
+    name: Cargando
+    img: icons/svg/thrust.svg
+    type: base
+    system: {}
+    changes:
+      - key: system.def.bonus
+        mode: 2
+        value: '-3'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: 1
+      turns: null
+      startRound: null
+      startTurn: null
+    description: '<p>Has cargado al combate (ventaja en tu primer ataque): -3 a la Defensa hasta el principio de tu siguiente asalto.</p>'
+    origin: null
+    transfer: true
+    statuses:
+      - charging
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: 8cdd126e4902ac0c
+sort: 200
+ownership:
+  default: 0

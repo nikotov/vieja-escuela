@@ -33,8 +33,11 @@
         <input type="number" name="system.xp" value="{{system.xp}}" min="0" data-dtype="Number" />
         <span class="ve-of">/ {{system.xpNext}}</span>
         <div class="ve-bar xp"><div class="fill" style="width: {{xpPercent}}%"></div></div>
-        {{#if system.canLevelUp}}
-          <button type="button" class="ve-level-up" data-action="levelUp"><i class="fas fa-angles-up"></i> {{localize "VE.LevelUp.button"}}</button>
+        {{#if editable}}
+          <button type="button" class="ve-level-up {{#if system.canLevelUp}}ready{{/if}}" data-action="levelUp"
+            data-tooltip="{{#if system.canLevelUp}}{{localize 'VE.LevelUp.readyHint'}}{{else}}{{localize 'VE.LevelUp.notReadyHint'}}{{/if}}">
+            <i class="fas fa-angles-up"></i> {{localize "VE.LevelUp.button"}}
+          </button>
         {{/if}}
       </div>
     </div>

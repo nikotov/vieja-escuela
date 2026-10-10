@@ -9,7 +9,45 @@ system:
   pod: 1
   divine: false
   random: 01-04
-effects: []
+  attack: ''
+  attackBonus: 0
+  ignoreArmor: false
+  damage: ''
+  healing: ''
+  save:
+    attribute: ''
+    effect: ''
+  roll:
+    formula: ''
+    label: ''
+effects:
+  - _id: 6c6e47f71425dbc1
+    _key: '!items.effects!veSplArmaduraDeM.6c6e47f71425dbc1'
+    name: Armadura de mago
+    img: icons/magic/defensive/shield-barrier-blue.webp
+    type: base
+    system: {}
+    changes:
+      - key: system.def.bonus
+        mode: 2
+        value: '4'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 3600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>+4 a la Defensa durante 1 hora (6 turnos).</p>
+    origin: null
+    transfer: false
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
 flags: {}
 folder: veFldConjNivel10
 sort: 200

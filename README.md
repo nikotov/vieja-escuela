@@ -7,6 +7,10 @@ A Foundry VTT **v12** system for *Vieja Escuela: el juego de rol* (Edición Expa
 - Compendiums: equipment, spells, talents, adventurer types and races, organized in folders (equipment by category, spells by level, talents by origin).
 - An inventory grouped by category (weapons, ammunition, armor, shields, tools, light sources, consumables, containers, mounts…).
 - Quick effects: pick a modifier such as "Instintos +1" or "Crítico con 19" and press Añadir, on any item or directly on a character for temporary buffs. A character's active effects are listed with readable summaries and on/off toggles.
+- Spell wizard in chat: casting a spell posts a card with buttons for what it does (attack roll, damage, healing, an Instintos save rolled by the selected tokens, extra rolls, and effects to apply to the selected tokens or to the caster). Damage cards can apply full, half or healing to the selected tokens; players' changes to tokens they don't own go through the GM.
+- An Efectos compendium (conditions, spell effects, potions): drop one on a character, or use its chat card, to apply it with its duration. Effects can grant advantage or disadvantage.
+- Automatic *Sobrecargado* condition when load exceeds FUE or heavy armor is worn without training (can be turned off in the world settings).
+- Level-up wizard: ATQ/INS/POD changes, HP roll, the 2 skill points, the bonus talent (Aventurados, level 6) and the new background (level 11), with class talents granted automatically.
 - Three sheet themes, chosen per player in the client settings: Clásico (printed sheet), Grimorio iluminado and Cuero y latón (dark).
 - Spanish by default: the client setting "Idioma del sistema" shows the system in Spanish even when Foundry itself is in English.
 - Built to be extended: modules can replace every piece. See [docs/MODULES.md](docs/MODULES.md).
@@ -56,7 +60,7 @@ src/sheets/      sheets + data-action registry
 public/          system.json, lang, templates (copied verbatim to dist/)
 packs/_source/   compendium YAML
 examples/        ve-example-module: a working demo of the extension points
-docs/PLAN.md     design plan and rules summary
+docs/            PLAN.md (design + rules), ARCHITECTURE.md (code map), MODULES.md (extension points)
 ```
 
 ## License

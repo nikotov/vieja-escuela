@@ -75,6 +75,27 @@ export class SpellData extends TypeDataModel {
       pod: int(1, { min: 0 }),
       divine: bool(false),
       random: str(""),
+      attack: str(""),
+      attackBonus: int(0),
+      ignoreArmor: bool(false),
+      damage: str(""),
+      healing: str(""),
+      save: new foundry.data.fields.SchemaField({ attribute: str(""), effect: str("") }),
+      roll: new foundry.data.fields.SchemaField({ formula: str(""), label: str("") }),
+    };
+  }
+}
+
+/**
+ * A packaged effect (condition, spell effect, potion...). Dropped on an actor, its Active Effects
+ * are applied to the actor directly instead of creating the item.
+ */
+export class EffectItemData extends TypeDataModel {
+  static defineSchema() {
+    return {
+      description: html(),
+      /** Key in CONFIG.VE.effectCategories. */
+      category: str("condition", { blank: false }),
     };
   }
 }
@@ -111,4 +132,5 @@ export const ITEM_MODELS = {
   spell: SpellData,
   class: ClassData,
   race: RaceData,
+  effect: EffectItemData,
 };

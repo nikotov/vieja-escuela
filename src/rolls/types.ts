@@ -13,6 +13,10 @@ export interface RollConfig {
   /** Key in CONFIG.VE.backgroundRelevance. */
   background: string;
   situational: number;
+  /** The actor being attacked, if any (its effects can grant advantage to the attacker). */
+  targetActor: Actor | null;
+  /** Ignore advantage/disadvantage and roll bonuses coming from Active Effects. */
+  ignoreEffects: boolean;
   /** Difficulty or Defense to beat; null = unknown. */
   target: number | null;
   targetLabel: string;

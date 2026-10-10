@@ -1,9 +1,13 @@
+/**
+ * Player character data model: stored fields plus everything derived from them (modifiers,
+ * ATQ/INS/POD, HP, Defense, movement, load). Ruleset-specific maths comes from the active Ruleset.
+ */
 import { coinLoad, isOverloaded, itemLoad } from "../rules/encumbrance";
 import { attributeModifier } from "../rules/modifiers";
 import { canLevelUp } from "../rules/progression";
 import { getActiveModifierTableKey, getActiveRuleset, type Ruleset, type RulesetContext } from "../rulesets";
 import { callAll, HOOKS } from "../hooks";
-import { bool, html, int, str } from "./fields";
+import { bool, damageBonus, edges, html, int, str } from "./fields";
 import type {
   ArmorSystem,
   CharacterSystem,
@@ -59,7 +63,12 @@ export class CharacterData extends TypeDataModel {
       atq: new fields.SchemaField({ bonus: int(0), melee: bonus(), ranged: bonus() }),
       def: bonus(),
       /** Bonus to all weapon damage. */
-      dmg: bonus(),
+      dmg: damageBonus(),
+      /** Added to every d20 roll (e.g. Plegaria). */
+      rollBonus: int(0),
+      edge: edges(Object.keys(CONFIG.VE.attributes)),
+      /** Heavy armor neither overloads nor slows (talent "Entrenamiento con armadura pesada"). */
+      heavyArmorTraining: bool(false),
       mov: new fields.SchemaField({
         /** Manual override; null = race or ruleset default. */
         base: new fields.NumberField({
@@ -141,7 +150,7 @@ export class CharacterData extends TypeDataModel {
         if (a.equipped) {
           if (a.category === "shield") shield = Math.max(shield, a.def);
           else armor = Math.max(armor, a.def);
-          heavy ||= a.heavy;
+          heavy ||= a.heavy && !s.heavyArmorTraining;
         }
         load += a.load;
       } else if (item.type === "weapon") {

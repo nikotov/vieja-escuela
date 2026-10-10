@@ -41,7 +41,13 @@ export class VEItemSheet extends ItemSheet {
     context.effectsEditor = effectsEditorContext(
       item.effects,
       this.isEditable,
-      localize("VE.Effect.itemHint"),
+      localize(
+        CONFIG.VE.appliedEffectItemTypes.includes(item.type)
+          ? "VE.Effect.appliedHint"
+          : item.type === "effect"
+            ? "VE.Effect.effectItemHint"
+            : "VE.Effect.itemHint",
+      ),
       item,
     );
     context.gearCategories = Object.fromEntries(

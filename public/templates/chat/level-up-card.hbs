@@ -12,5 +12,7 @@
   {{#if granted.length}}
     <p>{{localize "VE.LevelUp.granted"}}: {{#each granted}}<strong>{{name}}</strong>{{#unless @last}}, {{/unless}}{{/each}}</p>
   {{/if}}
-  <ul class="notes">{{#each notes}}<li>{{this}}</li>{{/each}}</ul>
+  {{#if skills.length}}<p>{{localize "VE.Sheet.skills"}}: {{#each skills}}<strong>{{this}} +1</strong>{{#unless @last}}, {{/unless}}{{/each}}</p>{{/if}}
+  {{#if background}}<p>{{localize "VE.LevelUp.newBackgroundTitle"}}: <strong>{{background}}</strong></p>{{/if}}
+  {{#if notes.length}}<ul class="notes">{{#each notes}}<li>{{this}}</li>{{/each}}</ul>{{/if}}
 </div>

@@ -1,0 +1,38 @@
+_id: eed487d64520165a
+_key: '!items!eed487d64520165a'
+name: Dormido
+type: effect
+img: icons/svg/sleep.svg
+system:
+  description: <p>Dormido mágicamente durante un turno (10 minutos).</p>
+  category: condition
+effects:
+  - _id: 80af551291117c14
+    _key: '!items.effects!eed487d64520165a.80af551291117c14'
+    name: Dormido
+    img: icons/svg/sleep.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Dormido mágicamente durante un turno (10 minutos).</p>
+    origin: null
+    transfer: true
+    statuses:
+      - sleep
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: 8cdd126e4902ac0c
+sort: 700
+ownership:
+  default: 0

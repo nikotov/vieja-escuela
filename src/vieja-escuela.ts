@@ -17,6 +17,8 @@ import { registerSettings } from "./settings";
 import { applySystemLanguage, registerLanguageSetting } from "./i18n";
 import { applyTheme, registerThemeSetting } from "./themes";
 import { registerEffectConfigHelpers } from "./effects";
+import { registerAutomation } from "./automation";
+import { registerSocket } from "./apply";
 import { registerChatListeners } from "./rolls/chat";
 import { registerHandlebarsHelpers } from "./helpers/handlebars";
 import { preloadTemplates } from "./helpers/templates";
@@ -32,6 +34,8 @@ Hooks.once("init", () => {
   Object.assign(C.Item.dataModels, ITEM_MODELS);
   C.Dice.rolls.push(api.dice.VERoll);
   C.Combat.initiative = { formula: "@init", decimals: 0 };
+  // A round (asalto) lasts 10 seconds; effect durations in seconds advance with it.
+  C.time.roundTime = 10;
 
   (game.system as any).api = api;
   globalThis.ViejaEscuela = api;
@@ -39,6 +43,7 @@ Hooks.once("init", () => {
   registerLanguageSetting();
   registerHandlebarsHelpers();
   registerEffectConfigHelpers();
+  registerAutomation();
   registerChatListeners();
   callAll(HOOKS.init, api);
 });
@@ -49,6 +54,9 @@ Hooks.once("setup", () => {
   registerSettings();
   registerThemeSetting();
   applyTheme();
+  // VE conditions first in the token HUD (after modules had their init); core statuses stay.
+  const C = CONFIG as any;
+  C.statusEffects = [...foundry.utils.deepClone(C.VE.statusEffects), ...C.statusEffects];
 
   // Sheets are registered here so a module's init can still swap the classes in `api.sheets`.
   const { CharacterSheet, MonsterSheet, VEItemSheet } = api.sheets;
@@ -70,6 +78,7 @@ Hooks.once("setup", () => {
 });
 
 Hooks.once("ready", () => {
+  registerSocket();
   callAll(HOOKS.ready, api);
 });
 

@@ -4,11 +4,11 @@
     <div class="header-fields">
       <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'Name'}}" /></h1>
       <div class="statblock">
-        <label>{{localize "VE.Stat.levelAbbr"}} <input type="number" name="system.level" value="{{system.level}}" data-dtype="Number" /></label>
+        <label>{{localize "VE.Stat.levelAbbr"}} <input type="number" name="system.level" value="{{source.level}}" data-dtype="Number" /></label>
         <label>{{localize "VE.Stat.initiative"}} <input type="number" name="system.initiative" value="{{system.initiative}}" data-dtype="Number" /></label>
-        <label>{{localize "VE.Stat.movAbbr"}} <input type="number" name="system.mov" value="{{system.mov}}" data-dtype="Number" /></label>
+        <label>{{localize "VE.Stat.movAbbr"}} <input type="number" name="system.mov.base" value="{{source.mov.base}}" data-dtype="Number" />{{#if (ne system.mov.value source.mov.base)}}<span class="ve-modified" data-tooltip="{{localize 'VE.Sheet.modifiedBy'}}">→ {{system.mov.value}}</span>{{/if}}</label>
         <label class="wide"><input type="text" name="system.movNote" value="{{system.movNote}}" placeholder="{{localize 'VE.Monster.movNote'}}" /></label>
-        <label>{{localize "VE.Stat.def"}} <input type="number" name="system.def" value="{{system.def}}" data-dtype="Number" /></label>
+        <label>{{localize "VE.Stat.def"}} <input type="number" name="system.def.base" value="{{source.def.base}}" data-dtype="Number" />{{#if (ne system.def.value source.def.base)}}<span class="ve-modified" data-tooltip="{{localize 'VE.Sheet.modifiedBy'}}">→ {{system.def.value}}</span>{{/if}}</label>
         <label>{{localize "VE.Stat.hp"}}
           <input type="number" name="system.hp.value" value="{{system.hp.value}}" data-dtype="Number" /> /
           <input type="number" name="system.hp.max" value="{{system.hp.max}}" data-dtype="Number" />
@@ -18,7 +18,7 @@
   </header>
 
   <section class="monster-rolls">
-    <a class="pill rollable" data-action="rollInstinct"><i class="fas fa-dice-d20"></i> {{localize "VE.Stat.ins"}} {{ve-signed system.ins}}</a>
+    <a class="pill rollable" data-action="rollInstinct"><i class="fas fa-dice-d20"></i> {{localize "VE.Stat.ins"}} {{ins}}</a>
     {{#each config.skills as |skill key|}}
       <a class="pill rollable" data-action="rollSkill" data-skill="{{key}}">{{localize skill.label}}</a>
     {{/each}}

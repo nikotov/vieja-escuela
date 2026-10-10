@@ -1,3 +1,6 @@
+/**
+ * Ruleset registry: built-in rulesets, registration for modules, and the active ruleset/table.
+ */
 import { SYSTEM_ID } from "../constants";
 import { aventurados } from "./aventurados";
 import { expandido } from "./expandido";

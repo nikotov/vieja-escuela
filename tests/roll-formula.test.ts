@@ -1,5 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { buildFormula, combineEdges, d20Formula, rollOutcome, sumTerms } from "../src/rules/roll-formula";
+import {
+  buildFormula,
+  combineEdges,
+  d20Formula,
+  edgeFromCount,
+  rollOutcome,
+  sumTerms,
+} from "../src/rules/roll-formula";
 
 describe("roll formulas", () => {
   it("advantage/disadvantage dice", () => {
@@ -14,6 +21,13 @@ describe("roll formulas", () => {
     expect(combineEdges("advantage", "disadvantage")).toBe("normal");
     expect(combineEdges("disadvantage")).toBe("disadvantage");
     expect(combineEdges()).toBe("normal");
+  });
+
+  it("turns effect counters into an edge", () => {
+    expect(edgeFromCount(2)).toBe("advantage");
+    expect(edgeFromCount(-1)).toBe("disadvantage");
+    expect(edgeFromCount(0)).toBe("normal");
+    expect(combineEdges("advantage", edgeFromCount(-1))).toBe("normal");
   });
 
   it("builds formulas, dropping zero terms", () => {

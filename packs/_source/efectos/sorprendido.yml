@@ -1,0 +1,38 @@
+_id: 3dc235014d0c9ef5
+_key: '!items!3dc235014d0c9ef5'
+name: Sorprendido
+type: effect
+img: icons/svg/terror.svg
+system:
+  description: <p>Durante el asalto de sorpresa no puedes atacar.</p>
+  category: condition
+effects:
+  - _id: 1e38d33522154d6e
+    _key: '!items.effects!3dc235014d0c9ef5.1e38d33522154d6e'
+    name: Sorprendido
+    img: icons/svg/terror.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: 1
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Durante el asalto de sorpresa no puedes atacar.</p>
+    origin: null
+    transfer: true
+    statuses:
+      - surprised
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: 8cdd126e4902ac0c
+sort: 500
+ownership:
+  default: 0

@@ -9,6 +9,17 @@ system:
   pod: 7
   divine: true
   random: ''
+  attack: ''
+  attackBonus: 0
+  ignoreArmor: false
+  damage: ''
+  healing: 4d8 + min(@lvl, 20)
+  save:
+    attribute: ''
+    effect: ''
+  roll:
+    formula: ''
+    label: ''
 effects: []
 flags: {}
 folder: veFldConjNivel40

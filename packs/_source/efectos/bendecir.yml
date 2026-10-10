@@ -1,0 +1,46 @@
+_id: 86568b8eaa33c8e1
+_key: '!items!86568b8eaa33c8e1'
+name: Bendecir
+type: effect
+img: icons/svg/sun.svg
+system:
+  description: <p>+1 al Ataque y a Instintos (CAR) para quienes estén a 3 m.</p>
+  category: spell
+effects:
+  - _id: f276dec2c3e8ca11
+    _key: '!items.effects!86568b8eaa33c8e1.f276dec2c3e8ca11'
+    name: Bendecir
+    img: icons/svg/sun.svg
+    type: base
+    system: {}
+    changes:
+      - key: system.atq.bonus
+        mode: 2
+        value: '1'
+        priority: null
+      - key: system.ins.bonus
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>+1 al Ataque y a Instintos (CAR) para quienes estén a 3 m.</p>
+    origin: null
+    transfer: true
+    statuses:
+      - bless
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: f60a31cd7d3b5dfb
+sort: 1300
+ownership:
+  default: 0

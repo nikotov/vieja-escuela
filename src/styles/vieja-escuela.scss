@@ -481,10 +481,13 @@
     width: auto;
     line-height: 1.5rem;
     padding: 0 0.6rem;
-    background: var(--ve-accent);
-    color: var(--ve-accent-ink);
-    border-color: var(--ve-accent);
-    animation: ve-pulse 2s ease-in-out infinite;
+    color: var(--ve-ink-soft);
+    &.ready {
+      background: var(--ve-accent);
+      color: var(--ve-accent-ink);
+      border-color: var(--ve-accent);
+      animation: ve-pulse 2s ease-in-out infinite;
+    }
   }
   .ve-ruleset {
     margin-left: auto;
@@ -1154,4 +1157,157 @@
     padding-left: 1.1rem;
     font-size: 0.85rem;
   }
+}
+
+// ---------------------------------------------------------------------------------------------
+// Level-up wizard
+// ---------------------------------------------------------------------------------------------
+.vieja-escuela.ve-level-up {
+  .ve-level-up-header {
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
+    margin-bottom: 0.6rem;
+    img {
+      width: 64px;
+      height: 64px;
+      border: var(--ve-frame);
+      border-radius: var(--ve-radius);
+      background: var(--ve-portrait-bg);
+      object-fit: cover;
+    }
+    h2 {
+      margin: 0;
+      border: none;
+      font-family: var(--ve-font-display);
+      color: var(--ve-heading-color);
+    }
+    .ve-level-jump {
+      font-size: 1.1rem;
+      strong {
+        font-family: var(--ve-font-display);
+        font-size: 1.6rem;
+        color: var(--ve-accent);
+      }
+    }
+  }
+  .ve-progress-rows {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .ve-progress {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.3rem;
+    border: var(--ve-frame-thin);
+    border-radius: var(--ve-radius);
+    background: var(--ve-panel);
+    label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      color: var(--ve-ink-soft);
+    }
+    i {
+      font-size: 0.7rem;
+      color: var(--ve-ink-faint);
+    }
+    &.up strong {
+      color: var(--ve-success);
+    }
+  }
+  .ve-hp-roll {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    button {
+      width: auto;
+      flex: 0 0 auto;
+      padding: 0 0.7rem;
+      line-height: 1.8rem;
+    }
+    .ve-hp-result {
+      font-family: var(--ve-font-display);
+      font-size: 1.8rem;
+      color: var(--ve-success);
+    }
+  }
+  .ve-skill-picks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.2rem 0.8rem;
+  }
+  .ve-skill-pick {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    span:nth-child(2) {
+      flex: 1;
+    }
+    .ve-skill-value {
+      font-size: 0.8rem;
+      color: var(--ve-ink-soft);
+    }
+    &.maxed {
+      opacity: 0.5;
+    }
+  }
+  select,
+  input[type="text"] {
+    width: 100%;
+  }
+  .ve-level-up-footer button {
+    line-height: 2rem;
+    background: var(--ve-accent);
+    color: var(--ve-accent-ink);
+    border-color: var(--ve-accent);
+  }
+}
+
+// Spell wizard & effect cards
+.vieja-escuela.ve-card {
+  .effect-note {
+    font-size: 0.78rem;
+    text-align: center;
+    color: var(--ve-ink-soft);
+  }
+  .tag.spent {
+    color: var(--ve-accent);
+  }
+  .ve-wizard-effect {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    margin-top: 0.3rem;
+    img {
+      width: 28px;
+      height: 28px;
+      flex: 0 0 28px;
+      border: var(--ve-frame-thin);
+      border-radius: var(--ve-radius);
+      background: var(--ve-portrait-bg);
+    }
+    .ve-wizard-effect-text {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.8rem;
+      span {
+        color: var(--ve-ink-soft);
+      }
+    }
+  }
+  .ve-button-row {
+    display: flex;
+    gap: 0.25rem;
+    button {
+      flex: 1;
+    }
+  }
+}
+
+.vieja-escuela.sheet.monster .ve-modified {
+  font-size: 0.8rem;
+  color: var(--ve-accent);
 }

@@ -9,7 +9,41 @@ system:
   pod: 3
   divine: true
   random: 91-94
-effects: []
+  attack: ''
+  attackBonus: 0
+  ignoreArmor: false
+  damage: ''
+  healing: ''
+  save:
+    attribute: ''
+    effect: ''
+  roll:
+    formula: ''
+    label: ''
+effects:
+  - _id: fb45eea737229f0f
+    _key: '!items.effects!veSplRetrasarVen.fb45eea737229f0f'
+    name: Veneno retrasado
+    img: icons/svg/pill.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 10800
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Los efectos del veneno se detienen durante 3 horas.</p>
+    origin: null
+    transfer: false
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
 flags: {}
 folder: veFldConjNivel20
 sort: 5400

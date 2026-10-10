@@ -23,7 +23,8 @@
       "talent": { "htmlFields": ["description"] },
       "spell": { "htmlFields": ["description"] },
       "class": { "htmlFields": ["description"] },
-      "race": { "htmlFields": ["description"] }
+      "race": { "htmlFields": ["description"] },
+      "effect": { "htmlFields": ["description"] }
     }
   },
   "packs": [
@@ -31,15 +32,17 @@
     { "name": "conjuros", "label": "Conjuros", "path": "packs/conjuros", "type": "Item", "system": "vieja-escuela", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
     { "name": "talentos", "label": "Talentos", "path": "packs/talentos", "type": "Item", "system": "vieja-escuela", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
     { "name": "clases", "label": "Tipos de aventurero", "path": "packs/clases", "type": "Item", "system": "vieja-escuela", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
-    { "name": "razas", "label": "Razas", "path": "packs/razas", "type": "Item", "system": "vieja-escuela", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } }
+    { "name": "razas", "label": "Razas", "path": "packs/razas", "type": "Item", "system": "vieja-escuela", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "efectos", "label": "Efectos", "path": "packs/efectos", "type": "Item", "system": "vieja-escuela", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } }
   ],
   "packFolders": [
-    { "name": "Vieja Escuela", "sorting": "m", "color": "#5a3b1e", "packs": ["clases", "razas", "talentos", "equipo", "conjuros"] }
+    { "name": "Vieja Escuela", "sorting": "m", "color": "#5a3b1e", "packs": ["clases", "razas", "talentos", "equipo", "conjuros", "efectos"] }
   ],
   "grid": { "distance": 1, "units": "m" },
   "primaryTokenAttribute": "hp",
   "secondaryTokenAttribute": "pod",
   "initiative": "@init",
+  "socket": true,
   "url": "",
   "manifest": "",
   "download": "",

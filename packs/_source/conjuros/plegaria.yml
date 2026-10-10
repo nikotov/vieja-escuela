@@ -9,7 +9,72 @@ system:
   pod: 5
   divine: true
   random: 79-82
-effects: []
+  attack: ''
+  attackBonus: 0
+  ignoreArmor: false
+  damage: ''
+  healing: ''
+  save:
+    attribute: ''
+    effect: ''
+  roll:
+    formula: ''
+    label: ''
+effects:
+  - _id: 11995f648c94b60f
+    _key: '!items.effects!veSplPlegaria000.11995f648c94b60f'
+    name: Plegaria
+    img: icons/svg/angel.svg
+    type: base
+    system: {}
+    changes:
+      - key: system.rollBonus
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 3600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Los aliados ganan +1 a toda tirada durante 1 hora.</p>
+    origin: null
+    transfer: false
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+  - _id: 59adf729070e172f
+    _key: '!items.effects!veSplPlegaria000.59adf729070e172f'
+    name: Plegaria (enemigos)
+    img: icons/svg/downgrade.svg
+    type: base
+    system: {}
+    changes:
+      - key: system.rollBonus
+        mode: 2
+        value: '-1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 3600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Los enemigos sufren -1 a toda tirada durante 1 hora.</p>
+    origin: null
+    transfer: false
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
 flags: {}
 folder: veFldConjNivel30
 sort: 4700

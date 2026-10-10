@@ -1,0 +1,41 @@
+_id: 2e6adf4b76b0aa62
+_key: '!items!2e6adf4b76b0aa62'
+name: Plegaria (enemigos)
+type: effect
+img: icons/svg/downgrade.svg
+system:
+  description: <p>Los enemigos sufren -1 a toda tirada durante 1 hora.</p>
+  category: spell
+effects:
+  - _id: 1fe278686659598d
+    _key: '!items.effects!2e6adf4b76b0aa62.1fe278686659598d'
+    name: Plegaria (enemigos)
+    img: icons/svg/downgrade.svg
+    type: base
+    system: {}
+    changes:
+      - key: system.rollBonus
+        mode: 2
+        value: '-1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 3600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Los enemigos sufren -1 a toda tirada durante 1 hora.</p>
+    origin: null
+    transfer: true
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: f60a31cd7d3b5dfb
+sort: 1700
+ownership:
+  default: 0

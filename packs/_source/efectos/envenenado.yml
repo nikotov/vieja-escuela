@@ -1,0 +1,38 @@
+_id: 634c873072856e4b
+_key: '!items!634c873072856e4b'
+name: Envenenado
+type: effect
+img: icons/svg/poison.svg
+system:
+  description: <p>Los efectos dependen del veneno; se suele resistir con Instintos (CON).</p>
+  category: condition
+effects:
+  - _id: a01e15f96490ca13
+    _key: '!items.effects!634c873072856e4b.a01e15f96490ca13'
+    name: Envenenado
+    img: icons/svg/poison.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Los efectos dependen del veneno; se suele resistir con Instintos (CON).</p>
+    origin: null
+    transfer: true
+    statuses:
+      - poison
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: 8cdd126e4902ac0c
+sort: 1000
+ownership:
+  default: 0

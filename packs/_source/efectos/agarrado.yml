@@ -1,0 +1,38 @@
+_id: f6bfe66d8241740e
+_key: '!items!f6bfe66d8241740e'
+name: Agarrado
+type: effect
+img: icons/svg/net.svg
+system:
+  description: <p>Atrapado por una criatura. Normalmente puedes intentar soltarte con Instintos (FUE) cada asalto.</p>
+  category: condition
+effects:
+  - _id: aef145718d0c584e
+    _key: '!items.effects!f6bfe66d8241740e.aef145718d0c584e'
+    name: Agarrado
+    img: icons/svg/net.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Atrapado por una criatura. Normalmente puedes intentar soltarte con Instintos (FUE) cada asalto.</p>
+    origin: null
+    transfer: true
+    statuses:
+      - restrain
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: 8cdd126e4902ac0c
+sort: 900
+ownership:
+  default: 0

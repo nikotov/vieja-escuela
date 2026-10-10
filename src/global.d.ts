@@ -1,3 +1,6 @@
+/**
+ * Type augmentations for Foundry globals: CONFIG.VE, the system's data models and settings.
+ */
 import type { VEConfig } from "./config";
 import type { ViejaEscuelaAPI } from "./api";
 import type { CharacterData } from "./data/actor-character";
@@ -7,6 +10,7 @@ import type {
   ClassData,
   GearData,
   RaceData,
+  EffectItemData,
   SpellData,
   TalentData,
   WeaponData,
@@ -30,6 +34,7 @@ declare global {
       spell: typeof SpellData;
       class: typeof ClassData;
       race: typeof RaceData;
+      effect: typeof EffectItemData;
     };
   }
 

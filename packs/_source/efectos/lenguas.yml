@@ -1,0 +1,37 @@
+_id: f30f60bf6c6644c9
+_key: '!items!f30f60bf6c6644c9'
+name: Lenguas
+type: effect
+img: icons/svg/sound.svg
+system:
+  description: <p>Hablas cualquier idioma durante 1 hora.</p>
+  category: spell
+effects:
+  - _id: 9b7de86974141a46
+    _key: '!items.effects!f30f60bf6c6644c9.9b7de86974141a46'
+    name: Lenguas
+    img: icons/svg/sound.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 3600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Hablas cualquier idioma durante 1 hora.</p>
+    origin: null
+    transfer: true
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: f60a31cd7d3b5dfb
+sort: 2800
+ownership:
+  default: 0

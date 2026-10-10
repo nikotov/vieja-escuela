@@ -1,7 +1,8 @@
 import { HOOKS, call, callAll } from "../hooks";
 import { buildFormula, combineEdges, d20Formula, rollOutcome, type RollTerm } from "../rules/roll-formula";
 import { signed } from "../rules/modifiers";
-import { attributeLabel, localize, messageFlags, resolveTemplate, rollMode } from "./helpers";
+import { attributeLabel, format, localize, messageFlags, resolveTemplate, rollMode } from "./helpers";
+import { effectEdge } from "./edges";
 import type { RollConfig, RollResult } from "./types";
 
 /**
@@ -26,7 +27,21 @@ export async function performRoll(config: RollConfig): Promise<RollResult | null
   if (background?.value) terms.push({ label: localize("VE.Roll.background"), value: background.value });
   if (config.situational) terms.push({ label: localize("VE.Roll.situational"), value: config.situational });
 
-  const edge = combineEdges(config.edge, background?.edge ?? "normal");
+  // Active Effects: a flat bonus to every d20 roll, and advantage/disadvantage counters.
+  const fx = config.ignoreEffects
+    ? { edge: "normal" as const, sources: [] as string[] }
+    : effectEdge(actor, config.type, config.attribute, config.targetActor);
+  const rollBonus = config.ignoreEffects ? 0 : Number((actor?.system as any)?.rollBonus ?? 0);
+  if (rollBonus) terms.push({ label: localize("VE.Roll.effects"), value: rollBonus });
+
+  const edge = combineEdges(config.edge, background?.edge ?? "normal", fx.edge);
+  const effectNote =
+    fx.edge === "normal"
+      ? ""
+      : format("VE.Roll.effectEdge", {
+          edge: localize(CONFIG.VE.edges[fx.edge]),
+          sources: fx.sources.join(", "),
+        });
   const formula = buildFormula(d20Formula(edge), terms);
   const RollClass = CONFIG.VE.Roll as typeof Roll;
   const roll = (await new RollClass(
@@ -49,6 +64,7 @@ export async function performRoll(config: RollConfig): Promise<RollResult | null
     terms: terms.filter((t) => t.value).map((t) => ({ ...t, signed: signed(t.value) })),
     edge,
     edgeLabel: edge === "normal" ? "" : localize(CONFIG.VE.edges[edge]),
+    effectNote,
     roll,
     rollHTML: await roll.render(),
     natural: roll.natural,

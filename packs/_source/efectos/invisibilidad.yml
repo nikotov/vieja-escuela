@@ -1,0 +1,38 @@
+_id: 370bce1ef76e4317
+_key: '!items!370bce1ef76e4317'
+name: Invisibilidad
+type: effect
+img: icons/svg/invisible.svg
+system:
+  description: <p>Invisible durante un turno o hasta que ataques.</p>
+  category: spell
+effects:
+  - _id: 572e33b7f4f005a4
+    _key: '!items.effects!370bce1ef76e4317.572e33b7f4f005a4'
+    name: Invisibilidad
+    img: icons/svg/invisible.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Invisible durante un turno o hasta que ataques.</p>
+    origin: null
+    transfer: true
+    statuses:
+      - invisible
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: f60a31cd7d3b5dfb
+sort: 1800
+ownership:
+  default: 0

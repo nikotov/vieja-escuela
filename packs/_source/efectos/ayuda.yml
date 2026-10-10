@@ -1,0 +1,45 @@
+_id: bd8ddbae3290cd2e
+_key: '!items!bd8ddbae3290cd2e'
+name: Ayuda
+type: effect
+img: icons/svg/angel.svg
+system:
+  description: <p>+1 al Ataque y a Instintos (CAR). Además, 1D8 PV temporales (tíralos y súmalos a mano).</p>
+  category: spell
+effects:
+  - _id: f0194e2a82058eaf
+    _key: '!items.effects!bd8ddbae3290cd2e.f0194e2a82058eaf'
+    name: Ayuda
+    img: icons/svg/angel.svg
+    type: base
+    system: {}
+    changes:
+      - key: system.atq.bonus
+        mode: 2
+        value: '1'
+        priority: null
+      - key: system.ins.bonus
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>+1 al Ataque y a Instintos (CAR). Además, 1D8 PV temporales (tíralos y súmalos a mano).</p>
+    origin: null
+    transfer: true
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: f60a31cd7d3b5dfb
+sort: 1200
+ownership:
+  default: 0

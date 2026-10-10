@@ -9,7 +9,41 @@ system:
   pod: 7
   divine: false
   random: ''
-effects: []
+  attack: ''
+  attackBonus: 0
+  ignoreArmor: false
+  damage: ''
+  healing: ''
+  save:
+    attribute: ''
+    effect: ''
+  roll:
+    formula: ''
+    label: ''
+effects:
+  - _id: 86a218db3bba4d9a
+    _key: '!items.effects!veSplPielDePiedr.86a218db3bba4d9a'
+    name: Piel de piedra
+    img: icons/magic/defensive/armor-stone-skin.webp
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 3600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Ignoras 10 puntos de daño de cada ataque durante 1 hora (réstalos a mano).</p>
+    origin: null
+    transfer: false
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
 flags: {}
 folder: veFldConjNivel40
 sort: 4600

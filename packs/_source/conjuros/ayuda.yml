@@ -9,7 +9,49 @@ system:
   pod: 3
   divine: true
   random: 05-06
-effects: []
+  attack: ''
+  attackBonus: 0
+  ignoreArmor: false
+  damage: ''
+  healing: ''
+  save:
+    attribute: ''
+    effect: ''
+  roll:
+    formula: 1d8
+    label: PV temporales
+effects:
+  - _id: 8d5ff646feaeeeed
+    _key: '!items.effects!veSplAyuda000000.8d5ff646feaeeeed'
+    name: Ayuda
+    img: icons/svg/angel.svg
+    type: base
+    system: {}
+    changes:
+      - key: system.atq.bonus
+        mode: 2
+        value: '1'
+        priority: null
+      - key: system.ins.bonus
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>+1 al Ataque y a Instintos (CAR). Además, 1D8 PV temporales (tíralos y súmalos a mano).</p>
+    origin: null
+    transfer: false
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
 flags: {}
 folder: veFldConjNivel20
 sort: 300

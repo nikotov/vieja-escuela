@@ -1,0 +1,41 @@
+_id: d04f1c87a7c4a49d
+_key: '!items!d04f1c87a7c4a49d'
+name: Escudo de fe
+type: effect
+img: icons/svg/holy-shield.svg
+system:
+  description: <p>+2 a la Defensa durante 6 asaltos.</p>
+  category: spell
+effects:
+  - _id: 6e9b61080a49112c
+    _key: '!items.effects!d04f1c87a7c4a49d.6e9b61080a49112c'
+    name: Escudo de fe
+    img: icons/svg/holy-shield.svg
+    type: base
+    system: {}
+    changes:
+      - key: system.def.bonus
+        mode: 2
+        value: '2'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: 6
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>+2 a la Defensa durante 6 asaltos.</p>
+    origin: null
+    transfer: true
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: f60a31cd7d3b5dfb
+sort: 1400
+ownership:
+  default: 0

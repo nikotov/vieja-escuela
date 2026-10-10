@@ -33,11 +33,22 @@ export const CHARACTER_SHEET_ACTIONS: Record<string, SheetAction> = {
     const itemId = target.closest<HTMLElement>("[data-item-id]")?.dataset.itemId;
     return sheet.actor.rollDamage({ itemId, attackIndex: itemId ? undefined : indexOf(target) });
   },
-  castSpell: (sheet, _event, target) => {
+  castSpell: (sheet, _event: MouseEvent, target) => {
     const item = itemOf(sheet, target);
-    return item && sheet.actor.castSpell(item);
+    // Shift-click: cast from a scroll or item, without spending POD.
+    return item && CONFIG.VE.rolls.spell(sheet.actor, item, { spend: !_event.shiftKey });
   },
-  levelUp: (sheet, event) => sheet.actor.levelUp({ force: event.shiftKey }),
+  /** Open the level-up wizard (the GM may level up without enough PE). Shift-click: quick level up. */
+  levelUp: (sheet, event) => {
+    const actor = sheet.actor;
+    if (!actor.system.canLevelUp && !game.user?.isGM) {
+      return ui.notifications?.warn(
+        game.i18n!.format("VE.LevelUp.notEnoughXp", { xp: actor.system.xp, needed: actor.system.xpNext }),
+      );
+    }
+    if (event.shiftKey) return actor.levelUp({ force: true });
+    return new CONFIG.VE.applications.LevelUpDialog(actor).render(true);
+  },
 
   itemCreate: (sheet, _event, target) => {
     const type = target.dataset.type ?? "gear";

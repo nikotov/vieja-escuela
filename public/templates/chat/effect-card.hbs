@@ -1,0 +1,21 @@
+<div class="vieja-escuela ve-card ve-effect-card" data-item-uuid="{{item.uuid}}">
+  <header class="ve-card-header">
+    <img src="{{item.img}}" alt="" />
+    <h3>{{item.name}}</h3>
+  </header>
+  {{#each effects}}
+    <div class="ve-wizard-effect">
+      <img src="{{img}}" alt="" />
+      <div class="ve-wizard-effect-text">
+        <strong>{{name}}</strong>
+        {{#if changes.length}}<span>{{#each changes}}{{this}}{{#unless @last}} · {{/unless}}{{/each}}</span>{{/if}}
+        {{#if duration}}<span class="duration"><i class="fas fa-hourglass-half"></i> {{duration}}</span>{{/if}}
+      </div>
+    </div>
+  {{/each}}
+  <div class="ve-card-body">{{{description}}}</div>
+  <div class="card-buttons">
+    <button type="button" data-ve-action="applyItemEffects"><i class="fas fa-users"></i> {{localize "VE.Chat.applyToSelected"}}</button>
+  </div>
+  <p class="hint">{{localize "VE.Chat.targetsHint"}}</p>
+</div>

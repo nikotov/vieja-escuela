@@ -29,3 +29,21 @@ export const grantedTalents = () =>
       level: int(1, { min: 1 }),
     }),
   );
+
+/**
+ * Advantage/disadvantage counters set by Active Effects: +1 = advantage, -1 = disadvantage; they
+ * add up and cancel out. `attacked` applies to attacks made *against* the actor. Per-attribute
+ * counters apply to attribute checks and Instintos rolls using that attribute.
+ */
+export const edges = (attributeKeys: string[]) =>
+  new (fields().SchemaField)({
+    all: int(0),
+    attack: int(0),
+    skill: int(0),
+    instinct: int(0),
+    attacked: int(0),
+    attributes: new (fields().SchemaField)(Object.fromEntries(attributeKeys.map((k) => [k, int(0)]))),
+  });
+
+/** Damage bonuses: a flat number and extra dice (e.g. "1d8"), both added to every damage roll. */
+export const damageBonus = () => new (fields().SchemaField)({ bonus: int(0), extra: str("") });

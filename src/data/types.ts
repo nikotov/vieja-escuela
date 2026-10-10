@@ -30,7 +30,10 @@ export interface CharacterSystem {
     ranged: { bonus: number; value: number };
   };
   def: { bonus: number; value: number; armor: number; shield: number };
-  dmg: { bonus: number };
+  dmg: { bonus: number; extra: string };
+  rollBonus: number;
+  edge: Edges;
+  heavyArmorTraining: boolean;
   mov: { base: number | null; bonus: number; value: number };
   critThreshold: number;
   hitDie: string;
@@ -49,6 +52,15 @@ export interface CharacterSystem {
   canLevelUp: boolean;
 }
 
+export interface Edges {
+  all: number;
+  attack: number;
+  skill: number;
+  instinct: number;
+  attacked: number;
+  attributes: Record<string, number>;
+}
+
 export interface MonsterAttack {
   name: string;
   count: number;
@@ -59,18 +71,21 @@ export interface MonsterAttack {
 export interface MonsterSystem {
   level: number;
   initiative: number;
-  mov: number;
+  mov: { base: number; bonus: number; value: number };
   movNote: string;
-  def: number;
+  def: { base: number; bonus: number; value: number };
   hp: { value: number; max: number };
+  atq: { bonus: number; value: number };
+  ins: { bonus: number; value: number };
+  dmg: { bonus: number; extra: string };
+  rollBonus: number;
+  edge: Edges;
   attacks: MonsterAttack[];
   morale: number;
   critThreshold: number;
   talents: string;
   description: string;
   // Derived
-  atq: number;
-  ins: number;
   skill: number;
   init: number;
 }
@@ -124,6 +139,22 @@ export interface SpellSystem {
   pod: number;
   divine: boolean;
   random: string;
+  /** "" (no attack roll), "melee" or "ranged". */
+  attack: string;
+  attackBonus: number;
+  /** The attack is against Defense without armor or shield. */
+  ignoreArmor: boolean;
+  damage: string;
+  healing: string;
+  /** Instintos save: attribute key ("" = none) and what success does ("half" | "negates"). */
+  save: { attribute: string; effect: string };
+  /** Any other roll the spell needs, e.g. "1d6" levels affected by Dormir. */
+  roll: { formula: string; label: string };
+}
+
+export interface EffectItemSystem {
+  description: string;
+  category: string;
 }
 
 export interface ClassSystem {

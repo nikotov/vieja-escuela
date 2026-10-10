@@ -24,6 +24,15 @@ export function registerSettings() {
     requiresReload: true,
   });
 
+  register(SYSTEM_ID, "autoOverload", {
+    name: "VE.Setting.autoOverload.name",
+    hint: "VE.Setting.autoOverload.hint",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: true,
+  });
+
   register(SYSTEM_ID, "modifierTable", {
     name: "VE.Setting.modifierTable.name",
     hint: "VE.Setting.modifierTable.hint",

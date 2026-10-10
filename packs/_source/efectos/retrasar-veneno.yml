@@ -1,0 +1,37 @@
+_id: fc39ad6aa5474267
+_key: '!items!fc39ad6aa5474267'
+name: Veneno retrasado
+type: effect
+img: icons/svg/pill.svg
+system:
+  description: <p>Los efectos del veneno se detienen durante 3 horas.</p>
+  category: spell
+effects:
+  - _id: 37c46e69d07930b7
+    _key: '!items.effects!fc39ad6aa5474267.37c46e69d07930b7'
+    name: Veneno retrasado
+    img: icons/svg/pill.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 10800
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Los efectos del veneno se detienen durante 3 horas.</p>
+    origin: null
+    transfer: true
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: f60a31cd7d3b5dfb
+sort: 2700
+ownership:
+  default: 0

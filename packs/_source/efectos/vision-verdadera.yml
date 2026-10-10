@@ -1,0 +1,37 @@
+_id: 97ca437ac94a4152
+_key: '!items!97ca437ac94a4152'
+name: Visión verdadera
+type: effect
+img: icons/svg/eye.svg
+system:
+  description: <p>Ves las cosas como son durante 10 minutos.</p>
+  category: spell
+effects:
+  - _id: 05cac7e1f45ca1db
+    _key: '!items.effects!97ca437ac94a4152.05cac7e1f45ca1db'
+    name: Visión verdadera
+    img: icons/svg/eye.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Ves las cosas como son durante 10 minutos.</p>
+    origin: null
+    transfer: true
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: f60a31cd7d3b5dfb
+sort: 2600
+ownership:
+  default: 0

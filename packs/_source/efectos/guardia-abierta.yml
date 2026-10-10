@@ -1,0 +1,42 @@
+_id: cd146a4b2ea0087f
+_key: '!items!cd146a4b2ea0087f'
+name: Guardia abierta
+type: effect
+img: icons/svg/daze.svg
+system:
+  description: '<p>Tras una pifia quedas desequilibrado: todos los ataques que recibas se hacen con ventaja hasta el inicio de tu próximo asalto.</p>'
+  category: condition
+effects:
+  - _id: 25b1d8b7ef773682
+    _key: '!items.effects!cd146a4b2ea0087f.25b1d8b7ef773682'
+    name: Guardia abierta
+    img: icons/svg/daze.svg
+    type: base
+    system: {}
+    changes:
+      - key: system.edge.attacked
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: 1
+      turns: null
+      startRound: null
+      startTurn: null
+    description: '<p>Tras una pifia quedas desequilibrado: todos los ataques que recibas se hacen con ventaja hasta el inicio de tu próximo asalto.</p>'
+    origin: null
+    transfer: true
+    statuses:
+      - openGuard
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: 8cdd126e4902ac0c
+sort: 100
+ownership:
+  default: 0

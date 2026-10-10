@@ -1,0 +1,37 @@
+_id: 4817bb6100c6630a
+_key: '!items!4817bb6100c6630a'
+name: Forma etérea
+type: effect
+img: icons/svg/aura.svg
+system:
+  description: <p>Puedes atravesar obstáculos sólidos durante 1 hora, pero no puedes atacar físicamente.</p>
+  category: potion
+effects:
+  - _id: 21b9a4b2b9b7a408
+    _key: '!items.effects!4817bb6100c6630a.21b9a4b2b9b7a408'
+    name: Forma etérea
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 3600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Puedes atravesar obstáculos sólidos durante 1 hora, pero no puedes atacar físicamente.</p>
+    origin: null
+    transfer: true
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: bd452a69e3a5ba0a
+sort: 3100
+ownership:
+  default: 0

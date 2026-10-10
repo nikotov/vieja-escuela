@@ -9,6 +9,17 @@ system:
   pod: 3
   divine: true
   random: 87-90
+  attack: ''
+  attackBonus: 0
+  ignoreArmor: false
+  damage: ''
+  healing: ''
+  save:
+    attribute: ''
+    effect: ''
+  roll:
+    formula: 1d4
+    label: Puntos de atributo restaurados
 effects: []
 flags: {}
 folder: veFldConjNivel20

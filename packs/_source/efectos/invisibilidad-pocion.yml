@@ -1,0 +1,38 @@
+_id: 154b1f73f5c6601c
+_key: '!items!154b1f73f5c6601c'
+name: Invisibilidad (poción)
+type: effect
+img: icons/svg/invisible.svg
+system:
+  description: <p>Invisible durante 1 hora o hasta que lleves a cabo un ataque de cualquier tipo.</p>
+  category: potion
+effects:
+  - _id: 224e7ee26f8f41b1
+    _key: '!items.effects!154b1f73f5c6601c.224e7ee26f8f41b1'
+    name: Invisibilidad (poción)
+    img: icons/svg/invisible.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 3600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Invisible durante 1 hora o hasta que lleves a cabo un ataque de cualquier tipo.</p>
+    origin: null
+    transfer: true
+    statuses:
+      - invisible
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: bd452a69e3a5ba0a
+sort: 3000
+ownership:
+  default: 0

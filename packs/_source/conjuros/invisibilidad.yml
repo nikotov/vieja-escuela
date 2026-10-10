@@ -9,7 +9,42 @@ system:
   pod: 3
   divine: false
   random: 65-66
-effects: []
+  attack: ''
+  attackBonus: 0
+  ignoreArmor: false
+  damage: ''
+  healing: ''
+  save:
+    attribute: ''
+    effect: ''
+  roll:
+    formula: ''
+    label: ''
+effects:
+  - _id: 124da1e9f1845089
+    _key: '!items.effects!veSplInvisibilid.124da1e9f1845089'
+    name: Invisibilidad
+    img: icons/svg/invisible.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Invisible durante un turno o hasta que ataques.</p>
+    origin: null
+    transfer: false
+    statuses:
+      - invisible
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
 flags: {}
 folder: veFldConjNivel20
 sort: 3600

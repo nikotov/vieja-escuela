@@ -47,8 +47,19 @@
     "Chat": {
       "applied": "{name}: {amount} PV",
       "applyDamage": "Aplicar daño",
+      "applyHalf": "Mitad",
+      "applyHalfHint": "Aplica la mitad del daño (redondeando hacia abajo), p. ej. tras superar Instintos.",
       "applyHealing": "Curar",
-      "noTokens": "Selecciona uno o más tokens."
+      "applyToSelected": "Aplicar a seleccionados",
+      "applyToSelectedHint": "Tokens seleccionados o, si no hay ninguno, los marcados como objetivo.",
+      "applyToSelf": "Aplicar al lanzador",
+      "effectsApplied": "{effects} → {actors}",
+      "needGM": "Hace falta un DJ conectado para modificar personajes que no son tuyos.",
+      "noTokens": "Selecciona uno o más tokens.",
+      "notOwner": "Solo el propietario del personaje puede usar este botón.",
+      "targetsHint": "Se aplica a los tokens seleccionados (o a los objetivos marcados).",
+      "toCaster": "Lanzador",
+      "toSelected": "Seleccionados"
     },
     "Class": {
       "armor": "Armaduras",
@@ -70,6 +81,15 @@
       "hard": "Difícil o bajo estrés (14+)",
       "veryHard": "Muy difícil (17+)"
     },
+    "Duration": {
+      "hour": "{n} hora",
+      "hours": "{n} horas",
+      "minutes": "{n} minutos",
+      "round": "{n} asalto",
+      "rounds": "{n} asaltos",
+      "seconds": "{n} segundos",
+      "turns": "{n} turnos de combate"
+    },
     "Edge": {
       "advantage": "Ventaja",
       "disadvantage": "Desventaja",
@@ -79,7 +99,9 @@
       "actorHint": "Efectos de talentos y objetos, más modificadores temporales (conjuros, pociones…) que añadas aquí.",
       "add": "Añadir",
       "advanced": "Editor avanzado",
+      "appliedHint": "Los efectos de un conjuro no afectan a quien lo tiene: se aplican a los objetivos desde la tarjeta del chat al lanzarlo.",
       "create": "Efecto avanzado…",
+      "effectItemHint": "Arrastra este efecto a un personaje (o usa su tarjeta de chat) para aplicárselo.",
       "hint": "Los efectos activos modifican al personaje que posee el objeto (p. ej. system.ins.bonus, system.mov.bonus, system.critThreshold).",
       "itemHint": "Elige un modificador y pulsa Añadir: se aplicará al personaje que tenga este objeto.",
       "noChanges": "Sin modificadores",
@@ -87,6 +109,14 @@
       "preset": "Modificador",
       "toggle": "Activar/desactivar",
       "value": "Valor"
+    },
+    "EffectCategory": {
+      "condition": "Estado",
+      "hint": "Un efecto empaquetado: al soltarlo sobre un personaje se le aplican sus efectos activos (con su duración), sin añadir el objeto.",
+      "label": "Categoría",
+      "other": "Otro",
+      "potion": "Poción",
+      "spell": "Efecto de conjuro"
     },
     "Gear": {
       "bundle": "Unidades por bulto",
@@ -118,14 +148,27 @@
       "quantity": "Cantidad"
     },
     "LevelUp": {
+      "backgroundPlaceholder": "Señor protector de Aguasnegras...",
       "bonusTalent": "Elige un nuevo talento.",
       "button": "Subir de nivel",
+      "chooseTalent": "Elige un nuevo talento",
+      "confirm": "Subir de nivel",
+      "forced": "No hay PE suficientes: subida forzada por el DJ",
       "granted": "Nuevos talentos",
       "hpGained": "Puntos de vida ganados",
+      "hpHint": "Si no tiras aquí, se tirará al confirmar. Siempre ganas al menos 1 PV.",
       "newBackground": "Ganas un nuevo trasfondo relacionado con tu fama y estatus.",
+      "newBackgroundTitle": "Nuevo trasfondo",
       "notEnoughXp": "Faltan PE: tienes {xp} y necesitas {needed}. Mayús+clic para forzar.",
+      "notReadyHint": "Aún no tienes PE suficientes (el DJ puede forzarlo). Mayús+clic: subida rápida sin asistente.",
+      "pointsLeft": "Puntos",
+      "progress": "Avance",
+      "readyHint": "¡Tienes PE suficientes! Abre el asistente de subida de nivel.",
+      "rollHp": "Tirar PV",
       "skillPoints": "Reparte {points} puntos de habilidad (máximo 1 por habilidad).",
-      "title": "Nivel"
+      "title": "Nivel",
+      "wizardTitle": "Subir de nivel: {name}",
+      "worldItems": "Objetos del mundo"
     },
     "ModifierTable": {
       "extended": "Ampliada (-3 a +3)",
@@ -144,24 +187,34 @@
       "normal": "Normal"
     },
     "Preset": {
+      "advAttack": "Ventaja en ataques (+1) / desventaja (-1)",
       "atq": "Ataque (todos)",
       "atqMelee": "Ataque cuerpo a cuerpo",
       "atqRanged": "Ataque a distancia",
       "crit": "Crítico con",
       "def": "Defensa",
+      "disAttack": "Desventaja en ataques",
       "dmg": "Daño",
+      "dmgExtra": "Dados de daño extra",
+      "edgeAll": "Ventaja (+1) / desventaja (-1) en todas las tiradas",
+      "edgeAttacked": "Ataques contra él con ventaja (+1) / desventaja (-1)",
+      "edgeInstinct": "Ventaja (+1) / desventaja (-1) en Instintos",
+      "edgeSkill": "Ventaja (+1) / desventaja (-1) en habilidades",
       "groupAttributes": "Atributos",
       "groupCombat": "Combate",
+      "groupEdges": "Ventaja / desventaja",
       "groupMagic": "Magia",
       "groupOther": "Otros",
       "groupSkills": "Habilidades",
       "groupStats": "Rasgos",
+      "heavyArmor": "Entrenamiento con armadura pesada",
       "hitDie": "Dado de aguante",
       "hp": "Puntos de vida",
       "ins": "Instintos",
       "magic": "Aptitud mágica",
       "mov": "Movimiento",
-      "pod": "Poder (POD)"
+      "pod": "Poder (POD)",
+      "rollBonus": "Bono a toda tirada"
     },
     "Roll": {
       "attack": "Atacar",
@@ -174,9 +227,12 @@
       "damage": "Daño",
       "damageMax": "Daño máximo +1",
       "damageTwoHanded": "A dos manos (+1)",
+      "defenseNoArmorOf": "Defensa sin armadura de {name}",
       "defenseOf": "Defensa de {name}",
       "difficulty": "Dificultad",
       "edge": "Tirada",
+      "effectEdge": "{edge} por efectos: {sources}",
+      "effects": "Efectos",
       "failure": "Fallo",
       "fumble": "¡Pifia!",
       "fumbleHint": "Guardia abierta: los ataques contra ti tienen ventaja hasta tu próximo asalto.",
@@ -193,6 +249,10 @@
       "expandido": "Vieja Escuela: Edición Expandida"
     },
     "Setting": {
+      "autoOverload": {
+        "hint": "Aplica o retira el estado Sobrecargado según la carga y la armadura pesada de cada personaje.",
+        "name": "Sobrecarga automática"
+      },
       "language": {
         "hint": "Idioma de las hojas, tarjetas y diálogos de Vieja Escuela, independientemente del idioma de Foundry.",
         "name": "Idioma del sistema"
@@ -267,14 +327,31 @@
       "supervivencia": "Supervivencia"
     },
     "Spell": {
+      "attack": "Tirada de ataque",
+      "attackMelee": "cuerpo a cuerpo",
+      "attackRanged": "a distancia",
       "cast": "Lanzar",
       "divine": "Divino",
+      "healing": "Curación",
+      "ignoreArmor": "Ignora armadura y escudo",
       "level": "Nivel",
       "levelAbbr": "Niv",
       "levelN": "Nivel {level}",
+      "mechanics": "Mecánica (asistente de chat)",
+      "mechanicsHint": "Lo que rellenes aquí aparece como botones en la tarjeta de chat al lanzar el conjuro. Los efectos de la pestaña Efectos se aplican a los objetivos. Mayús+clic al lanzar: sin gastar POD (pergaminos).",
       "notEnoughPod": "No tienes suficiente POD ({value}/{cost}).",
       "random": "Tabla aleatoria (1d100)",
-      "resist": "Resistir con Instintos:"
+      "resist": "Resistir con Instintos:",
+      "rollFormula": "Otra tirada",
+      "rollLabel": "Qué representa",
+      "save": {
+        "half": "mitad de daño",
+        "negates": "lo evitan"
+      },
+      "saveAttribute": "Instintos para resistir",
+      "saveEffect": "Si superan la tirada",
+      "saveHint": "Los tokens seleccionados (o los objetivos) tiran Instintos contra 10 + nivel del lanzador.",
+      "saveTitle": "Instintos contra {spell}"
     },
     "Stat": {
       "atqAbbr": "ATQ",
@@ -295,6 +372,20 @@
       "pod": "Poder",
       "podAbbr": "POD",
       "xp": "PE"
+    },
+    "Status": {
+      "charging": "Cargando",
+      "chargingHint": "-3 a la Defensa hasta tu siguiente asalto.",
+      "incapacitated": "Incapacitado",
+      "incapacitatedHint": "No puedes actuar; mueres si no recuperas PV en 10 asaltos.",
+      "openGuard": "Guardia abierta",
+      "openGuardHint": "Los ataques contra ti tienen ventaja hasta tu próximo asalto.",
+      "overloaded": "Sobrecargado",
+      "overloadedHint": "Desventaja al atacar y en acciones de rapidez o destreza.",
+      "stabilized": "Estabilizado",
+      "stabilizedHint": "Inconsciente, pero tienes 1 hora para recuperar PV.",
+      "surprised": "Sorprendido",
+      "surprisedHint": "No puedes atacar en el asalto de sorpresa."
     },
     "Tab": {
       "combat": "Combate",

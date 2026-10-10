@@ -1,3 +1,7 @@
+/**
+ * d20 checks: skills, attributes, Instintos and monster morale. Each builds a RollConfig and
+ * hands it to the shared pipeline (CONFIG.VE.rolls.perform).
+ */
 import {
   attributeLabel,
   charSystem,
@@ -48,7 +52,7 @@ export function rollAttribute(actor: Actor, attribute: string, options: RollOpti
 /** Instintos: d20 + INS + an attribute modifier chosen by the DJ. */
 export function rollInstinct(actor: Actor, options: RollOptions = {}) {
   const character = isCharacter(actor);
-  const ins = character ? charSystem(actor).ins.value : monsterSystem(actor).ins;
+  const ins = character ? charSystem(actor).ins.value : monsterSystem(actor).ins.value;
   const config = makeRollConfig(
     {
       type: "instinct",

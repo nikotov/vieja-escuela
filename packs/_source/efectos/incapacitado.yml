@@ -1,0 +1,38 @@
+_id: a6238875eab51464
+_key: '!items!a6238875eab51464'
+name: Incapacitado
+type: effect
+img: icons/svg/unconscious.svg
+system:
+  description: <p>Con 0 o menos PV caes incapacitado y no puedes actuar. Si tus PV no vuelven a ser positivos en 10 asaltos, mueres. El DJ puede permitir una tirada de Instintos (CON) contra 10 + PV negativos para estabilizarte.</p>
+  category: condition
+effects:
+  - _id: 9a76be0b88290492
+    _key: '!items.effects!a6238875eab51464.9a76be0b88290492'
+    name: Incapacitado
+    img: icons/svg/unconscious.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Con 0 o menos PV caes incapacitado y no puedes actuar. Si tus PV no vuelven a ser positivos en 10 asaltos, mueres. El DJ puede permitir una tirada de Instintos (CON) contra 10 + PV negativos para estabilizarte.</p>
+    origin: null
+    transfer: true
+    statuses:
+      - incapacitated
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: 8cdd126e4902ac0c
+sort: 300
+ownership:
+  default: 0

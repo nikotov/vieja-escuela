@@ -1,0 +1,45 @@
+_id: 70fd1b255b5373ab
+_key: '!items!70fd1b255b5373ab'
+name: Fuerza extraordinaria
+type: effect
+img: icons/svg/upgrade.svg
+system:
+  description: <p>+4 a las tiradas de Ataque y 1d8 extra al daño durante 1 hora.</p>
+  category: potion
+effects:
+  - _id: bfbc83ea2364170e
+    _key: '!items.effects!70fd1b255b5373ab.bfbc83ea2364170e'
+    name: Fuerza extraordinaria
+    img: icons/svg/upgrade.svg
+    type: base
+    system: {}
+    changes:
+      - key: system.atq.bonus
+        mode: 2
+        value: '4'
+        priority: null
+      - key: system.dmg.extra
+        mode: 5
+        value: 1d8
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 3600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>+4 a las tiradas de Ataque y 1d8 extra al daño durante 1 hora.</p>
+    origin: null
+    transfer: true
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: bd452a69e3a5ba0a
+sort: 2900
+ownership:
+  default: 0

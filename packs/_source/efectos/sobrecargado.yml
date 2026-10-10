@@ -1,0 +1,46 @@
+_id: b5f755f28a50f9fa
+_key: '!items!b5f755f28a50f9fa'
+name: Sobrecargado
+type: effect
+img: icons/svg/anchor.svg
+system:
+  description: <p>Desventaja al atacar y en las acciones basadas en la rapidez o la destreza. Se aplica automáticamente al superar tu carga (FUE) o al llevar armadura pesada sin entrenamiento.</p>
+  category: condition
+effects:
+  - _id: 098bba1a2dc3a618
+    _key: '!items.effects!b5f755f28a50f9fa.098bba1a2dc3a618'
+    name: Sobrecargado
+    img: icons/svg/anchor.svg
+    type: base
+    system: {}
+    changes:
+      - key: system.edge.attack
+        mode: 2
+        value: '-1'
+        priority: null
+      - key: system.edge.attributes.des
+        mode: 2
+        value: '-1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Desventaja al atacar y en las acciones basadas en la rapidez o la destreza. Se aplica automáticamente al superar tu carga (FUE) o al llevar armadura pesada sin entrenamiento.</p>
+    origin: null
+    transfer: true
+    statuses:
+      - overloaded
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: 8cdd126e4902ac0c
+sort: 0
+ownership:
+  default: 0

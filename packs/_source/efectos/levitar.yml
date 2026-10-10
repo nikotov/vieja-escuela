@@ -1,0 +1,37 @@
+_id: bad3c77e45985166
+_key: '!items!bad3c77e45985166'
+name: Levitar
+type: effect
+img: icons/svg/up.svg
+system:
+  description: <p>Puedes flotar hacia arriba y hacia abajo durante un turno.</p>
+  category: spell
+effects:
+  - _id: da8cbbddf113bc47
+    _key: '!items.effects!bad3c77e45985166.da8cbbddf113bc47'
+    name: Levitar
+    img: icons/svg/up.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Puedes flotar hacia arriba y hacia abajo durante un turno.</p>
+    origin: null
+    transfer: true
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: f60a31cd7d3b5dfb
+sort: 2000
+ownership:
+  default: 0

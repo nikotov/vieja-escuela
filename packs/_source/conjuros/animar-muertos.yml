@@ -9,6 +9,17 @@ system:
   pod: 7
   divine: false
   random: ''
+  attack: ''
+  attackBonus: 0
+  ignoreArmor: false
+  damage: ''
+  healing: ''
+  save:
+    attribute: ''
+    effect: ''
+  roll:
+    formula: 3d6
+    label: Esqueletos o zombis creados
 effects: []
 flags: {}
 folder: veFldConjNivel40

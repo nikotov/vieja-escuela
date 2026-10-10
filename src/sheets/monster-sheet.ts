@@ -26,9 +26,16 @@ export class MonsterSheet extends VEBaseActorSheet {
     const context = (await super.getData(options)) as Record<string, any>;
     const s = this.actor.system as unknown as MonsterSystem;
     context.system = s;
+    // Stored values (before Active Effects) for inputs; see the character sheet.
+    context.source = (this.actor as any)._source.system;
     context.config = CONFIG.VE;
-    context.atq = signed(s.atq);
-    context.attacks = s.attacks.map((a, index) => ({ ...a, index, bonusTotal: signed(s.atq + a.bonus) }));
+    context.atq = signed(s.atq.value);
+    context.ins = signed(s.ins.value);
+    context.attacks = s.attacks.map((a, index) => ({
+      ...a,
+      index,
+      bonusTotal: signed(s.atq.value + a.bonus),
+    }));
     context.moraleChoices = Object.fromEntries(
       Object.values(CONFIG.VE.morale).map((m) => [m.value, `${game.i18n!.localize(m.label)} (${m.value}+)`]),
     );

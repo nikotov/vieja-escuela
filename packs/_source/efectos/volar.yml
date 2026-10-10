@@ -1,0 +1,38 @@
+_id: 59b4c3d2dbeb40c2
+_key: '!items!59b4c3d2dbeb40c2'
+name: Volar
+type: effect
+img: icons/svg/wing.svg
+system:
+  description: <p>Vuelas durante un turno a 10 m/s.</p>
+  category: spell
+effects:
+  - _id: 92e4542b5c4b4929
+    _key: '!items.effects!59b4c3d2dbeb40c2.92e4542b5c4b4929'
+    name: Volar
+    img: icons/svg/wing.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Vuelas durante un turno a 10 m/s.</p>
+    origin: null
+    transfer: true
+    statuses:
+      - fly
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: f60a31cd7d3b5dfb
+sort: 1900
+ownership:
+  default: 0

@@ -1,3 +1,6 @@
+/**
+ * Small helpers shared by the roll handlers: labels, actor shortcuts, target lookup, defaults.
+ */
 import { SYSTEM_ID } from "../constants";
 import { getActiveRuleset } from "../rulesets";
 import type { CharacterSystem, MonsterSystem } from "../data/types";
@@ -54,6 +57,8 @@ export function makeRollConfig(base: Partial<RollConfig>, options: RollOptions =
     background: "none",
     situational: 0,
     target: CONFIG.VE.defaultDifficulty,
+    targetActor: null,
+    ignoreEffects: false,
     targetLabel: localize("VE.Roll.difficulty"),
     showTarget: true,
     showBackground: true,

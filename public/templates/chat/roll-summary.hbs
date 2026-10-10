@@ -5,6 +5,7 @@
     </ul>
   {{/if}}
   {{#if edgeLabel}}<div class="edge {{edge}}">{{edgeLabel}}</div>{{/if}}
+  {{#if effectNote}}<div class="effect-note"><i class="fas fa-bolt"></i> {{effectNote}}</div>{{/if}}
   {{{rollHTML}}}
   <div class="outcome">
     {{#if config.target}}<span class="target">{{config.targetLabel}}: {{config.target}}</span>{{/if}}

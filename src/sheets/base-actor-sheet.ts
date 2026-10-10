@@ -1,4 +1,5 @@
 import { signed } from "../rules/modifiers";
+import { applyEffects } from "../apply";
 import type { SheetAction } from "./actions";
 
 /** Shared behaviour for the system's actor sheets: `data-action` dispatch through a registry. */
@@ -24,6 +25,17 @@ export abstract class VEBaseActorSheet extends ActorSheet {
         handler(this, event, el);
       });
     });
+  }
+
+  /** Efecto items aren't added as items: their effects are applied to the actor. */
+  protected override async _onDropItem(event: DragEvent, data: any) {
+    const item = (await (Item as any).implementation.fromDropData(data)) as Item | null;
+    if (item?.type === "effect") {
+      if (!this.actor.isOwner) return false;
+      await applyEffects([this.actor], item.effects.contents, item.uuid);
+      return false;
+    }
+    return super._onDropItem(event, data);
   }
 
   protected async enrich(html: string) {

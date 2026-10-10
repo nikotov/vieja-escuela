@@ -9,7 +9,41 @@ system:
   pod: 1
   divine: false
   random: 14-17
-effects: []
+  attack: ''
+  attackBonus: 0
+  ignoreArmor: false
+  damage: ''
+  healing: ''
+  save:
+    attribute: ''
+    effect: ''
+  roll:
+    formula: ''
+    label: ''
+effects:
+  - _id: 5bcdeb28e26d9fad
+    _key: '!items.effects!veSplCaidaDePlum.5bcdeb28e26d9fad'
+    name: Caída de pluma
+    img: icons/svg/falling.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Caes lentamente durante 10 minutos como máximo.</p>
+    origin: null
+    transfer: false
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
 flags: {}
 folder: veFldConjNivel10
 sort: 700

@@ -7,7 +7,34 @@ system:
   description: <p>La armadura de placas no te sobrecarga o penaliza tu movimiento.</p>
   source: general
   ruleset: aventurados
-effects: []
+effects:
+  - _id: 228543590961fb68
+    _key: '!items.effects!veTalEntrArmPesa.228543590961fb68'
+    name: Entrenamiento con armadura pesada
+    img: icons/svg/shield.svg
+    type: base
+    system: {}
+    changes:
+      - key: system.heavyArmorTraining
+        mode: 5
+        value: 'true'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: ''
+    origin: null
+    transfer: true
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
 flags: {}
 folder: veFldTalAventura
 sort: 3600

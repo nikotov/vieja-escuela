@@ -9,7 +9,41 @@ system:
   pod: 3
   divine: false
   random: 67-69
-effects: []
+  attack: ''
+  attackBonus: 0
+  ignoreArmor: false
+  damage: ''
+  healing: ''
+  save:
+    attribute: ''
+    effect: ''
+  roll:
+    formula: ''
+    label: ''
+effects:
+  - _id: b219f72ccec48cfb
+    _key: '!items.effects!veSplLevitar0000.b219f72ccec48cfb'
+    name: Levitar
+    img: icons/svg/up.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Puedes flotar hacia arriba y hacia abajo durante un turno.</p>
+    origin: null
+    transfer: false
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
 flags: {}
 folder: veFldConjNivel20
 sort: 3800

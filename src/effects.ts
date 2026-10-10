@@ -1,3 +1,7 @@
+/**
+ * Active Effect helpers for sheets: quick presets, readable summaries, the shared effects editor
+ * (item and actor sheets) and key suggestions in Foundry's own effect editor.
+ */
 import { describeChange, EFFECT_MODES, presetChange, type EffectPreset } from "./rules/effects";
 import { skillLabel } from "./rolls/helpers";
 
@@ -82,12 +86,13 @@ export async function addPresetChange(doc: Item | Actor, presetId: string, value
   if (!preset) return;
   const change = presetChange(preset, value);
   const existing = doc instanceof Item ? doc.effects.contents[0] : undefined;
+  const transfer = !(doc instanceof Item && CONFIG.VE.appliedEffectItemTypes.includes(doc.type));
   if (existing) {
     return existing.update({ changes: [...existing.toObject().changes, change] } as any);
   }
   const name = doc instanceof Item ? doc.name : describeChange(change, getEffectPresets(), localize);
   return (ActiveEffect as any).create(
-    { name, img: doc instanceof Item ? doc.img : "icons/svg/aura.svg", transfer: true, changes: [change] },
+    { name, img: doc instanceof Item ? doc.img : "icons/svg/aura.svg", transfer, changes: [change] },
     { parent: doc },
   );
 }
@@ -109,7 +114,11 @@ export const EFFECT_ACTIONS: Record<string, (doc: Item | Actor, el: HTMLElement)
   },
   effectCreate: (doc) =>
     (ActiveEffect as any).create(
-      { name: doc.name, img: doc instanceof Item ? doc.img : "icons/svg/aura.svg", transfer: true },
+      {
+        name: doc.name,
+        img: doc instanceof Item ? doc.img : "icons/svg/aura.svg",
+        transfer: !(doc instanceof Item && CONFIG.VE.appliedEffectItemTypes.includes(doc.type)),
+      },
       { parent: doc, renderSheet: true },
     ),
   effectEdit: (_doc, el) => effectFrom(el)?.sheet?.render(true),
@@ -174,4 +183,20 @@ export function registerEffectConfigHelpers() {
       input.setAttribute("list", "ve-effect-keys");
     });
   });
+}
+
+/** "6 asaltos", "1 hora", "10 minutos" — or "" when the effect has no duration. */
+export function formatDuration(effect: ActiveEffect): string {
+  const d = (effect as any).duration ?? {};
+  if (d.rounds)
+    return game.i18n!.format(d.rounds === 1 ? "VE.Duration.round" : "VE.Duration.rounds", { n: d.rounds });
+  if (d.turns) return game.i18n!.format("VE.Duration.turns", { n: d.turns });
+  const seconds = Number(d.seconds) || 0;
+  if (!seconds) return "";
+  if (seconds % 3600 === 0) {
+    const n = seconds / 3600;
+    return game.i18n!.format(n === 1 ? "VE.Duration.hour" : "VE.Duration.hours", { n });
+  }
+  if (seconds % 60 === 0) return game.i18n!.format("VE.Duration.minutes", { n: seconds / 60 });
+  return game.i18n!.format("VE.Duration.seconds", { n: seconds });
 }

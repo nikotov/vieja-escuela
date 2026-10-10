@@ -1,0 +1,38 @@
+_id: e9f0f2c25887d867
+_key: '!items!e9f0f2c25887d867'
+name: Estabilizado
+type: effect
+img: icons/svg/heal.svg
+system:
+  description: <p>No recuperas la consciencia, pero dispones de 1 hora (en vez de 10 asaltos) para volver a tener PV positivos.</p>
+  category: condition
+effects:
+  - _id: f5dbef9cdd6f26b2
+    _key: '!items.effects!e9f0f2c25887d867.f5dbef9cdd6f26b2'
+    name: Estabilizado
+    img: icons/svg/heal.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>No recuperas la consciencia, pero dispones de 1 hora (en vez de 10 asaltos) para volver a tener PV positivos.</p>
+    origin: null
+    transfer: true
+    statuses:
+      - stabilized
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: 8cdd126e4902ac0c
+sort: 400
+ownership:
+  default: 0

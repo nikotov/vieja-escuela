@@ -15,6 +15,13 @@ export function combineEdges(...edges: Edge[]): Edge {
   return adv ? "advantage" : "disadvantage";
 }
 
+/** Effect counters: positive = advantage, negative = disadvantage, zero = normal. */
+export function edgeFromCount(count: number): Edge {
+  if (count > 0) return "advantage";
+  if (count < 0) return "disadvantage";
+  return "normal";
+}
+
 export function d20Formula(edge: Edge): string {
   if (edge === "advantage") return "2d20kh";
   if (edge === "disadvantage") return "2d20kl";

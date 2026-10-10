@@ -9,7 +9,41 @@ system:
   pod: 7
   divine: true
   random: ''
-effects: []
+  attack: ''
+  attackBonus: 0
+  ignoreArmor: false
+  damage: ''
+  healing: ''
+  save:
+    attribute: ''
+    effect: ''
+  roll:
+    formula: ''
+    label: ''
+effects:
+  - _id: 8fbac883338dcbda
+    _key: '!items.effects!veSplLenguas0000.8fbac883338dcbda'
+    name: Lenguas
+    img: icons/svg/sound.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 3600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Hablas cualquier idioma durante 1 hora.</p>
+    origin: null
+    transfer: false
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
 flags: {}
 folder: veFldConjNivel40
 sort: 3700

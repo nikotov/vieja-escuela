@@ -1,0 +1,41 @@
+_id: cc69ae202df401e7
+_key: '!items!cc69ae202df401e7'
+name: Plegaria
+type: effect
+img: icons/svg/angel.svg
+system:
+  description: <p>Los aliados ganan +1 a toda tirada durante 1 hora.</p>
+  category: spell
+effects:
+  - _id: 945f471867889f82
+    _key: '!items.effects!cc69ae202df401e7.945f471867889f82'
+    name: Plegaria
+    img: icons/svg/angel.svg
+    type: base
+    system: {}
+    changes:
+      - key: system.rollBonus
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 3600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Los aliados ganan +1 a toda tirada durante 1 hora.</p>
+    origin: null
+    transfer: true
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: f60a31cd7d3b5dfb
+sort: 1600
+ownership:
+  default: 0

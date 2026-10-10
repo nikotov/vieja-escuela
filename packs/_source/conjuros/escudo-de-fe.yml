@@ -9,7 +9,45 @@ system:
   pod: 1
   divine: true
   random: 48-51
-effects: []
+  attack: ''
+  attackBonus: 0
+  ignoreArmor: false
+  damage: ''
+  healing: ''
+  save:
+    attribute: ''
+    effect: ''
+  roll:
+    formula: ''
+    label: ''
+effects:
+  - _id: 06147b8d654f923c
+    _key: '!items.effects!veSplEscudoDeFe0.06147b8d654f923c'
+    name: Escudo de fe
+    img: icons/svg/holy-shield.svg
+    type: base
+    system: {}
+    changes:
+      - key: system.def.bonus
+        mode: 2
+        value: '2'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: 6
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>+2 a la Defensa durante 6 asaltos.</p>
+    origin: null
+    transfer: false
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
 flags: {}
 folder: veFldConjNivel10
 sort: 2900

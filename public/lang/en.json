@@ -47,8 +47,19 @@
     "Chat": {
       "applied": "{name}: {amount} HP",
       "applyDamage": "Apply damage",
+      "applyHalf": "Half",
+      "applyHalfHint": "Apply half the damage (rounded down), e.g. after a successful Instincts roll.",
       "applyHealing": "Heal",
-      "noTokens": "Select one or more tokens."
+      "applyToSelected": "Apply to selected",
+      "applyToSelectedHint": "Selected tokens or, if none, targeted tokens.",
+      "applyToSelf": "Apply to caster",
+      "effectsApplied": "{effects} → {actors}",
+      "needGM": "A connected GM is needed to change actors you don't own.",
+      "noTokens": "Select one or more tokens.",
+      "notOwner": "Only the actor's owner can use this button.",
+      "targetsHint": "Applies to selected tokens (or to targeted ones).",
+      "toCaster": "Caster",
+      "toSelected": "Selected"
     },
     "Class": {
       "armor": "Armor",
@@ -70,6 +81,15 @@
       "hard": "Hard or under stress (14+)",
       "veryHard": "Very hard (17+)"
     },
+    "Duration": {
+      "hour": "{n} hour",
+      "hours": "{n} hours",
+      "minutes": "{n} minutes",
+      "round": "{n} round",
+      "rounds": "{n} rounds",
+      "seconds": "{n} seconds",
+      "turns": "{n} combat turns"
+    },
     "Edge": {
       "advantage": "Advantage",
       "disadvantage": "Disadvantage",
@@ -79,7 +99,9 @@
       "actorHint": "Effects from talents and items, plus temporary modifiers (spells, potions…) you add here.",
       "add": "Add",
       "advanced": "Advanced editor",
+      "appliedHint": "A spell's effects don't affect its owner: they're applied to targets from the chat card when cast.",
       "create": "Advanced effect…",
+      "effectItemHint": "Drag this effect onto a character (or use its chat card) to apply it.",
       "hint": "Active effects modify the actor that owns the item (e.g. system.ins.bonus, system.mov.bonus, system.critThreshold).",
       "itemHint": "Pick a modifier and press Add: it applies to the character who owns this item.",
       "noChanges": "No modifiers",
@@ -87,6 +109,14 @@
       "preset": "Modifier",
       "toggle": "Toggle",
       "value": "Value"
+    },
+    "EffectCategory": {
+      "condition": "Condition",
+      "hint": "A packaged effect: dropping it on a character applies its active effects (with duration) without adding the item.",
+      "label": "Category",
+      "other": "Other",
+      "potion": "Potion",
+      "spell": "Spell effect"
     },
     "Gear": {
       "bundle": "Items per load point",
@@ -118,14 +148,27 @@
       "quantity": "Quantity"
     },
     "LevelUp": {
+      "backgroundPlaceholder": "Lord Protector of Blackwater...",
       "bonusTalent": "Choose a new talent.",
       "button": "Level up",
+      "chooseTalent": "Choose a new talent",
+      "confirm": "Level up",
+      "forced": "Not enough XP: level up forced by the GM",
       "granted": "New talents",
       "hpGained": "Hit points gained",
+      "hpHint": "If you don't roll here, it's rolled on confirm. You always gain at least 1 HP.",
       "newBackground": "You gain a new background tied to your fame and status.",
+      "newBackgroundTitle": "New background",
       "notEnoughXp": "Not enough XP: you have {xp} and need {needed}. Shift-click to force.",
+      "notReadyHint": "Not enough XP yet (the GM can force it). Shift-click: quick level up without the wizard.",
+      "pointsLeft": "Points",
+      "progress": "Progression",
+      "readyHint": "You have enough XP! Open the level-up wizard.",
+      "rollHp": "Roll HP",
       "skillPoints": "Spend {points} skill points (at most 1 per skill).",
-      "title": "Level"
+      "title": "Level",
+      "wizardTitle": "Level up: {name}",
+      "worldItems": "World items"
     },
     "ModifierTable": {
       "extended": "Extended (-3 to +3)",
@@ -144,24 +187,34 @@
       "normal": "Normal"
     },
     "Preset": {
+      "advAttack": "Attack advantage (+1) / disadvantage (-1)",
       "atq": "Attack (all)",
       "atqMelee": "Melee attack",
       "atqRanged": "Ranged attack",
       "crit": "Critical on",
       "def": "Defense",
+      "disAttack": "Attack disadvantage",
       "dmg": "Damage",
+      "dmgExtra": "Extra damage dice",
+      "edgeAll": "Advantage (+1) / disadvantage (-1) on all rolls",
+      "edgeAttacked": "Attacks against it with advantage (+1) / disadvantage (-1)",
+      "edgeInstinct": "Instincts advantage (+1) / disadvantage (-1)",
+      "edgeSkill": "Skill advantage (+1) / disadvantage (-1)",
       "groupAttributes": "Attributes",
       "groupCombat": "Combat",
+      "groupEdges": "Advantage / disadvantage",
       "groupMagic": "Magic",
       "groupOther": "Other",
       "groupSkills": "Skills",
       "groupStats": "Traits",
+      "heavyArmor": "Heavy armor training",
       "hitDie": "Hit die",
       "hp": "Hit points",
       "ins": "Instincts",
       "magic": "Magic aptitude",
       "mov": "Movement",
-      "pod": "Power (POD)"
+      "pod": "Power (POD)",
+      "rollBonus": "Bonus to every roll"
     },
     "Roll": {
       "attack": "Attack",
@@ -174,9 +227,12 @@
       "damage": "Damage",
       "damageMax": "Maximum damage +1",
       "damageTwoHanded": "Two-handed (+1)",
+      "defenseNoArmorOf": "{name}'s Defense without armor",
       "defenseOf": "{name}'s Defense",
       "difficulty": "Difficulty",
       "edge": "Roll",
+      "effectEdge": "{edge} from effects: {sources}",
+      "effects": "Effects",
       "failure": "Failure",
       "fumble": "Fumble!",
       "fumbleHint": "Guard down: attacks against you have advantage until your next round.",
@@ -193,6 +249,10 @@
       "expandido": "Vieja Escuela: Expanded Edition"
     },
     "Setting": {
+      "autoOverload": {
+        "hint": "Apply or remove the Overloaded condition from each character's load and heavy armor.",
+        "name": "Automatic overload"
+      },
       "language": {
         "hint": "Language for Vieja Escuela's sheets, cards and dialogs, regardless of Foundry's language.",
         "name": "System language"
@@ -267,14 +327,31 @@
       "supervivencia": "Survival"
     },
     "Spell": {
+      "attack": "Attack roll",
+      "attackMelee": "melee",
+      "attackRanged": "ranged",
       "cast": "Cast",
       "divine": "Divine",
+      "healing": "Healing",
+      "ignoreArmor": "Ignores armor and shield",
       "level": "Level",
       "levelAbbr": "Lvl",
       "levelN": "Level {level}",
+      "mechanics": "Mechanics (chat wizard)",
+      "mechanicsHint": "What you fill in here becomes buttons on the chat card when the spell is cast. Effects in the Effects tab are applied to targets. Shift-click to cast without spending POD (scrolls).",
       "notEnoughPod": "Not enough POD ({value}/{cost}).",
       "random": "Random table (1d100)",
-      "resist": "Resist with Instincts:"
+      "resist": "Resist with Instincts:",
+      "rollFormula": "Other roll",
+      "rollLabel": "What it's for",
+      "save": {
+        "half": "half damage",
+        "negates": "negates"
+      },
+      "saveAttribute": "Instincts save",
+      "saveEffect": "On a successful save",
+      "saveHint": "Selected (or targeted) tokens roll Instincts against 10 + caster level.",
+      "saveTitle": "Instincts vs {spell}"
     },
     "Stat": {
       "atqAbbr": "ATK",
@@ -295,6 +372,20 @@
       "pod": "Power",
       "podAbbr": "POW",
       "xp": "XP"
+    },
+    "Status": {
+      "charging": "Charging",
+      "chargingHint": "-3 Defense until your next round.",
+      "incapacitated": "Incapacitated",
+      "incapacitatedHint": "You can't act; you die unless you regain HP within 10 rounds.",
+      "openGuard": "Guard down",
+      "openGuardHint": "Attacks against you have advantage until your next round.",
+      "overloaded": "Overloaded",
+      "overloadedHint": "Disadvantage on attacks and on speed or dexterity actions.",
+      "stabilized": "Stabilized",
+      "stabilizedHint": "Unconscious, but you have 1 hour to regain HP.",
+      "surprised": "Surprised",
+      "surprisedHint": "You can't attack during the surprise round."
     },
     "Tab": {
       "combat": "Combat",

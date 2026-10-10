@@ -9,7 +9,49 @@ system:
   pod: 1
   divine: true
   random: 54-58
-effects: []
+  attack: ''
+  attackBonus: 0
+  ignoreArmor: false
+  damage: ''
+  healing: ''
+  save:
+    attribute: ''
+    effect: ''
+  roll:
+    formula: ''
+    label: ''
+effects:
+  - _id: 13b484089c7d85aa
+    _key: '!items.effects!veSplFavorDivino.13b484089c7d85aa'
+    name: Favor divino
+    img: icons/svg/upgrade.svg
+    type: base
+    system: {}
+    changes:
+      - key: system.atq.bonus
+        mode: 2
+        value: '2'
+        priority: null
+      - key: system.dmg.bonus
+        mode: 2
+        value: '2'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: 6
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>+2 al Ataque y al daño durante 6 asaltos.</p>
+    origin: null
+    transfer: false
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
 flags: {}
 folder: veFldConjNivel10
 sort: 3100

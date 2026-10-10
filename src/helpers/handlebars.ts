@@ -1,3 +1,6 @@
+/**
+ * Handlebars helpers used by the system's templates (prefixed `ve-`).
+ */
 import { signed } from "../rules/modifiers";
 
 export function registerHandlebarsHelpers() {
@@ -10,6 +13,8 @@ export function registerHandlebarsHelpers() {
       const abbr = CONFIG.VE.currencies[cost.unit]?.abbr;
       return `${cost.value} ${abbr ? game.i18n!.localize(abbr) : cost.unit}`;
     },
+    "ve-attribute-labels": () =>
+      Object.fromEntries(Object.entries(CONFIG.VE.attributes).map(([k, a]) => [k, a.label])),
     "ve-localize-map": (map: Record<string, string>) =>
       Object.fromEntries(Object.entries(map ?? {}).map(([k, v]) => [k, game.i18n!.localize(v)])),
   });

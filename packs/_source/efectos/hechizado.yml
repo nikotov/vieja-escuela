@@ -1,0 +1,37 @@
+_id: 2bc4685a334316e6
+_key: '!items!2bc4685a334316e6'
+name: Hechizado
+type: effect
+img: icons/svg/eye.svg
+system:
+  description: <p>Bajo el influjo de una criatura (canción de arpía, dríada...). Se suele evitar con Instintos (CAR).</p>
+  category: condition
+effects:
+  - _id: dc9336b5c1717eb6
+    _key: '!items.effects!2bc4685a334316e6.dc9336b5c1717eb6'
+    name: Hechizado
+    img: icons/svg/eye.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Bajo el influjo de una criatura (canción de arpía, dríada...). Se suele evitar con Instintos (CAR).</p>
+    origin: null
+    transfer: true
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: 8cdd126e4902ac0c
+sort: 800
+ownership:
+  default: 0

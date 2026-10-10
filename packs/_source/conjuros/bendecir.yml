@@ -9,7 +9,50 @@ system:
   pod: 1
   divine: true
   random: 07-08
-effects: []
+  attack: ''
+  attackBonus: 0
+  ignoreArmor: false
+  damage: ''
+  healing: ''
+  save:
+    attribute: ''
+    effect: ''
+  roll:
+    formula: ''
+    label: ''
+effects:
+  - _id: 11f8f62124aad49e
+    _key: '!items.effects!veSplBendecir000.11f8f62124aad49e'
+    name: Bendecir
+    img: icons/svg/sun.svg
+    type: base
+    system: {}
+    changes:
+      - key: system.atq.bonus
+        mode: 2
+        value: '1'
+        priority: null
+      - key: system.ins.bonus
+        mode: 2
+        value: '1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>+1 al Ataque y a Instintos (CAR) para quienes estén a 3 m.</p>
+    origin: null
+    transfer: false
+    statuses:
+      - bless
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
 flags: {}
 folder: veFldConjNivel10
 sort: 400

@@ -1,0 +1,45 @@
+_id: a1b7dae00e8f2bc7
+_key: '!items!a1b7dae00e8f2bc7'
+name: Favor divino
+type: effect
+img: icons/svg/upgrade.svg
+system:
+  description: <p>+2 al Ataque y al daño durante 6 asaltos.</p>
+  category: spell
+effects:
+  - _id: f6751d6042ebb94b
+    _key: '!items.effects!a1b7dae00e8f2bc7.f6751d6042ebb94b'
+    name: Favor divino
+    img: icons/svg/upgrade.svg
+    type: base
+    system: {}
+    changes:
+      - key: system.atq.bonus
+        mode: 2
+        value: '2'
+        priority: null
+      - key: system.dmg.bonus
+        mode: 2
+        value: '2'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: 6
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>+2 al Ataque y al daño durante 6 asaltos.</p>
+    origin: null
+    transfer: true
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: f60a31cd7d3b5dfb
+sort: 1500
+ownership:
+  default: 0

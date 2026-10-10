@@ -1,0 +1,37 @@
+_id: c78783ca33259e45
+_key: '!items!c78783ca33259e45'
+name: Caída de pluma
+type: effect
+img: icons/svg/falling.svg
+system:
+  description: <p>Caes lentamente durante 10 minutos como máximo.</p>
+  category: spell
+effects:
+  - _id: 322e9a277b0bcee6
+    _key: '!items.effects!c78783ca33259e45.322e9a277b0bcee6'
+    name: Caída de pluma
+    img: icons/svg/falling.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Caes lentamente durante 10 minutos como máximo.</p>
+    origin: null
+    transfer: true
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: f60a31cd7d3b5dfb
+sort: 2100
+ownership:
+  default: 0

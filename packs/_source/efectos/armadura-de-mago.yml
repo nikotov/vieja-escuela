@@ -1,0 +1,41 @@
+_id: 7fbb2bd1791df60f
+_key: '!items!7fbb2bd1791df60f'
+name: Armadura de mago
+type: effect
+img: icons/magic/defensive/shield-barrier-blue.webp
+system:
+  description: <p>+4 a la Defensa durante 1 hora (6 turnos).</p>
+  category: spell
+effects:
+  - _id: 5064273b498a5a3c
+    _key: '!items.effects!7fbb2bd1791df60f.5064273b498a5a3c'
+    name: Armadura de mago
+    img: icons/magic/defensive/shield-barrier-blue.webp
+    type: base
+    system: {}
+    changes:
+      - key: system.def.bonus
+        mode: 2
+        value: '4'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 3600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>+4 a la Defensa durante 1 hora (6 turnos).</p>
+    origin: null
+    transfer: true
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: f60a31cd7d3b5dfb
+sort: 1100
+ownership:
+  default: 0

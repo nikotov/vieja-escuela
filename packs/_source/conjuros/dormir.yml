@@ -9,7 +9,42 @@ system:
   pod: 1
   divine: false
   random: 38-41
-effects: []
+  attack: ''
+  attackBonus: 0
+  ignoreArmor: false
+  damage: ''
+  healing: ''
+  save:
+    attribute: car
+    effect: negates
+  roll:
+    formula: 1d6
+    label: Niveles de criaturas afectados
+effects:
+  - _id: aa5cb8f63ae5d8df
+    _key: '!items.effects!veSplDormir00000.aa5cb8f63ae5d8df'
+    name: Dormido
+    img: icons/svg/sleep.svg
+    type: base
+    system: {}
+    changes: []
+    disabled: false
+    duration:
+      startTime: null
+      seconds: 600
+      combat: null
+      rounds: null
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Dormido mágicamente durante un turno (10 minutos).</p>
+    origin: null
+    transfer: false
+    statuses:
+      - sleep
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
 flags: {}
 folder: veFldConjNivel10
 sort: 2400

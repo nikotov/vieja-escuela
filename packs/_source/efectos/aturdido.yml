@@ -1,0 +1,42 @@
+_id: 3f830b97e9d155bb
+_key: '!items!3f830b97e9d155bb'
+name: Aturdido
+type: effect
+img: icons/svg/lightning.svg
+system:
+  description: <p>Desventaja en todas tus tiradas hasta el final de tu siguiente asalto (p. ej. la descarga de una anguila eléctrica).</p>
+  category: condition
+effects:
+  - _id: 9ae8e9fac865befa
+    _key: '!items.effects!3f830b97e9d155bb.9ae8e9fac865befa'
+    name: Aturdido
+    img: icons/svg/lightning.svg
+    type: base
+    system: {}
+    changes:
+      - key: system.edge.all
+        mode: 2
+        value: '-1'
+        priority: null
+    disabled: false
+    duration:
+      startTime: null
+      seconds: null
+      combat: null
+      rounds: 1
+      turns: null
+      startRound: null
+      startTurn: null
+    description: <p>Desventaja en todas tus tiradas hasta el final de tu siguiente asalto (p. ej. la descarga de una anguila eléctrica).</p>
+    origin: null
+    transfer: true
+    statuses:
+      - stun
+    tint: '#ffffff'
+    flags: {}
+    sort: 0
+flags: {}
+folder: 8cdd126e4902ac0c
+sort: 600
+ownership:
+  default: 0

@@ -1,4 +1,4 @@
-<div class="vieja-escuela ve-card ve-spell-card">
+<div class="vieja-escuela ve-card ve-spell-card" data-actor-uuid="{{actorUuid}}" data-item-uuid="{{itemUuid}}">
   <header class="ve-card-header">
     <img src="{{item.img}}" alt="" />
     <h3>{{item.name}}</h3>
@@ -7,7 +7,41 @@
     <span class="tag">{{localize "VE.Spell.levelAbbr"}} {{spell.level}}</span>
     <span class="tag">{{localize "VE.Stat.podAbbr"}} {{spell.pod}}</span>
     {{#if spell.divine}}<span class="tag">{{localize "VE.Spell.divine"}}</span>{{/if}}
+    {{#if spent}}<span class="tag spent">−{{spent}} {{localize "VE.Stat.podAbbr"}} ({{remaining}})</span>{{/if}}
   </div>
   <div class="ve-card-body">{{{description}}}</div>
-  <p class="hint">{{localize "VE.Spell.resist"}} <strong>{{difficulty}}+</strong></p>
+
+  <div class="card-buttons ve-wizard">
+    {{#if attack}}
+      <button type="button" data-ve-action="spellAttack"><i class="fas fa-dice-d20"></i> {{localize "VE.Roll.attack"}} ({{attack.label}})</button>
+    {{/if}}
+    {{#if damage}}
+      {{#unless attack}}<button type="button" data-ve-action="spellDamage"><i class="fas fa-burst"></i> {{localize "VE.Roll.damage"}} ({{damage}})</button>{{/unless}}
+    {{/if}}
+    {{#if healing}}
+      <button type="button" data-ve-action="spellHealing"><i class="fas fa-heart"></i> {{localize "VE.Spell.healing"}} ({{healing}})</button>
+    {{/if}}
+    {{#if save}}
+      <button type="button" data-ve-action="spellSave" data-tooltip="{{localize 'VE.Spell.saveHint'}}">
+        <i class="fas fa-shield-heart"></i> {{localize "VE.Stat.ins"}} {{save.label}} {{save.difficulty}}+{{#if save.effect}} · {{save.effect}}{{/if}}
+      </button>
+    {{/if}}
+    {{#if roll}}
+      <button type="button" data-ve-action="spellRoll"><i class="fas fa-dice"></i> {{roll.label}} ({{roll.formula}})</button>
+    {{/if}}
+    {{#each effects}}
+      <div class="ve-wizard-effect">
+        <img src="{{img}}" alt="" />
+        <div class="ve-wizard-effect-text">
+          <strong>{{name}}</strong>
+          {{#if changes.length}}<span>{{#each changes}}{{this}}{{#unless @last}} · {{/unless}}{{/each}}</span>{{/if}}
+        </div>
+      </div>
+      <div class="ve-button-row">
+        <button type="button" data-ve-action="spellEffect" data-effect-id="{{id}}" data-tooltip="{{localize 'VE.Chat.applyToSelectedHint'}}"><i class="fas fa-users"></i> {{localize "VE.Chat.toSelected"}}</button>
+        <button type="button" data-ve-action="spellEffect" data-effect-id="{{id}}" data-self="true" data-tooltip="{{localize 'VE.Chat.applyToSelf'}}"><i class="fas fa-user"></i> {{localize "VE.Chat.toCaster"}}</button>
+      </div>
+    {{/each}}
+  </div>
+  {{#unless save}}<p class="hint">{{localize "VE.Spell.resist"}} <strong>{{difficulty}}+</strong></p>{{/unless}}
 </div>
