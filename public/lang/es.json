@@ -76,16 +76,41 @@
       "normal": "Normal"
     },
     "Effect": {
-      "create": "Nuevo efecto",
+      "actorHint": "Efectos de talentos y objetos, más modificadores temporales (conjuros, pociones…) que añadas aquí.",
+      "add": "Añadir",
+      "advanced": "Editor avanzado",
+      "create": "Efecto avanzado…",
       "hint": "Los efectos activos modifican al personaje que posee el objeto (p. ej. system.ins.bonus, system.mov.bonus, system.critThreshold).",
+      "itemHint": "Elige un modificador y pulsa Añadir: se aplicará al personaje que tenga este objeto.",
+      "noChanges": "Sin modificadores",
       "none": "Sin efectos.",
-      "toggle": "Activar/desactivar"
+      "preset": "Modificador",
+      "toggle": "Activar/desactivar",
+      "value": "Valor"
     },
     "Gear": {
       "bundle": "Unidades por bulto",
       "bundleHint": "Los objetos pequeños solo cuentan al acumular esta cantidad (\"1 cada 4\").",
       "capacity": "Capacidad (bultos)",
+      "category": "Categoría",
       "container": "Contenedor"
+    },
+    "GearCategory": {
+      "ammo": "Munición",
+      "consumable": "Consumibles",
+      "container": "Contenedores",
+      "gear": "Equipo de aventura",
+      "light": "Iluminación",
+      "tool": "Herramientas",
+      "transport": "Monturas y transporte",
+      "treasure": "Tesoros"
+    },
+    "Inventory": {
+      "armor": "Armaduras",
+      "melee": "Armas cuerpo a cuerpo",
+      "other": "Otros",
+      "ranged": "Armas a distancia",
+      "shields": "Escudos"
     },
     "Item": {
       "cost": "Coste",
@@ -118,6 +143,26 @@
       "cowardly": "Cobarde",
       "normal": "Normal"
     },
+    "Preset": {
+      "atq": "Ataque (todos)",
+      "atqMelee": "Ataque cuerpo a cuerpo",
+      "atqRanged": "Ataque a distancia",
+      "crit": "Crítico con",
+      "def": "Defensa",
+      "dmg": "Daño",
+      "groupAttributes": "Atributos",
+      "groupCombat": "Combate",
+      "groupMagic": "Magia",
+      "groupOther": "Otros",
+      "groupSkills": "Habilidades",
+      "groupStats": "Rasgos",
+      "hitDie": "Dado de aguante",
+      "hp": "Puntos de vida",
+      "ins": "Instintos",
+      "magic": "Aptitud mágica",
+      "mov": "Movimiento",
+      "pod": "Poder (POD)"
+    },
     "Roll": {
       "attack": "Atacar",
       "attackTitle": "Ataque: {name}",
@@ -148,6 +193,10 @@
       "expandido": "Vieja Escuela: Edición Expandida"
     },
     "Setting": {
+      "language": {
+        "hint": "Idioma de las hojas, tarjetas y diálogos de Vieja Escuela, independientemente del idioma de Foundry.",
+        "name": "Idioma del sistema"
+      },
       "modifierTable": {
         "auto": "Automática",
         "hint": "Automática usa la del reglamento elegido.",
@@ -156,6 +205,10 @@
       "ruleset": {
         "hint": "Edición Expandida (razas y tipos de aventurero) o Aventurados Fabricados (talentos a elegir, sin clases).",
         "name": "Reglamento"
+      },
+      "theme": {
+        "hint": "Aspecto de hojas, diálogos y tarjetas de chat. Cada jugador elige el suyo.",
+        "name": "Tema de las hojas"
       }
     },
     "Sheet": {
@@ -170,9 +223,12 @@
       "bonuses": "Bonificadores",
       "bonusesHint": "Ajustes manuales; los talentos con efectos activos también los modifican.",
       "character": "Hoja de personaje",
+      "defBreakdown": "{base} base · DES {des} · armadura {armor} · escudo {shield} · bono {bonus}",
+      "defense": "Defensa",
       "description": "Descripción",
       "dropHere": "Arrastra aquí",
       "dropTalents": "Arrastra talentos aquí.",
+      "effects": "Efectos activos",
       "equipped": "Equipada",
       "gear": "Equipo",
       "granted": "Otorgado por raza o tipo de aventurero",
@@ -180,20 +236,25 @@
       "item": "Hoja de objeto",
       "items": "Objetos",
       "load": "Carga",
+      "modifiedBy": "Modificado por efectos",
       "money": "Monedas",
       "monster": "Hoja de monstruo",
+      "noArmor": "Sin armadura equipada.",
       "noAttacks": "Sin ataques.",
       "noBackgrounds": "Sin trasfondos.",
+      "noMagicHint": "Sin aptitud mágica no puedes gastar POD, pero puedes guardar aquí conjuros de pergaminos u objetos.",
       "noSpells": "Sin conjuros.",
       "noTalents": "Sin talentos.",
       "noWeapons": "Sin armas.",
       "overloaded": "Sobrecargado: desventaja en ataques y acciones de rapidez o destreza.",
+      "postToChat": "Mostrar en el chat",
       "skills": "Habilidades",
       "skillsHint": "Nivel 1: 4 puntos (máx. 1 por habilidad). +2 por nivel. Máximo 10.",
       "spells": "Conjuros",
       "spellsHint": "Lanzar un conjuro gasta su coste en POD. Se recupera con 8 horas de descanso.",
       "talents": "Talentos",
       "talentsHint": "Empiezas con cuatro talentos y ganas uno más a nivel 6.",
+      "unequip": "Quitar",
       "weapons": "Armas"
     },
     "Skill": {
@@ -210,6 +271,7 @@
       "divine": "Divino",
       "level": "Nivel",
       "levelAbbr": "Niv",
+      "levelN": "Nivel {level}",
       "notEnoughPod": "No tienes suficiente POD ({value}/{cost}).",
       "random": "Tabla aleatoria (1d100)",
       "resist": "Resistir con Instintos:"
@@ -235,13 +297,16 @@
       "xp": "PE"
     },
     "Tab": {
+      "combat": "Combate",
       "details": "Detalles",
       "effects": "Efectos",
       "equipment": "Equipo",
+      "inventory": "Inventario",
       "magic": "Magia",
       "main": "Principal",
       "notes": "Notas",
-      "skills": "Habilidades y talentos"
+      "skills": "Habilidades y talentos",
+      "talents": "Talentos"
     },
     "Talent": {
       "allRulesets": "Todos",
@@ -251,6 +316,11 @@
       "race": "Raza",
       "ruleset": "Reglamento",
       "source": "Origen"
+    },
+    "Theme": {
+      "clasico": "Clásico (hoja impresa)",
+      "cuero": "Cuero y latón (oscuro)",
+      "grimorio": "Grimorio iluminado"
     },
     "Weapon": {
       "addStr": "Suma FUE al daño",

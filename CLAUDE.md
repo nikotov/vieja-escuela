@@ -18,6 +18,9 @@ Design plan and rules summary: [docs/PLAN.md](docs/PLAN.md). Extension points: [
 
 ## Conventions
 - Typing: fvtt-types v12 is used for globals. The data models extend `TypeDataModel as any`, and `system` is read through the interfaces in `src/data/types.ts`. Keep those interfaces in sync with the schemas.
-- UI strings go in `public/lang/es.json` (primary) and `en.json`, under the `VE.*` prefix. Content (packs) is in Spanish.
+- UI strings go in `public/lang/es.json` (primary) and `en.json`, under the `VE.*` prefix; add them with `node scripts/i18n-add.mjs keys.json` (`{"VE.x": ["es", "en"]}`). Both files are bundled into the JS, and the client setting "language" (default `es`) forces the system's strings into Spanish even when Foundry's core runs in English. Content (packs) is in Spanish.
+- Styling: every color and font is a `--ve-*` CSS variable defined per theme in `src/styles/_themes.scss`. The client setting "theme" puts the theme class on `<body>`. Never hard-code colors in `vieja-escuela.scss`.
+- Inputs for fields that Active Effects can modify (attributes, skills, bonuses, critThreshold, magic) must bind to `source.*` (the stored value), not `system.*`; otherwise saving the form bakes the effect into the stored value.
+- Compendium folders are `_folder-*.yml` documents in each pack's source directory; items point to them with `folder: <id>`.
 - Compendium YAML: 16-character alphanumeric `_id` with prefixes `veTal`/`veCls`/`veRaz`/`veEqp`/`veSpl`/`veEff`. Classes and races reference talents by `Compendium.vieja-escuela.talentos.Item.<id>`.
 - Mechanical talents use Active Effects on bonus fields: `system.ins.bonus`, `system.atq.{bonus,melee.bonus,ranged.bonus}`, `system.def.bonus`, `system.mov.bonus`, `system.hp.bonus`, `system.pod.bonus`, `system.critThreshold` (DOWNGRADE), `system.hitDie`, `system.magic`.

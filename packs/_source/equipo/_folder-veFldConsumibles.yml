@@ -1,0 +1,10 @@
+_id: veFldConsumibles
+_key: '!folders!veFldConsumibles'
+name: Consumibles
+type: Item
+folder: null
+sorting: a
+sort: 900
+color: null
+description: ''
+flags: {}

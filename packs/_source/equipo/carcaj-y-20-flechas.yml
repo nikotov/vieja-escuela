@@ -4,6 +4,7 @@ name: Carcaj y 20 flechas
 type: gear
 img: icons/containers/ammunition/arrows-quiver-simple-brown.webp
 system:
+  category: ammo
   description: <p>Ocupa 1 Punto de carga.</p>
   quantity: 1
   bundle: 1
@@ -15,7 +16,7 @@ system:
   capacity: 0
 effects: []
 flags: {}
-folder: null
+folder: veFldMunicion000
 sort: 3000
 ownership:
   default: 0

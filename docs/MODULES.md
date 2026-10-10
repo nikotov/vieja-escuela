@@ -26,8 +26,14 @@ Hooks.once("vieja-escuela.init", (api) => {
 | Change the roll dialog | `CONFIG.VE.applications.RollDialog = MyDialog`. It needs `static configure(config): Promise<boolean>`, which mutates the config |
 | Change the roll class | `CONFIG.VE.Roll = MyRoll` (needs a `natural` getter) |
 | Restyle a chat card or sheet | Point a key in `CONFIG.VE.templates` (`checkCard`, `attackCard`, `damageCard`, `spellCard`, `levelUpCard`, `rollDialog`, `characterSheet`, `monsterSheet`, `itemSheet`, `itemParts.<type>`) at your own `.hbs` |
-| Add a character sheet tab | Push `{id, label, template, visible?(ctx), prepare?(ctx, sheet)}` onto `CONFIG.VE.sheets.character.tabs` |
-| Add a sheet button | Add `CONFIG.VE.sheets.<character\|monster>.actions.myAction = (sheet, event, element) => …` and put `data-action="myAction"` in your template |
+| Add a character sheet tab | Push `{id, label, icon?, template, visible?(ctx), prepare?(ctx, sheet)}` onto `CONFIG.VE.sheets.character.tabs` |
+| Change the character sidebar | Point `CONFIG.VE.templates.characterSidebar` at your own partial (attributes, skills, backgrounds) |
+| Add a sheet button | Add `CONFIG.VE.sheets.<character\|monster\|item>.actions.myAction = (sheet, event, element) => …` and put `data-action="myAction"` in your template |
+| Add a sheet theme | `CONFIG.VE.themes.mytheme = {label, cssClass: "my-theme"}` and ship CSS that sets the `--ve-*` variables under `body.my-theme .vieja-escuela`. See `src/styles/_themes.scss` for the full variable list |
+| Add a gear category | `CONFIG.VE.gearCategories.mykey = {label, icon}`. It gets its own inventory section automatically |
+| Add an inventory section | Push `{id, label, icon, match(item), create: {type, system}}` onto `CONFIG.VE.inventory.groups`. Sections are matched in order, before the gear categories |
+| Add a quick effect preset | Push `{id, label, key, mode, valueType: "number"\|"boolean"\|"die"\|"text", default, group}` onto `CONFIG.VE.effectPresets`. Presets for every attribute and skill are generated automatically |
+| Translate or override strings | `CONFIG.VE.translations.<lang>` holds bundled strings used by the "Idioma del sistema" client setting. Merge your keys in during init |
 | Add a chat card button | Add `CONFIG.VE.chatActions.myAction = (event, button, message) => …` and use `data-ve-action="myAction"` |
 | Replace a sheet | Register your own with `Actors.registerSheet(...)`, or subclass `api.sheets.CharacterSheet` |
 | Replace a data model or document | Subclass `api.models.CharacterData` (etc.) or `api.documents.VEActor`, then reassign `CONFIG.Actor.dataModels.character` / `CONFIG.Actor.documentClass` |

@@ -44,6 +44,8 @@ export class GearData extends TypeDataModel {
   static defineSchema() {
     return {
       description: html(),
+      /** Key in CONFIG.VE.gearCategories. */
+      category: str("gear", { blank: false }),
       quantity: int(1, { min: 0 }),
       bundle: int(1, { min: 1 }),
       load: num(1, { min: 0 }),

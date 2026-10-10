@@ -14,6 +14,9 @@ import { ITEM_MODELS } from "./data/items";
 import { SYSTEM_ID } from "./constants";
 import { HOOKS, callAll } from "./hooks";
 import { registerSettings } from "./settings";
+import { applySystemLanguage, registerLanguageSetting } from "./i18n";
+import { applyTheme, registerThemeSetting } from "./themes";
+import { registerEffectConfigHelpers } from "./effects";
 import { registerChatListeners } from "./rolls/chat";
 import { registerHandlebarsHelpers } from "./helpers/handlebars";
 import { preloadTemplates } from "./helpers/templates";
@@ -33,13 +36,19 @@ Hooks.once("init", () => {
   (game.system as any).api = api;
   globalThis.ViejaEscuela = api;
 
+  registerLanguageSetting();
   registerHandlebarsHelpers();
+  registerEffectConfigHelpers();
   registerChatListeners();
   callAll(HOOKS.init, api);
 });
 
+Hooks.once("i18nInit", applySystemLanguage);
+
 Hooks.once("setup", () => {
   registerSettings();
+  registerThemeSetting();
+  applyTheme();
 
   // Sheets are registered here so a module's init can still swap the classes in `api.sheets`.
   const { CharacterSheet, MonsterSheet, VEItemSheet } = api.sheets;

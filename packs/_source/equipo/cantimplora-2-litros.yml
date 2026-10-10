@@ -4,6 +4,7 @@ name: Cantimplora (2 litros)
 type: gear
 img: icons/sundries/survival/waterskin-leather-brown.webp
 system:
+  category: gear
   description: <p>Ocupa 1 Punto de carga.</p>
   quantity: 1
   bundle: 1
@@ -15,7 +16,7 @@ system:
   capacity: 0
 effects: []
 flags: {}
-folder: null
+folder: veFldEquipoAvent
 sort: 2900
 ownership:
   default: 0

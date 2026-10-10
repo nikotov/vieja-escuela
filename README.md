@@ -4,7 +4,11 @@ A Foundry VTT **v12** system for *Vieja Escuela: el juego de rol* (Edición Expa
 
 - Character and monster sheets with d20 rolls: advantage/disadvantage, background bonus, difficulty or target Defense, natural 20/1.
 - Attacks with crits (talents can lower the crit threshold), damage cards and apply/heal buttons, spellcasting that spends POD, and a level-up button that rolls HP and grants class talents.
-- Compendiums: equipment, spells, talents, adventurer types and races.
+- Compendiums: equipment, spells, talents, adventurer types and races, organized in folders (equipment by category, spells by level, talents by origin).
+- An inventory grouped by category (weapons, ammunition, armor, shields, tools, light sources, consumables, containers, mounts…).
+- Quick effects: pick a modifier such as "Instintos +1" or "Crítico con 19" and press Añadir, on any item or directly on a character for temporary buffs. A character's active effects are listed with readable summaries and on/off toggles.
+- Three sheet themes, chosen per player in the client settings: Clásico (printed sheet), Grimorio iluminado and Cuero y latón (dark).
+- Spanish by default: the client setting "Idioma del sistema" shows the system in Spanish even when Foundry itself is in English.
 - Built to be extended: modules can replace every piece. See [docs/MODULES.md](docs/MODULES.md).
 
 ## Development

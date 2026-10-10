@@ -4,6 +4,7 @@ name: Espejo pequeño de acero
 type: gear
 img: icons/sundries/survival/mirror-plain.webp
 system:
+  category: tool
   description: <p>No cuenta para la carga.</p>
   quantity: 1
   bundle: 1
@@ -15,7 +16,7 @@ system:
   capacity: 0
 effects: []
 flags: {}
-folder: null
+folder: veFldHerramienta
 sort: 3200
 ownership:
   default: 0

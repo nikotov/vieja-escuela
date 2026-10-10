@@ -1,0 +1,50 @@
+<div class="ve-effects-editor">
+  {{#if effectsEditor.editable}}
+    <div class="ve-quick-effect">
+      <select data-role="preset" aria-label="{{localize 'VE.Effect.preset'}}">
+        {{#each effectsEditor.presets}}
+          <optgroup label="{{label}}">
+            {{#each presets}}<option value="{{id}}" data-value-type="{{valueType}}" data-default="{{default}}">{{label}}</option>{{/each}}
+          </optgroup>
+        {{/each}}
+      </select>
+      <input type="number" data-role="value" data-kind="number" aria-label="{{localize 'VE.Effect.value'}}" />
+      <select data-role="value" data-kind="die" hidden>{{selectOptions effectsEditor.dice}}</select>
+      <input type="text" data-role="value" data-kind="text" hidden />
+      <button type="button" data-action="effectAdd"><i class="fas fa-plus"></i> {{localize "VE.Effect.add"}}</button>
+    </div>
+    <p class="ve-hint">{{effectsEditor.hint}}</p>
+  {{/if}}
+  <ol class="ve-effect-list">
+    {{#each effectsEditor.effects}}
+      <li class="ve-effect {{#if disabled}}disabled{{/if}}" data-effect-uuid="{{uuid}}">
+        <img src="{{img}}" alt="" />
+        <div class="ve-effect-main">
+          <div class="ve-effect-title">
+            <span class="ve-effect-name">{{name}}</span>
+            {{#if source}}<span class="ve-effect-source"><i class="fas fa-link"></i> {{source}}</span>{{/if}}
+          </div>
+          <div class="ve-chips">
+            {{#each changes}}
+              <span class="ve-chip" data-change-index="{{index}}">{{text}}{{#if @root.effectsEditor.editable}}<a data-action="effectChangeRemove" data-tooltip="{{localize 'Delete'}}"><i class="fas fa-xmark"></i></a>{{/if}}</span>
+            {{else}}
+              <span class="ve-empty">{{localize "VE.Effect.noChanges"}}</span>
+            {{/each}}
+          </div>
+        </div>
+        {{#if @root.effectsEditor.editable}}
+          <div class="ve-controls">
+            <a class="ve-toggle {{#unless disabled}}active{{/unless}}" data-action="effectToggle" data-tooltip="{{localize 'VE.Effect.toggle'}}"><i class="fas fa-power-off"></i></a>
+            <a data-action="effectEdit" data-tooltip="{{localize 'VE.Effect.advanced'}}"><i class="fas fa-sliders"></i></a>
+            <a data-action="effectDelete" data-tooltip="{{localize 'Delete'}}"><i class="fas fa-trash"></i></a>
+          </div>
+        {{/if}}
+      </li>
+    {{else}}
+      <li class="ve-empty">{{localize "VE.Effect.none"}}</li>
+    {{/each}}
+  </ol>
+  {{#if effectsEditor.editable}}
+    <a class="ve-advanced" data-action="effectCreate"><i class="fas fa-sliders"></i> {{localize "VE.Effect.create"}}</a>
+  {{/if}}
+</div>

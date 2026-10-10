@@ -1,0 +1,10 @@
+_id: veFldArmasCuerpo
+_key: '!folders!veFldArmasCuerpo'
+name: Armas cuerpo a cuerpo
+type: Item
+folder: null
+sorting: a
+sort: 100
+color: null
+description: ''
+flags: {}

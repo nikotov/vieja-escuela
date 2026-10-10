@@ -86,10 +86,35 @@ export class VEActor extends Actor {
   override async _preCreate(data: any, options: any, user: any) {
     if ((await super._preCreate(data, options, user)) === false) return false;
     if (data.type === "character") {
-      this.updateSource({
+      const update: Record<string, unknown> = {
         prototypeToken: { actorLink: true, disposition: CONST.TOKEN_DISPOSITIONS.FRIENDLY },
-      } as any);
+      };
+      // Start at full health unless the creator set HP explicitly.
+      if (foundry.utils.getProperty(data, "system.hp.value") === undefined) {
+        update["system.hp.value"] = (this.system as any).hp?.max ?? 1;
+      }
+      this.updateSource(update as any);
     }
+  }
+
+  override _preCreateDescendantDocuments(
+    parent: any,
+    collection: string,
+    data: any[],
+    options: any,
+    userId: string,
+  ) {
+    (super._preCreateDescendantDocuments as (...args: any[]) => void).call(
+      this,
+      parent,
+      collection,
+      data,
+      options,
+      userId,
+    );
+    // Remember whether the character was at full health before a class/race changes max HP.
+    const hp = (this.system as any).hp;
+    if (collection === "items" && hp) options.veWasFullHp = hp.value >= hp.max;
   }
 
   override _onCreateDescendantDocuments(
@@ -112,17 +137,23 @@ export class VEActor extends Actor {
     if (userId !== game.user?.id || collection !== "items") return;
     const added = documents.filter((d) => GRANTING_TYPES.includes(d.type));
     if (!added.length) return;
-    void this.#onGrantingItemsAdded(added);
+    void this.#onGrantingItemsAdded(added, options.veWasFullHp ?? false);
   }
 
   /** Only one class and one race: replace the previous one, then grant the new item's talents. */
-  async #onGrantingItemsAdded(added: Item[]) {
+  async #onGrantingItemsAdded(added: Item[], wasFull: boolean) {
     const replaced = this.items
       .filter((i) => GRANTING_TYPES.includes(i.type) && added.some((a) => a.type === i.type && a.id !== i.id))
       .map((i) => i.id!);
     if (replaced.length) await this.deleteEmbeddedDocuments("Item", replaced);
-    const level = (this.system as any).level ?? 1;
+    const system = this.system as any;
+    const level = system.level ?? 1;
     await this.grantTalents(level, { exact: false, sources: added });
+    // A level-1 character at full health stays at full health (and full POD) with the new class/race.
+    if (level === 1 && system.hp.gained === 0 && wasFull) {
+      const after = this.system as any;
+      await this.update({ "system.hp.value": after.hp.max, "system.pod.value": after.pod.max } as any);
+    }
   }
 
   override _onDeleteDescendantDocuments(

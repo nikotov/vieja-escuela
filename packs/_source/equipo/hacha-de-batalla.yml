@@ -21,7 +21,7 @@ system:
   damageBonus: 0
 effects: []
 flags: {}
-folder: null
+folder: veFldArmasCuerpo
 sort: 100
 ownership:
   default: 0

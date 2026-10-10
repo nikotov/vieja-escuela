@@ -4,6 +4,7 @@ name: Antorcha
 type: gear
 img: icons/sundries/lights/torch-brown.webp
 system:
+  category: light
   description: '<p>Proporciona 1 hora de luz.</p><p>Carga: 1 punto cada 4 unidades. Los objetos más pequeños no cuentan para la carga hasta llegar a un cierto número. Por tanto no hay que contar ese peso hasta acumular el límite indicado.</p>'
   quantity: 1
   bundle: 4
@@ -15,7 +16,7 @@ system:
   capacity: 0
 effects: []
 flags: {}
-folder: null
+folder: veFldIluminacion
 sort: 2800
 ownership:
   default: 0

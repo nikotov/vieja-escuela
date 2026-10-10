@@ -4,6 +4,7 @@ name: Vendas para heridas (1 paquete)
 type: gear
 img: icons/sundries/survival/leather-strap-brown.webp
 system:
+  category: consumable
   description: '<p>Carga: 1 punto cada 6 unidades. Los objetos más pequeños no cuentan para la carga hasta llegar a un cierto número. Por tanto no hay que contar ese peso hasta acumular el límite indicado.</p>'
   quantity: 1
   bundle: 6
@@ -15,7 +16,7 @@ system:
   capacity: 0
 effects: []
 flags: {}
-folder: null
+folder: veFldConsumibles
 sort: 5000
 ownership:
   default: 0

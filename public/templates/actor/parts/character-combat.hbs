@@ -1,0 +1,49 @@
+<section class="ve-section">
+  <h3>{{localize "VE.Sheet.attacks"}}</h3>
+  <ol class="item-list ve-rows">
+    {{#each weapons}}
+      <li class="item ve-row" data-item-id="{{item.id}}">
+        <img src="{{item.img}}" alt="" />
+        <a class="ve-row-name rollable" data-action="rollAttack">{{item.name}}</a>
+        <span class="ve-tag">{{#if (ve-eq system.kind "ranged")}}{{localize "VE.Weapon.ranged"}}{{else}}{{localize "VE.Weapon.melee"}}{{/if}}</span>
+        <a class="ve-pill rollable" data-action="rollAttack" data-tooltip="{{localize 'VE.Roll.attack'}}"><i class="fas fa-dice-d20"></i> {{atq}}</a>
+        <a class="ve-pill rollable" data-action="rollDamage" data-tooltip="{{localize 'VE.Roll.damage'}}"><i class="fas fa-burst"></i> {{damage}}</a>
+      </li>
+    {{else}}
+      <li class="ve-empty">{{localize "VE.Sheet.noWeapons"}}</li>
+    {{/each}}
+  </ol>
+</section>
+
+<section class="ve-section">
+  <h3>{{localize "VE.Sheet.defense"}} <span class="ve-counter">{{system.def.value}}</span></h3>
+  <p class="ve-breakdown">{{stats.defBreakdown}}</p>
+  <ol class="item-list ve-rows">
+    {{#each wornArmor}}
+      <li class="item ve-row" data-item-id="{{item.id}}">
+        <img src="{{item.img}}" alt="" />
+        <a class="ve-row-name" data-action="itemEdit">{{item.name}}</a>
+        <span class="ve-tag">{{localize "VE.Stat.def"}} {{ve-signed system.def}}</span>
+        <a class="ve-toggle active" data-action="itemToggleEquipped" data-tooltip="{{localize 'VE.Sheet.unequip'}}"><i class="fas fa-shield-halved"></i></a>
+      </li>
+    {{else}}
+      <li class="ve-empty">{{localize "VE.Sheet.noArmor"}}</li>
+    {{/each}}
+  </ol>
+  {{#if system.load.overloaded}}<p class="ve-hint warning"><i class="fas fa-triangle-exclamation"></i> {{localize "VE.Sheet.overloaded"}}</p>{{/if}}
+</section>
+
+<section class="ve-section">
+  <h3>{{localize "VE.Sheet.bonuses"}}</h3>
+  <div class="ve-form-grid">
+    <label>{{localize "VE.Stat.hp"}} <input type="number" name="system.hp.bonus" value="{{source.hp.bonus}}" data-dtype="Number" /></label>
+    <label>{{localize "VE.Stat.def"}} <input type="number" name="system.def.bonus" value="{{source.def.bonus}}" data-dtype="Number" /></label>
+    <label>{{localize "VE.Stat.atqAbbr"}} <input type="number" name="system.atq.bonus" value="{{source.atq.bonus}}" data-dtype="Number" /></label>
+    <label>{{localize "VE.Preset.dmg"}} <input type="number" name="system.dmg.bonus" value="{{source.dmg.bonus}}" data-dtype="Number" /></label>
+    <label>{{localize "VE.Stat.insAbbr"}} <input type="number" name="system.ins.bonus" value="{{source.ins.bonus}}" data-dtype="Number" /></label>
+    <label>{{localize "VE.Stat.movAbbr"}} <input type="number" name="system.mov.bonus" value="{{source.mov.bonus}}" data-dtype="Number" /></label>
+    <label>{{localize "VE.Stat.critThreshold"}} <input type="number" name="system.critThreshold" value="{{source.critThreshold}}" data-dtype="Number" /></label>
+    <label class="ve-check">{{localize "VE.Stat.magic"}} <input type="checkbox" name="system.magic" {{checked source.magic}} /></label>
+  </div>
+  <p class="ve-hint">{{localize "VE.Sheet.bonusesHint"}}</p>
+</section>

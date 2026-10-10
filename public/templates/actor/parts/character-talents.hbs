@@ -1,0 +1,27 @@
+<section class="ve-section">
+  <h3>
+    {{localize "VE.Sheet.talents"}}
+    {{#if editable}}<a class="ve-control" data-action="itemCreate" data-type="talent" data-tooltip="{{localize 'VE.Sheet.add'}}"><i class="fas fa-plus"></i></a>{{/if}}
+  </h3>
+  {{#if ruleset.startingTalents}}<p class="ve-hint">{{localize "VE.Sheet.talentsHint"}}</p>{{/if}}
+  <ol class="item-list ve-rows">
+    {{#each talents}}
+      <li class="item ve-row" data-item-id="{{item.id}}">
+        <img src="{{item.img}}" alt="" />
+        <a class="ve-row-name" data-action="itemChat" data-tooltip="{{localize 'VE.Sheet.postToChat'}}">{{item.name}}</a>
+        {{#if granted}}<span class="ve-tag" data-tooltip="{{localize 'VE.Sheet.granted'}}"><i class="fas fa-link"></i></span>{{/if}}
+        <div class="ve-controls">
+          <a data-action="itemEdit" data-tooltip="{{localize 'Edit'}}"><i class="fas fa-pen"></i></a>
+          {{#if @root.editable}}<a data-action="itemDelete" data-tooltip="{{localize 'Delete'}}"><i class="fas fa-trash"></i></a>{{/if}}
+        </div>
+      </li>
+    {{else}}
+      <li class="ve-empty">{{localize "VE.Sheet.noTalents"}}</li>
+    {{/each}}
+  </ol>
+</section>
+
+<section class="ve-section">
+  <h3>{{localize "VE.Sheet.effects"}}</h3>
+  {{> (lookup @root "effectsEditorTemplate")}}
+</section>

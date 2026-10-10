@@ -8,27 +8,27 @@ system:
   source: general
   ruleset: aventurados
 effects:
-- _id: veEffPiesLigeros
-  _key: '!items.effects!veTalPiesLigeros.veEffPiesLigeros'
-  name: Pies ligeros
-  img: icons/svg/wingfoot.svg
-  type: base
-  system: {}
-  transfer: true
-  disabled: false
-  changes:
-  - key: system.mov.bonus
-    mode: 2
-    value: '2'
-    priority: null
-  duration: {}
-  description: ''
-  origin: null
-  statuses: []
-  tint: '#ffffff'
-  flags: {}
+  - _id: veEffPiesLigeros
+    _key: '!items.effects!veTalPiesLigeros.veEffPiesLigeros'
+    name: Pies ligeros
+    img: icons/svg/wingfoot.svg
+    type: base
+    system: {}
+    transfer: true
+    disabled: false
+    changes:
+      - key: system.mov.bonus
+        mode: 2
+        value: '2'
+        priority: null
+    duration: {}
+    description: ''
+    origin: null
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
 flags: {}
-folder: null
+folder: veFldTalAventura
 sort: 4500
 ownership:
   default: 0

@@ -4,6 +4,7 @@ name: Símbolo religioso (de plata)
 type: gear
 img: icons/equipment/neck/amulet-round-silver-blue.webp
 system:
+  category: gear
   description: <p>No cuenta para la carga.</p>
   quantity: 1
   bundle: 1
@@ -15,7 +16,7 @@ system:
   capacity: 0
 effects: []
 flags: {}
-folder: null
+folder: veFldEquipoAvent
 sort: 4900
 ownership:
   default: 0

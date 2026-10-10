@@ -31,7 +31,11 @@ export class CharacterData extends TypeDataModel {
     const skills = Object.fromEntries(
       Object.keys(CONFIG.VE.skills).map((key) => [
         key,
-        new fields.SchemaField({ value: int(0, { min: 0, max: CONFIG.VE.maxSkill }) }),
+        new fields.SchemaField({
+          value: int(0, { min: 0, max: CONFIG.VE.maxSkill }),
+          /** Modified by Active Effects; added to the value on rolls. */
+          bonus: int(0),
+        }),
       ]),
     );
     const money = Object.fromEntries(
@@ -54,6 +58,8 @@ export class CharacterData extends TypeDataModel {
       ins: bonus(),
       atq: new fields.SchemaField({ bonus: int(0), melee: bonus(), ranged: bonus() }),
       def: bonus(),
+      /** Bonus to all weapon damage. */
+      dmg: bonus(),
       mov: new fields.SchemaField({
         /** Manual override; null = race or ruleset default. */
         base: new fields.NumberField({
@@ -99,6 +105,7 @@ export class CharacterData extends TypeDataModel {
     const table = VE.modifierTables[getActiveModifierTableKey()];
 
     for (const attr of Object.values(s.attributes)) attr.mod = attributeModifier(attr.value, table);
+    for (const skill of Object.values(s.skills)) skill.total = skill.value + (skill.bonus ?? 0);
     const mod = (key: string) => s.attributes[key]?.mod ?? 0;
 
     const ctx: RulesetContext = this.rulesetContext();

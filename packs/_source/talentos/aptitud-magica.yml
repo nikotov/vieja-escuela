@@ -8,27 +8,27 @@ system:
   source: general
   ruleset: aventurados
 effects:
-- _id: veEffAptitudMagi
-  _key: '!items.effects!veTalAptitudMagi.veEffAptitudMagi'
-  name: Aptitud mágica
-  img: icons/svg/aura.svg
-  type: base
-  system: {}
-  transfer: true
-  disabled: false
-  changes:
-  - key: system.magic
-    mode: 5
-    value: 'true'
-    priority: null
-  duration: {}
-  description: ''
-  origin: null
-  statuses: []
-  tint: '#ffffff'
-  flags: {}
+  - _id: veEffAptitudMagi
+    _key: '!items.effects!veTalAptitudMagi.veEffAptitudMagi'
+    name: Aptitud mágica
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    transfer: true
+    disabled: false
+    changes:
+      - key: system.magic
+        mode: 5
+        value: 'true'
+        priority: null
+    duration: {}
+    description: ''
+    origin: null
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
 flags: {}
-folder: null
+folder: veFldTalAventura
 sort: 2800
 ownership:
   default: 0

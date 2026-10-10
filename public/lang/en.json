@@ -76,16 +76,41 @@
       "normal": "Normal"
     },
     "Effect": {
-      "create": "New effect",
+      "actorHint": "Effects from talents and items, plus temporary modifiers (spells, potions…) you add here.",
+      "add": "Add",
+      "advanced": "Advanced editor",
+      "create": "Advanced effect…",
       "hint": "Active effects modify the actor that owns the item (e.g. system.ins.bonus, system.mov.bonus, system.critThreshold).",
+      "itemHint": "Pick a modifier and press Add: it applies to the character who owns this item.",
+      "noChanges": "No modifiers",
       "none": "No effects.",
-      "toggle": "Toggle"
+      "preset": "Modifier",
+      "toggle": "Toggle",
+      "value": "Value"
     },
     "Gear": {
       "bundle": "Items per load point",
       "bundleHint": "Small items only count once you have this many (\"1 per 4\").",
       "capacity": "Capacity (load points)",
+      "category": "Category",
       "container": "Container"
+    },
+    "GearCategory": {
+      "ammo": "Ammunition",
+      "consumable": "Consumables",
+      "container": "Containers",
+      "gear": "Adventuring gear",
+      "light": "Light sources",
+      "tool": "Tools",
+      "transport": "Mounts & transport",
+      "treasure": "Treasure"
+    },
+    "Inventory": {
+      "armor": "Armor",
+      "melee": "Melee weapons",
+      "other": "Other",
+      "ranged": "Ranged weapons",
+      "shields": "Shields"
     },
     "Item": {
       "cost": "Cost",
@@ -118,6 +143,26 @@
       "cowardly": "Cowardly",
       "normal": "Normal"
     },
+    "Preset": {
+      "atq": "Attack (all)",
+      "atqMelee": "Melee attack",
+      "atqRanged": "Ranged attack",
+      "crit": "Critical on",
+      "def": "Defense",
+      "dmg": "Damage",
+      "groupAttributes": "Attributes",
+      "groupCombat": "Combat",
+      "groupMagic": "Magic",
+      "groupOther": "Other",
+      "groupSkills": "Skills",
+      "groupStats": "Traits",
+      "hitDie": "Hit die",
+      "hp": "Hit points",
+      "ins": "Instincts",
+      "magic": "Magic aptitude",
+      "mov": "Movement",
+      "pod": "Power (POD)"
+    },
     "Roll": {
       "attack": "Attack",
       "attackTitle": "Attack: {name}",
@@ -148,6 +193,10 @@
       "expandido": "Vieja Escuela: Expanded Edition"
     },
     "Setting": {
+      "language": {
+        "hint": "Language for Vieja Escuela's sheets, cards and dialogs, regardless of Foundry's language.",
+        "name": "System language"
+      },
       "modifierTable": {
         "auto": "Automatic",
         "hint": "Automatic uses the one from the chosen ruleset.",
@@ -156,6 +205,10 @@
       "ruleset": {
         "hint": "Expanded Edition (races and adventurer types) or Aventurados Fabricados (pick talents, no classes).",
         "name": "Ruleset"
+      },
+      "theme": {
+        "hint": "Look of sheets, dialogs and chat cards. Each player picks their own.",
+        "name": "Sheet theme"
       }
     },
     "Sheet": {
@@ -170,9 +223,12 @@
       "bonuses": "Bonuses",
       "bonusesHint": "Manual adjustments; talents with active effects also change these.",
       "character": "Character sheet",
+      "defBreakdown": "{base} base · DEX {des} · armor {armor} · shield {shield} · bonus {bonus}",
+      "defense": "Defense",
       "description": "Description",
       "dropHere": "Drop here",
       "dropTalents": "Drop talents here.",
+      "effects": "Active effects",
       "equipped": "Equipped",
       "gear": "Gear",
       "granted": "Granted by race or adventurer type",
@@ -180,20 +236,25 @@
       "item": "Item sheet",
       "items": "Items",
       "load": "Load",
+      "modifiedBy": "Modified by effects",
       "money": "Coins",
       "monster": "Monster sheet",
+      "noArmor": "No armor equipped.",
       "noAttacks": "No attacks.",
       "noBackgrounds": "No backgrounds.",
+      "noMagicHint": "Without magic aptitude you can't spend POD, but you can keep spells from scrolls or items here.",
       "noSpells": "No spells.",
       "noTalents": "No talents.",
       "noWeapons": "No weapons.",
       "overloaded": "Overloaded: disadvantage on attacks and actions relying on speed or dexterity.",
+      "postToChat": "Post to chat",
       "skills": "Skills",
       "skillsHint": "Level 1: 4 points (max 1 per skill). +2 per level. Max 10.",
       "spells": "Spells",
       "spellsHint": "Casting a spell spends its POD cost. Recovered with 8 hours of rest.",
       "talents": "Talents",
       "talentsHint": "You start with four talents and gain one more at level 6.",
+      "unequip": "Unequip",
       "weapons": "Weapons"
     },
     "Skill": {
@@ -210,6 +271,7 @@
       "divine": "Divine",
       "level": "Level",
       "levelAbbr": "Lvl",
+      "levelN": "Level {level}",
       "notEnoughPod": "Not enough POD ({value}/{cost}).",
       "random": "Random table (1d100)",
       "resist": "Resist with Instincts:"
@@ -235,13 +297,16 @@
       "xp": "XP"
     },
     "Tab": {
+      "combat": "Combat",
       "details": "Details",
       "effects": "Effects",
       "equipment": "Equipment",
+      "inventory": "Inventory",
       "magic": "Magic",
       "main": "Main",
       "notes": "Notes",
-      "skills": "Skills & talents"
+      "skills": "Skills & talents",
+      "talents": "Talents"
     },
     "Talent": {
       "allRulesets": "All",
@@ -251,6 +316,11 @@
       "race": "Race",
       "ruleset": "Ruleset",
       "source": "Source"
+    },
+    "Theme": {
+      "clasico": "Classic (printed sheet)",
+      "cuero": "Leather & brass (dark)",
+      "grimorio": "Illuminated grimoire"
     },
     "Weapon": {
       "addStr": "Add STR to damage",

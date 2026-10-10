@@ -1,0 +1,146 @@
+// Theme tokens. A theme is a set of CSS custom properties; `body.<theme class>` selects one.
+// Modules can add themes: register in CONFIG.VE.themes and define the same variables.
+
+@mixin theme-clasico {
+  // Printed old-school character sheet: cream paper, black ink, double rules.
+  --ve-paper: #fbf8f0;
+  --ve-paper-image: none;
+  --ve-panel: #ffffff;
+  --ve-panel-alt: #f1ece0;
+  --ve-ink: #17130f;
+  --ve-ink-soft: #4e463c;
+  --ve-ink-faint: #8a8174;
+  --ve-accent: #9e1b1b;
+  --ve-accent-ink: #fffaf0;
+  --ve-gold: #9e1b1b;
+  --ve-line: #8f857a;
+  --ve-line-strong: #17130f;
+  --ve-frame: 3px double var(--ve-line-strong);
+  --ve-frame-thin: 1px solid var(--ve-line-strong);
+  --ve-rule: 3px double var(--ve-line-strong);
+  --ve-radius: 0;
+  --ve-pill-radius: 2px;
+  --ve-shadow: none;
+  --ve-input-bg: transparent;
+  --ve-input-border: var(--ve-line);
+  --ve-font-display: "Modesto Condensed", "Palatino Linotype", serif;
+  --ve-font-heading: "Modesto Condensed", "Palatino Linotype", serif;
+  --ve-font-body: "Signika", sans-serif;
+  --ve-heading-case: uppercase;
+  --ve-heading-tracking: 0.08em;
+  --ve-heading-style: normal;
+  --ve-heading-color: var(--ve-ink);
+  --ve-ornament: "";
+  --ve-bar-bg: #e4ddd0;
+  --ve-bar-hp: #2f5d2f;
+  --ve-bar-pod: #29487a;
+  --ve-bar-xp: #17130f;
+  --ve-success: #2f5d2f;
+  --ve-failure: #9e1b1b;
+  --ve-critical: #a86b00;
+  --ve-chip-bg: #ece6d8;
+  --ve-tab-active-bg: var(--ve-ink);
+  --ve-tab-active-ink: var(--ve-paper);
+  --ve-portrait-bg: #3b352e;
+}
+
+@mixin theme-grimorio {
+  // Illuminated grimoire: aged parchment, red and gold ink, ornaments.
+  --ve-paper: #efe0bc;
+  --ve-paper-image:
+    radial-gradient(ellipse at 50% 0%, rgba(255, 248, 225, 0.75), transparent 60%),
+    radial-gradient(ellipse at 50% 120%, rgba(120, 80, 30, 0.25), transparent 60%),
+    repeating-linear-gradient(0deg, rgba(110, 80, 40, 0.035) 0 2px, transparent 2px 5px);
+  --ve-panel: rgba(255, 249, 232, 0.55);
+  --ve-panel-alt: rgba(176, 141, 60, 0.14);
+  --ve-ink: #3a2414;
+  --ve-ink-soft: #6b4a2b;
+  --ve-ink-faint: #9c8160;
+  --ve-accent: #8a2a12;
+  --ve-accent-ink: #fbf1d6;
+  --ve-gold: #a8832e;
+  --ve-line: #c2a46e;
+  --ve-line-strong: #8f6b31;
+  --ve-frame: 1px solid var(--ve-line-strong);
+  --ve-frame-thin: 1px solid var(--ve-line);
+  --ve-rule: 1px solid var(--ve-gold);
+  --ve-radius: 8px;
+  --ve-pill-radius: 999px;
+  --ve-shadow: inset 0 0 0 3px rgba(255, 249, 232, 0.6), inset 0 0 0 4px rgba(168, 131, 46, 0.45);
+  --ve-input-bg: rgba(255, 252, 240, 0.5);
+  --ve-input-border: var(--ve-line);
+  --ve-font-display: "Amiri", "Palatino Linotype", serif;
+  --ve-font-heading: "Amiri", "Palatino Linotype", serif;
+  --ve-font-body: "Amiri", "Palatino Linotype", serif;
+  --ve-heading-case: none;
+  --ve-heading-tracking: 0.01em;
+  --ve-heading-style: italic;
+  --ve-heading-color: var(--ve-accent);
+  --ve-ornament: "❦";
+  --ve-bar-bg: rgba(120, 80, 30, 0.18);
+  --ve-bar-hp: #7a1f12;
+  --ve-bar-pod: #3b4f8a;
+  --ve-bar-xp: #a8832e;
+  --ve-success: #3c6b2a;
+  --ve-failure: #8a2a12;
+  --ve-critical: #a8832e;
+  --ve-chip-bg: rgba(168, 131, 46, 0.18);
+  --ve-tab-active-bg: var(--ve-accent);
+  --ve-tab-active-ink: var(--ve-accent-ink);
+  --ve-portrait-bg: #5b3f22;
+}
+
+@mixin theme-cuero {
+  // Dark leather and brass.
+  --ve-paper: #231811;
+  --ve-paper-image:
+    radial-gradient(ellipse at 30% 0%, rgba(255, 210, 140, 0.08), transparent 55%),
+    repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.08) 0 2px, transparent 2px 6px);
+  --ve-panel: #2f2118;
+  --ve-panel-alt: #3a2a1e;
+  --ve-ink: #f0e2c4;
+  --ve-ink-soft: #c8b38c;
+  --ve-ink-faint: #8f7a5a;
+  --ve-accent: #d9a441;
+  --ve-accent-ink: #231811;
+  --ve-gold: #d9a441;
+  --ve-line: #5e4630;
+  --ve-line-strong: #b8893e;
+  --ve-frame: 1px solid var(--ve-line-strong);
+  --ve-frame-thin: 1px solid var(--ve-line);
+  --ve-rule: 1px solid var(--ve-line-strong);
+  --ve-radius: 4px;
+  --ve-pill-radius: 4px;
+  --ve-shadow: 0 1px 0 rgba(255, 220, 160, 0.06) inset, 0 2px 6px rgba(0, 0, 0, 0.35);
+  --ve-input-bg: rgba(0, 0, 0, 0.28);
+  --ve-input-border: var(--ve-line);
+  --ve-font-display: "Modesto Condensed", "Palatino Linotype", serif;
+  --ve-font-heading: "Modesto Condensed", "Palatino Linotype", serif;
+  --ve-font-body: "Signika", sans-serif;
+  --ve-heading-case: uppercase;
+  --ve-heading-tracking: 0.1em;
+  --ve-heading-style: normal;
+  --ve-heading-color: var(--ve-gold);
+  --ve-ornament: "";
+  --ve-bar-bg: rgba(0, 0, 0, 0.35);
+  --ve-bar-hp: #b0392b;
+  --ve-bar-pod: #4a76c2;
+  --ve-bar-xp: #d9a441;
+  --ve-success: #8fbf6a;
+  --ve-failure: #e0735f;
+  --ve-critical: #f0c060;
+  --ve-chip-bg: rgba(217, 164, 65, 0.15);
+  --ve-tab-active-bg: var(--ve-gold);
+  --ve-tab-active-ink: #231811;
+  --ve-portrait-bg: #120c08;
+}
+
+.vieja-escuela {
+  @include theme-clasico;
+}
+body.ve-theme-grimorio .vieja-escuela {
+  @include theme-grimorio;
+}
+body.ve-theme-cuero .vieja-escuela {
+  @include theme-cuero;
+}

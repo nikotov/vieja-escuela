@@ -1,0 +1,42 @@
+<section class="ve-section">
+  <h3>{{localize "VE.Sheet.attributes"}}</h3>
+  <ol class="ve-attributes">
+    {{#each attributes}}
+      <li class="ve-attribute {{#if modified}}modified{{/if}}">
+        <a class="ve-abbr rollable" data-action="rollAttribute" data-attribute="{{key}}" data-tooltip="{{label}}">{{abbr}}</a>
+        <input type="number" name="system.attributes.{{key}}.value" value="{{value}}" data-dtype="Number" />
+        <span class="ve-mod" {{#if modified}}data-tooltip="{{localize 'VE.Sheet.modifiedBy'}} ({{modified}})"{{/if}}>{{mod}}</span>
+      </li>
+    {{/each}}
+  </ol>
+</section>
+
+<section class="ve-section">
+  <h3>{{localize "VE.Sheet.skills"}} <span class="ve-counter" data-tooltip="{{localize 'VE.Sheet.skillsHint'}}">{{skillPoints}}</span></h3>
+  <ol class="ve-skills">
+    {{#each skills}}
+      <li class="ve-skill">
+        <a class="ve-skill-name rollable" data-action="rollSkill" data-skill="{{key}}"><i class="fas fa-dice-d20"></i> {{label}}</a>
+        {{#if bonus}}<span class="ve-badge" data-tooltip="{{localize 'VE.Sheet.modifiedBy'}}">{{bonus}}</span>{{/if}}
+        <input type="number" name="system.skills.{{key}}.value" value="{{value}}" min="0" max="{{@root.config.maxSkill}}" data-dtype="Number" />
+      </li>
+    {{/each}}
+  </ol>
+</section>
+
+<section class="ve-section">
+  <h3>
+    {{localize "VE.Sheet.backgrounds"}}
+    {{#if editable}}<a class="ve-control" data-action="backgroundAdd" data-tooltip="{{localize 'VE.Sheet.add'}}"><i class="fas fa-plus"></i></a>{{/if}}
+  </h3>
+  <ol class="ve-backgrounds">
+    {{#each system.backgrounds}}
+      <li data-index="{{@index}}">
+        <input type="text" name="system.backgrounds.{{@index}}" value="{{this}}" placeholder="{{localize 'VE.Sheet.backgroundPlaceholder'}}" />
+        {{#if @root.editable}}<a class="ve-control" data-action="backgroundRemove" data-tooltip="{{localize 'Delete'}}"><i class="fas fa-xmark"></i></a>{{/if}}
+      </li>
+    {{else}}
+      <li class="ve-empty">{{localize "VE.Sheet.noBackgrounds"}}</li>
+    {{/each}}
+  </ol>
+</section>

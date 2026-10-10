@@ -8,27 +8,27 @@ system:
   source: class
   ruleset: expandido
 effects:
-- _id: veEffSensibilida
-  _key: '!items.effects!veTalSensibilida.veEffSensibilida'
-  name: Sensibilidad Mágica
-  img: icons/svg/aura.svg
-  type: base
-  system: {}
-  transfer: true
-  disabled: false
-  changes:
-  - key: system.magic
-    mode: 5
-    value: 'true'
-    priority: null
-  duration: {}
-  description: ''
-  origin: null
-  statuses: []
-  tint: '#ffffff'
-  flags: {}
+  - _id: veEffSensibilida
+    _key: '!items.effects!veTalSensibilida.veEffSensibilida'
+    name: Sensibilidad Mágica
+    img: icons/svg/aura.svg
+    type: base
+    system: {}
+    transfer: true
+    disabled: false
+    changes:
+      - key: system.magic
+        mode: 5
+        value: 'true'
+        priority: null
+    duration: {}
+    description: ''
+    origin: null
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
 flags: {}
-folder: null
+folder: veFldTalTipos000
 sort: 1300
 ownership:
   default: 0

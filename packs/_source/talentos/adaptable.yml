@@ -8,27 +8,27 @@ system:
   source: race
   ruleset: ''
 effects:
-- _id: veEffAdaptable00
-  _key: '!items.effects!veTalAdaptable00.veEffAdaptable00'
-  name: Adaptable
-  img: icons/svg/upgrade.svg
-  type: base
-  system: {}
-  transfer: true
-  disabled: false
-  changes:
-  - key: system.ins.bonus
-    mode: 2
-    value: '1'
-    priority: null
-  duration: {}
-  description: ''
-  origin: null
-  statuses: []
-  tint: '#ffffff'
-  flags: {}
+  - _id: veEffAdaptable00
+    _key: '!items.effects!veTalAdaptable00.veEffAdaptable00'
+    name: Adaptable
+    img: icons/svg/upgrade.svg
+    type: base
+    system: {}
+    transfer: true
+    disabled: false
+    changes:
+      - key: system.ins.bonus
+        mode: 2
+        value: '1'
+        priority: null
+    duration: {}
+    description: ''
+    origin: null
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
 flags: {}
-folder: null
+folder: veFldTalRazas000
 sort: 100
 ownership:
   default: 0

@@ -1,0 +1,52 @@
+<section class="ve-section ve-purse">
+  <div class="ve-load">
+    <span class="ve-label">{{localize "VE.Sheet.load"}}</span>
+    <div class="ve-bar load {{#if system.load.overloaded}}warning{{/if}}"><div class="fill" style="width: {{loadPercent}}%"></div></div>
+    <span class="ve-counter {{#if system.load.overloaded}}warning{{/if}}">{{system.load.value}} / {{system.load.max}}</span>
+  </div>
+  <div class="ve-money">
+    {{#each config.currencies as |currency key|}}
+      <label><span>{{localize currency.abbr}}</span><input type="number" name="system.money.{{key}}" value="{{lookup @root.system.money key}}" min="0" data-dtype="Number" /></label>
+    {{/each}}
+  </div>
+</section>
+
+{{#each inventory as |group|}}
+  <section class="ve-section ve-inventory-group" data-group="{{group.id}}">
+    <h3>
+      {{#if group.icon}}<i class="{{group.icon}}"></i>{{/if}} {{group.label}}
+      <span class="ve-count">{{group.items.length}}</span>
+      {{#if (and @root.editable group.canCreate)}}<a class="ve-control" data-action="inventoryCreate" data-group="{{group.id}}" data-tooltip="{{localize 'VE.Sheet.add'}}"><i class="fas fa-plus"></i></a>{{/if}}
+    </h3>
+    {{#if group.items.length}}
+      <ol class="item-list ve-rows">
+        {{#each group.items}}
+          <li class="item ve-row" data-item-id="{{item.id}}">
+            <img src="{{item.img}}" alt="" />
+            <a class="ve-row-name" data-action="itemChat" data-tooltip="{{localize 'VE.Sheet.postToChat'}}">{{item.name}}</a>
+            {{#if (ve-eq item.type "weapon")}}
+              <a class="ve-pill rollable" data-action="rollAttack"><i class="fas fa-dice-d20"></i> {{atq}}</a>
+              <span class="ve-tag">{{damage}}</span>
+            {{/if}}
+            {{#if (ve-eq item.type "armor")}}
+              <span class="ve-tag">{{localize "VE.Stat.def"}} {{ve-signed system.def}}</span>
+              <a class="ve-toggle {{#if system.equipped}}active{{/if}}" data-action="itemToggleEquipped" data-tooltip="{{localize 'VE.Sheet.equipped'}}"><i class="fas fa-shield-halved"></i></a>
+            {{/if}}
+            {{#unless (ve-eq item.type "armor")}}
+              <span class="ve-qty">
+                <a data-action="itemQuantity" data-delta="-1"><i class="fas fa-minus"></i></a>
+                <span>{{system.quantity}}</span>
+                <a data-action="itemQuantity" data-delta="1"><i class="fas fa-plus"></i></a>
+              </span>
+            {{/unless}}
+            <span class="ve-load-tag" data-tooltip="{{localize 'VE.Item.load'}}">{{load}} <i class="fas fa-weight-hanging"></i></span>
+            <div class="ve-controls">
+              <a data-action="itemEdit" data-tooltip="{{localize 'Edit'}}"><i class="fas fa-pen"></i></a>
+              {{#if @root.editable}}<a data-action="itemDelete" data-tooltip="{{localize 'Delete'}}"><i class="fas fa-trash"></i></a>{{/if}}
+            </div>
+          </li>
+        {{/each}}
+      </ol>
+    {{/if}}
+  </section>
+{{/each}}

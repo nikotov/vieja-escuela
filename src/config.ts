@@ -1,4 +1,5 @@
 import type { ModifierTable } from "./rules/modifiers";
+import { EFFECT_MODES, type EffectPreset } from "./rules/effects";
 import type { ProgressionTable } from "./rules/progression";
 import { BUILTIN_RULESETS, type Ruleset } from "./rulesets";
 import { MODIFIER_TABLES, PROGRESSION_TABLES } from "./rulesets/tables";
@@ -7,13 +8,16 @@ import { RollDialog } from "./rolls/roll-dialog";
 import { ROLL_HANDLERS, type RollHandlers } from "./rolls";
 import { CHAT_ACTIONS, type ChatAction } from "./rolls/chat";
 import { VERoll } from "./rolls/ve-roll";
-import { CHARACTER_SHEET_ACTIONS, type SheetAction } from "./sheets/actions";
+import { BUNDLED_TRANSLATIONS } from "./i18n";
+import { CHARACTER_SHEET_ACTIONS, ITEM_SHEET_ACTIONS, type SheetAction } from "./sheets/actions";
 
 /** A tab on the character sheet. Modules can push their own. */
 export interface SheetTab {
   id: string;
   /** i18n key. */
   label: string;
+  /** Font Awesome classes, e.g. "fas fa-swords". */
+  icon?: string;
   /** Handlebars template path; loaded and registered as a partial automatically. */
   template: string;
   /** Hide the tab when this returns false. */
@@ -22,7 +26,27 @@ export interface SheetTab {
   prepare?: (context: Record<string, any>, sheet: unknown) => void | Promise<void>;
 }
 
+/** A section of the character inventory. Gear categories get a section each automatically. */
+export interface InventoryGroup {
+  id: string;
+  /** i18n key. */
+  label: string;
+  icon?: string;
+  match: (item: Item) => boolean;
+  /** Data for items created with this section's "+" button. */
+  create: { type: string; system?: Record<string, unknown> };
+}
+
+/** A sheet theme, selectable per player. `cssClass` is added to <body>; style it in your CSS. */
+export interface Theme {
+  /** i18n key. */
+  label: string;
+  cssClass: string;
+}
+
 const tpl = (path: string) => `${TEMPLATE_ROOT}/${path}`;
+const sys = (item: Item) => item.system as any;
+const ADD = EFFECT_MODES.ADD;
 
 /**
  * Default `CONFIG.VE`. Everything the system looks up at runtime lives here, so modules can replace
@@ -109,6 +133,174 @@ export function createConfig() {
       heavy: "VE.Armor.heavy",
       shield: "VE.Armor.shield",
     } as Record<string, string>,
+    /** Gear categories, in inventory order. Each gets an inventory section and a compendium folder. */
+    gearCategories: {
+      ammo: { label: "VE.GearCategory.ammo", icon: "fas fa-bullseye" },
+      gear: { label: "VE.GearCategory.gear", icon: "fas fa-compass" },
+      tool: { label: "VE.GearCategory.tool", icon: "fas fa-screwdriver-wrench" },
+      light: { label: "VE.GearCategory.light", icon: "fas fa-fire" },
+      consumable: { label: "VE.GearCategory.consumable", icon: "fas fa-flask" },
+      container: { label: "VE.GearCategory.container", icon: "fas fa-sack" },
+      transport: { label: "VE.GearCategory.transport", icon: "fas fa-horse" },
+      treasure: { label: "VE.GearCategory.treasure", icon: "fas fa-gem" },
+    } as Record<string, { label: string; icon: string }>,
+
+    /** Inventory sections before the gear categories. */
+    inventory: {
+      groups: [
+        {
+          id: "melee",
+          label: "VE.Inventory.melee",
+          icon: "fas fa-khanda",
+          match: (i) => i.type === "weapon" && sys(i).kind !== "ranged",
+          create: { type: "weapon", system: { kind: "melee" } },
+        },
+        {
+          id: "ranged",
+          label: "VE.Inventory.ranged",
+          icon: "fas fa-bow-arrow",
+          match: (i) => i.type === "weapon" && sys(i).kind === "ranged",
+          create: { type: "weapon", system: { kind: "ranged", addStr: false, range: 20 } },
+        },
+        {
+          id: "armor",
+          label: "VE.Inventory.armor",
+          icon: "fas fa-vest",
+          match: (i) => i.type === "armor" && sys(i).category !== "shield",
+          create: { type: "armor", system: { category: "light" } },
+        },
+        {
+          id: "shields",
+          label: "VE.Inventory.shields",
+          icon: "fas fa-shield-halved",
+          match: (i) => i.type === "armor" && sys(i).category === "shield",
+          create: { type: "armor", system: { category: "shield", def: 1 } },
+        },
+      ] as InventoryGroup[],
+    },
+
+    /**
+     * Quick Active Effect presets offered on item and actor sheets. Presets for every attribute and
+     * skill are added automatically (see `getEffectPresets`).
+     */
+    effectPresets: [
+      {
+        id: "atq",
+        label: "VE.Preset.atq",
+        key: "system.atq.bonus",
+        mode: ADD,
+        valueType: "number",
+        default: "1",
+        group: "VE.Preset.groupCombat",
+      },
+      {
+        id: "atqMelee",
+        label: "VE.Preset.atqMelee",
+        key: "system.atq.melee.bonus",
+        mode: ADD,
+        valueType: "number",
+        default: "1",
+        group: "VE.Preset.groupCombat",
+      },
+      {
+        id: "atqRanged",
+        label: "VE.Preset.atqRanged",
+        key: "system.atq.ranged.bonus",
+        mode: ADD,
+        valueType: "number",
+        default: "1",
+        group: "VE.Preset.groupCombat",
+      },
+      {
+        id: "dmg",
+        label: "VE.Preset.dmg",
+        key: "system.dmg.bonus",
+        mode: ADD,
+        valueType: "number",
+        default: "1",
+        group: "VE.Preset.groupCombat",
+      },
+      {
+        id: "def",
+        label: "VE.Preset.def",
+        key: "system.def.bonus",
+        mode: ADD,
+        valueType: "number",
+        default: "1",
+        group: "VE.Preset.groupCombat",
+      },
+      {
+        id: "crit",
+        label: "VE.Preset.crit",
+        key: "system.critThreshold",
+        mode: EFFECT_MODES.DOWNGRADE,
+        valueType: "number",
+        default: "19",
+        group: "VE.Preset.groupCombat",
+      },
+      {
+        id: "ins",
+        label: "VE.Preset.ins",
+        key: "system.ins.bonus",
+        mode: ADD,
+        valueType: "number",
+        default: "1",
+        group: "VE.Preset.groupStats",
+      },
+      {
+        id: "hp",
+        label: "VE.Preset.hp",
+        key: "system.hp.bonus",
+        mode: ADD,
+        valueType: "number",
+        default: "2",
+        group: "VE.Preset.groupStats",
+      },
+      {
+        id: "hitDie",
+        label: "VE.Preset.hitDie",
+        key: "system.hitDie",
+        mode: EFFECT_MODES.OVERRIDE,
+        valueType: "die",
+        default: "d8",
+        group: "VE.Preset.groupStats",
+      },
+      {
+        id: "mov",
+        label: "VE.Preset.mov",
+        key: "system.mov.bonus",
+        mode: ADD,
+        valueType: "number",
+        default: "2",
+        group: "VE.Preset.groupStats",
+      },
+      {
+        id: "magic",
+        label: "VE.Preset.magic",
+        key: "system.magic",
+        mode: EFFECT_MODES.OVERRIDE,
+        valueType: "boolean",
+        default: "true",
+        group: "VE.Preset.groupMagic",
+      },
+      {
+        id: "pod",
+        label: "VE.Preset.pod",
+        key: "system.pod.bonus",
+        mode: ADD,
+        valueType: "number",
+        default: "1",
+        group: "VE.Preset.groupMagic",
+      },
+    ] as EffectPreset[],
+
+    /** Sheet themes (client setting "theme"). */
+    themes: {
+      clasico: { label: "VE.Theme.clasico", cssClass: "ve-theme-clasico" },
+      grimorio: { label: "VE.Theme.grimorio", cssClass: "ve-theme-grimorio" },
+      cuero: { label: "VE.Theme.cuero", cssClass: "ve-theme-cuero" },
+    } as Record<string, Theme>,
+
     talentSources: {
       general: "VE.Talent.general",
       race: "VE.Talent.race",
@@ -119,6 +311,9 @@ export function createConfig() {
       mp: { label: "VE.Currency.mp", abbr: "VE.Currency.mpAbbr" },
       mc: { label: "VE.Currency.mc", abbr: "VE.Currency.mcAbbr" },
     } as Record<string, { label: string; abbr: string }>,
+
+    /** Bundled translations for the "language" client setting (lang code → nested strings). */
+    translations: { ...BUNDLED_TRANSLATIONS } as Record<string, object>,
 
     defenseBase: 10,
     /** Heavy armor caps movement at this value. */
@@ -153,6 +348,10 @@ export function createConfig() {
       spellCard: tpl("chat/spell-card.hbs"),
       levelUpCard: tpl("chat/level-up-card.hbs"),
       characterSheet: tpl("actor/character-sheet.hbs"),
+      /** Left column of the character sheet (attributes, skills, backgrounds). */
+      characterSidebar: tpl("actor/parts/character-sidebar.hbs"),
+      /** Effect list + quick preset picker, shared by item and actor sheets. */
+      effectsEditor: tpl("parts/effects-editor.hbs"),
       monsterSheet: tpl("actor/monster-sheet.hbs"),
       itemSheet: tpl("item/item-sheet.hbs"),
       itemParts: {
@@ -166,7 +365,6 @@ export function createConfig() {
       } as Record<string, string>,
       /** Extra partials preloaded at startup. */
       partials: [
-        tpl("item/parts/effects.hbs"),
         tpl("item/parts/granted-talents.hbs"),
         tpl("item/parts/common-physical.hbs"),
         tpl("chat/roll-summary.hbs"),
@@ -176,26 +374,45 @@ export function createConfig() {
     sheets: {
       character: {
         tabs: [
-          { id: "main", label: "VE.Tab.main", template: tpl("actor/parts/character-main.hbs") },
-          { id: "skills", label: "VE.Tab.skills", template: tpl("actor/parts/character-skills.hbs") },
           {
-            id: "equipment",
-            label: "VE.Tab.equipment",
-            template: tpl("actor/parts/character-equipment.hbs"),
+            id: "combat",
+            label: "VE.Tab.combat",
+            icon: "fas fa-swords",
+            template: tpl("actor/parts/character-combat.hbs"),
+          },
+          {
+            id: "talents",
+            label: "VE.Tab.talents",
+            icon: "fas fa-star",
+            template: tpl("actor/parts/character-talents.hbs"),
+          },
+          {
+            id: "inventory",
+            label: "VE.Tab.inventory",
+            icon: "fas fa-sack",
+            template: tpl("actor/parts/character-inventory.hbs"),
           },
           {
             id: "magic",
             label: "VE.Tab.magic",
+            icon: "fas fa-wand-sparkles",
             template: tpl("actor/parts/character-magic.hbs"),
-            visible: (ctx) => ctx.system.magic || ctx.spells.length > 0,
           },
-          { id: "notes", label: "VE.Tab.notes", template: tpl("actor/parts/character-notes.hbs") },
+          {
+            id: "notes",
+            label: "VE.Tab.notes",
+            icon: "fas fa-feather",
+            template: tpl("actor/parts/character-notes.hbs"),
+          },
         ] as SheetTab[],
         /** `data-action` handlers for the character sheet. */
         actions: { ...CHARACTER_SHEET_ACTIONS } as Record<string, SheetAction>,
       },
       monster: {
         actions: { ...CHARACTER_SHEET_ACTIONS } as Record<string, SheetAction>,
+      },
+      item: {
+        actions: { ...ITEM_SHEET_ACTIONS } as Record<string, SheetAction>,
       },
     },
   };

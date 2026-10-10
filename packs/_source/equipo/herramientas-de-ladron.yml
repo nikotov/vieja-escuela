@@ -4,6 +4,7 @@ name: Herramientas de ladrón
 type: gear
 img: icons/tools/hand/lockpicks-steel-grey.webp
 system:
+  category: tool
   description: <p>Ocupa 1 Punto de carga.</p>
   quantity: 1
   bundle: 1
@@ -15,7 +16,7 @@ system:
   capacity: 0
 effects: []
 flags: {}
-folder: null
+folder: veFldHerramienta
 sort: 3700
 ownership:
   default: 0

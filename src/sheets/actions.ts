@@ -2,7 +2,15 @@
  * `data-action` handlers shared by the actor sheets. The registries live in
  * `CONFIG.VE.sheets.<type>.actions`, so modules can add actions or override these.
  */
+import { EFFECT_ACTIONS } from "../effects";
+import { inventoryGroups } from "./inventory";
+
 export type SheetAction = (sheet: any, event: MouseEvent, target: HTMLElement) => unknown;
+
+/** Effect actions bound to the sheet's own document (actor or item). */
+const EFFECT_SHEET_ACTIONS: Record<string, SheetAction> = Object.fromEntries(
+  Object.entries(EFFECT_ACTIONS).map(([key, fn]) => [key, (sheet, _event, el) => fn(sheet.document, el)]),
+);
 
 const itemOf = (sheet: any, target: HTMLElement): Item | undefined => {
   const id = target.closest<HTMLElement>("[data-item-id]")?.dataset.itemId;
@@ -35,6 +43,13 @@ export const CHARACTER_SHEET_ACTIONS: Record<string, SheetAction> = {
     const type = target.dataset.type ?? "gear";
     const name = game.i18n!.format("DOCUMENT.New", { type: game.i18n!.localize(`TYPES.Item.${type}`) });
     return sheet.actor.createEmbeddedDocuments("Item", [{ name, type }], { renderSheet: true });
+  },
+  /** "+" on an inventory section: create an item with that section's defaults. */
+  inventoryCreate: (sheet, _event, target) => {
+    const group = inventoryGroups().find((g) => g.id === target.dataset.group);
+    if (!group) return;
+    const name = game.i18n!.format("DOCUMENT.New", { type: game.i18n!.localize(group.label) });
+    return sheet.actor.createEmbeddedDocuments("Item", [{ name, ...group.create }], { renderSheet: true });
   },
   itemEdit: (sheet, _event, target) => itemOf(sheet, target)?.sheet?.render(true),
   itemDelete: (sheet, _event, target) => itemOf(sheet, target)?.deleteDialog(),
@@ -71,5 +86,21 @@ export const CHARACTER_SHEET_ACTIONS: Record<string, SheetAction> = {
     const attacks = [...sheet.actor.system.toObject().attacks];
     attacks.splice(indexOf(target), 1);
     return sheet.actor.update({ "system.attacks": attacks });
+  },
+  ...EFFECT_SHEET_ACTIONS,
+};
+
+/** `data-action` handlers for the item sheet (`CONFIG.VE.sheets.item.actions`). */
+export const ITEM_SHEET_ACTIONS: Record<string, SheetAction> = {
+  ...EFFECT_SHEET_ACTIONS,
+  talentOpen: async (_sheet, _event, target) => {
+    const uuid = target.closest<HTMLElement>("[data-uuid]")?.dataset.uuid;
+    const doc = uuid ? ((await fromUuid(uuid)) as Item | null) : null;
+    return doc?.sheet?.render(true);
+  },
+  talentRemove: (sheet, _event, target) => {
+    const talents = [...sheet.item.system.toObject().talents];
+    talents.splice(indexOf(target), 1);
+    return sheet.item.update({ "system.talents": talents });
   },
 };

@@ -1,23 +1,33 @@
-<section class="spells">
-  <h3>{{localize "VE.Sheet.spells"}}
-    <span class="counter">{{localize "VE.Stat.podAbbr"}} {{system.pod.value}} / {{system.pod.max}}</span>
-    {{#if editable}}<a class="header-control" data-action="itemCreate" data-type="spell"><i class="fas fa-plus"></i></a>{{/if}}
+<section class="ve-section">
+  <h3>
+    {{localize "VE.Sheet.spells"}}
+    {{#if system.magic}}<span class="ve-counter">{{localize "VE.Stat.podAbbr"}} {{system.pod.value}} / {{system.pod.max}}</span>{{/if}}
+    {{#if editable}}<a class="ve-control" data-action="itemCreate" data-type="spell" data-tooltip="{{localize 'VE.Sheet.add'}}"><i class="fas fa-plus"></i></a>{{/if}}
   </h3>
-  <p class="hint">{{localize "VE.Sheet.spellsHint"}}</p>
-  <ol class="item-list">
-    {{#each spells}}
-      <li class="item spell flexrow" data-item-id="{{item.id}}">
-        <img src="{{item.img}}" alt="" />
-        <a class="name" data-action="itemChat">{{item.name}}</a>
-        <span class="tag">{{localize "VE.Spell.levelAbbr"}} {{system.level}}</span>
-        <a class="pill rollable" data-action="castSpell" data-tooltip="{{localize 'VE.Spell.cast'}}"><i class="fas fa-wand-sparkles"></i> {{system.pod}}</a>
-        <div class="item-controls">
-          <a data-action="itemEdit"><i class="fas fa-edit"></i></a>
-          {{#if @root.editable}}<a data-action="itemDelete"><i class="fas fa-trash"></i></a>{{/if}}
-        </div>
-      </li>
-    {{else}}
-      <li class="empty">{{localize "VE.Sheet.noSpells"}}</li>
-    {{/each}}
-  </ol>
+  {{#if system.magic}}
+    <div class="ve-bar pod"><div class="fill" style="width: {{podPercent}}%"></div></div>
+    <p class="ve-hint">{{localize "VE.Sheet.spellsHint"}}</p>
+  {{else}}
+    <p class="ve-hint"><i class="fas fa-circle-info"></i> {{localize "VE.Sheet.noMagicHint"}}</p>
+  {{/if}}
+
+  {{#each spellLevels}}
+    <h4 class="ve-subheading">{{label}}</h4>
+    <ol class="item-list ve-rows">
+      {{#each spells}}
+        <li class="item ve-row" data-item-id="{{item.id}}">
+          <img src="{{item.img}}" alt="" />
+          <a class="ve-row-name" data-action="itemChat" data-tooltip="{{localize 'VE.Sheet.postToChat'}}">{{item.name}}</a>
+          {{#if system.divine}}<span class="ve-tag">{{localize "VE.Spell.divine"}}</span>{{/if}}
+          <a class="ve-pill rollable" data-action="castSpell" data-tooltip="{{localize 'VE.Spell.cast'}}"><i class="fas fa-wand-sparkles"></i> {{system.pod}} {{localize "VE.Stat.podAbbr"}}</a>
+          <div class="ve-controls">
+            <a data-action="itemEdit" data-tooltip="{{localize 'Edit'}}"><i class="fas fa-pen"></i></a>
+            {{#if @root.editable}}<a data-action="itemDelete" data-tooltip="{{localize 'Delete'}}"><i class="fas fa-trash"></i></a>{{/if}}
+          </div>
+        </li>
+      {{/each}}
+    </ol>
+  {{else}}
+    <p class="ve-empty">{{localize "VE.Sheet.noSpells"}}</p>
+  {{/each}}
 </section>

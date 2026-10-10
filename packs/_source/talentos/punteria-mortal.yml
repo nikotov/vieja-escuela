@@ -8,27 +8,27 @@ system:
   source: general
   ruleset: aventurados
 effects:
-- _id: veEffPunteriaMor
-  _key: '!items.effects!veTalPunteriaMor.veEffPunteriaMor'
-  name: Puntería mortal
-  img: icons/svg/target.svg
-  type: base
-  system: {}
-  transfer: true
-  disabled: false
-  changes:
-  - key: system.atq.ranged.bonus
-    mode: 2
-    value: '1'
-    priority: null
-  duration: {}
-  description: ''
-  origin: null
-  statuses: []
-  tint: '#ffffff'
-  flags: {}
+  - _id: veEffPunteriaMor
+    _key: '!items.effects!veTalPunteriaMor.veEffPunteriaMor'
+    name: Puntería mortal
+    img: icons/svg/target.svg
+    type: base
+    system: {}
+    transfer: true
+    disabled: false
+    changes:
+      - key: system.atq.ranged.bonus
+        mode: 2
+        value: '1'
+        priority: null
+    duration: {}
+    description: ''
+    origin: null
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
 flags: {}
-folder: null
+folder: veFldTalAventura
 sort: 4700
 ownership:
   default: 0

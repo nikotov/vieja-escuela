@@ -1,4 +1,5 @@
 <div class="form-grid">
+  <label>{{localize "VE.Gear.category"}} <select name="system.category">{{selectOptions gearCategories selected=system.category}}</select></label>
   {{> "systems/vieja-escuela/templates/item/parts/common-physical.hbs"}}
   <label data-tooltip="{{localize 'VE.Gear.bundleHint'}}">{{localize "VE.Gear.bundle"}} <input type="number" name="system.bundle" value="{{system.bundle}}" min="1" data-dtype="Number" /></label>
   <label class="checkbox">{{localize "VE.Gear.container"}} <input type="checkbox" name="system.container" {{checked system.container}} /></label>

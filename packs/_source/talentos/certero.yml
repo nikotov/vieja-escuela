@@ -8,27 +8,27 @@ system:
   source: race
   ruleset: expandido
 effects:
-- _id: veEffCertero0000
-  _key: '!items.effects!veTalCertero0000.veEffCertero0000'
-  name: Certero
-  img: icons/svg/target.svg
-  type: base
-  system: {}
-  transfer: true
-  disabled: false
-  changes:
-  - key: system.atq.ranged.bonus
-    mode: 2
-    value: '1'
-    priority: null
-  duration: {}
-  description: ''
-  origin: null
-  statuses: []
-  tint: '#ffffff'
-  flags: {}
+  - _id: veEffCertero0000
+    _key: '!items.effects!veTalCertero0000.veEffCertero0000'
+    name: Certero
+    img: icons/svg/target.svg
+    type: base
+    system: {}
+    transfer: true
+    disabled: false
+    changes:
+      - key: system.atq.ranged.bonus
+        mode: 2
+        value: '1'
+        priority: null
+    duration: {}
+    description: ''
+    origin: null
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
 flags: {}
-folder: null
+folder: veFldTalRazas000
 sort: 800
 ownership:
   default: 0

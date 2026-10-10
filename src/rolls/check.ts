@@ -14,7 +14,7 @@ import type { RollOptions } from "./types";
 export function rollSkill(actor: Actor, skill: string, options: RollOptions = {}) {
   const label = skillLabel(skill);
   const value = isCharacter(actor)
-    ? (charSystem(actor).skills[skill]?.value ?? 0)
+    ? (charSystem(actor).skills[skill]?.total ?? 0)
     : monsterSystem(actor).skill;
   const config = makeRollConfig(
     {

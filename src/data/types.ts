@@ -17,7 +17,7 @@ export interface GrantedTalent {
 
 export interface CharacterSystem {
   attributes: Record<string, { value: number; mod: number }>;
-  skills: Record<string, { value: number }>;
+  skills: Record<string, { value: number; bonus: number; total: number }>;
   level: number;
   xp: number;
   hp: { value: number; gained: number; bonus: number; max: number; base: number };
@@ -30,6 +30,7 @@ export interface CharacterSystem {
     ranged: { bonus: number; value: number };
   };
   def: { bonus: number; value: number; armor: number; shield: number };
+  dmg: { bonus: number };
   mov: { base: number | null; bonus: number; value: number };
   critThreshold: number;
   hitDie: string;
@@ -102,6 +103,7 @@ export interface ArmorSystem {
 
 export interface GearSystem {
   description: string;
+  category: string;
   quantity: number;
   bundle: number;
   load: number;

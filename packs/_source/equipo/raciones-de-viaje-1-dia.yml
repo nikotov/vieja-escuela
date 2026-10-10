@@ -4,6 +4,7 @@ name: Raciones de viaje (1 día)
 type: gear
 img: icons/consumables/grains/breadsticks-crackers-wrapped-ration-brown.webp
 system:
+  category: consumable
   description: '<p>Carga: 1 punto cada 5 unidades. Los objetos más pequeños no cuentan para la carga hasta llegar a un cierto número. Por tanto no hay que contar ese peso hasta acumular el límite indicado.</p>'
   quantity: 1
   bundle: 5
@@ -15,7 +16,7 @@ system:
   capacity: 0
 effects: []
 flags: {}
-folder: null
+folder: veFldConsumibles
 sort: 4600
 ownership:
   default: 0

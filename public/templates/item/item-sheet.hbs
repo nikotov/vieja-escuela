@@ -21,7 +21,7 @@
       {{editor enrichedDescription target="system.description" button=true editable=editable engine="prosemirror"}}
     </div>
     <div class="tab effects" data-group="primary" data-tab="effects">
-      {{> "systems/vieja-escuela/templates/item/parts/effects.hbs"}}
+      {{> (lookup @root "effectsEditorTemplate")}}
     </div>
   </section>
 </form>

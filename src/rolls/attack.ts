@@ -106,6 +106,7 @@ export async function rollDamage(actor: Actor, options: DamageOptions = {}) {
     const strMod = s.attributes[CONFIG.VE.damageAttribute]?.mod ?? 0;
     if (w.addStr && strMod) parts.push(String(strMod));
     if (w.damageBonus) parts.push(String(w.damageBonus));
+    if (s.dmg?.bonus) parts.push(String(s.dmg.bonus));
     if (options.twoHanded && w.hands === "versatile") parts.push("1");
   } else {
     const attack = monsterSystem(actor).attacks[options.attackIndex ?? 0];

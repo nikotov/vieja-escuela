@@ -4,6 +4,7 @@ name: Saco
 type: gear
 img: icons/containers/bags/sack-cloth-brown.webp
 system:
+  category: container
   description: <p>10 Puntos de carga de capacidad.</p><p>Este objeto no consume Puntos de carga por sí mismo. Sí se cuentan los Puntos de carga de lo que almacene. Su ventaja es permitir a los aventureros desprenderse de este objeto y bajar su carga transportada rápidamente ante cualquier suceso imprevisto.</p>
   quantity: 1
   bundle: 1
@@ -15,7 +16,7 @@ system:
   capacity: 10
 effects: []
 flags: {}
-folder: null
+folder: veFldContenedore
 sort: 4700
 ownership:
   default: 0

@@ -4,6 +4,7 @@ name: Pértiga de madera (3 metros)
 type: gear
 img: icons/commodities/wood/wood-pole.webp
 system:
+  category: tool
   description: <p>Ocupa 2 Puntos de carga.</p>
   quantity: 1
   bundle: 1
@@ -15,7 +16,7 @@ system:
   capacity: 0
 effects: []
 flags: {}
-folder: null
+folder: veFldHerramienta
 sort: 4200
 ownership:
   default: 0

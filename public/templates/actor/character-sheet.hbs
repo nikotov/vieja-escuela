@@ -1,79 +1,96 @@
-<form class="{{cssClass}} ve-sheet" autocomplete="off">
-  <header class="sheet-header">
-    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
-    <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'Name'}}" /></h1>
-      <div class="header-row">
+<form class="{{cssClass}} ve-sheet ve-character" autocomplete="off">
+  <header class="ve-hero">
+    <div class="ve-portrait"><img src="{{actor.img}}" data-edit="img" alt="{{actor.name}}" /></div>
+    <div class="ve-identity">
+      <input class="ve-name" name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'Name'}}" />
+      <div class="ve-lineage">
         {{#if showRace}}
-          <div class="slot" data-drop="race">
-            <span class="slot-label">{{localize "TYPES.Item.race"}}</span>
+          <div class="ve-slot {{#unless raceItem}}empty{{/unless}}">
+            <span class="ve-slot-label">{{localize "TYPES.Item.race"}}</span>
             {{#if raceItem}}
               <a data-action="itemEdit" data-item-id="{{raceItem.id}}">{{raceItem.name}}</a>
-              {{#if editable}}<a class="slot-remove" data-action="itemDelete" data-item-id="{{raceItem.id}}" data-tooltip="{{localize 'Delete'}}"><i class="fas fa-times"></i></a>{{/if}}
-            {{else}}<span class="empty">{{localize "VE.Sheet.dropHere"}}</span>{{/if}}
+              {{#if editable}}<a class="ve-slot-remove" data-action="itemDelete" data-item-id="{{raceItem.id}}" data-tooltip="{{localize 'Delete'}}"><i class="fas fa-xmark"></i></a>{{/if}}
+            {{else}}<span>{{localize "VE.Sheet.dropHere"}}</span>{{/if}}
           </div>
         {{/if}}
         {{#if showClass}}
-          <div class="slot" data-drop="class">
-            <span class="slot-label">{{localize "TYPES.Item.class"}}</span>
+          <div class="ve-slot {{#unless classItem}}empty{{/unless}}">
+            <span class="ve-slot-label">{{localize "TYPES.Item.class"}}</span>
             {{#if classItem}}
               <a data-action="itemEdit" data-item-id="{{classItem.id}}">{{classItem.name}}</a>
-              {{#if editable}}<a class="slot-remove" data-action="itemDelete" data-item-id="{{classItem.id}}" data-tooltip="{{localize 'Delete'}}"><i class="fas fa-times"></i></a>{{/if}}
-            {{else}}<span class="empty">{{localize "VE.Sheet.dropHere"}}</span>{{/if}}
+              {{#if editable}}<a class="ve-slot-remove" data-action="itemDelete" data-item-id="{{classItem.id}}" data-tooltip="{{localize 'Delete'}}"><i class="fas fa-xmark"></i></a>{{/if}}
+            {{else}}<span>{{localize "VE.Sheet.dropHere"}}</span>{{/if}}
           </div>
         {{/if}}
-        <label class="field level">
+        <label class="ve-level">
           <span>{{localize "VE.Stat.level"}}</span>
           <input type="number" name="system.level" value="{{system.level}}" min="1" data-dtype="Number" />
         </label>
-        <label class="field xp">
-          <span>{{localize "VE.Stat.xp"}}</span>
-          <input type="number" name="system.xp" value="{{system.xp}}" min="0" data-dtype="Number" />
-          <span class="of">/ {{system.xpNext}}</span>
-        </label>
+        <span class="ve-ruleset" data-tooltip="{{localize 'VE.Setting.ruleset.name'}}">{{rulesetLabel}}</span>
+      </div>
+      <div class="ve-xp">
+        <span class="ve-label">{{localize "VE.Stat.xp"}}</span>
+        <input type="number" name="system.xp" value="{{system.xp}}" min="0" data-dtype="Number" />
+        <span class="ve-of">/ {{system.xpNext}}</span>
+        <div class="ve-bar xp"><div class="fill" style="width: {{xpPercent}}%"></div></div>
         {{#if system.canLevelUp}}
-          <button type="button" class="level-up" data-action="levelUp"><i class="fas fa-arrow-up"></i> {{localize "VE.LevelUp.button"}}</button>
+          <button type="button" class="ve-level-up" data-action="levelUp"><i class="fas fa-angles-up"></i> {{localize "VE.LevelUp.button"}}</button>
         {{/if}}
       </div>
-      <div class="ruleset-tag">{{rulesetLabel}}</div>
     </div>
   </header>
 
-  <section class="stats-strip">
-    <div class="stat hp">
+  <section class="ve-vitals">
+    <div class="ve-vital hp">
       <label>{{localize "VE.Stat.hp"}}</label>
-      <div class="hp-values">
+      <div class="ve-pair">
         <input type="number" name="system.hp.value" value="{{system.hp.value}}" data-dtype="Number" />
-        <span>/ {{system.hp.max}}</span>
+        <span class="ve-max">/ {{system.hp.max}}</span>
       </div>
-      <div class="bar"><div class="fill" style="width: {{hpPercent}}%"></div></div>
+      <div class="ve-bar hp"><div class="fill" style="width: {{hpPercent}}%"></div></div>
     </div>
-    <div class="stat"><label>{{localize "VE.Stat.def"}}</label><span class="value">{{system.def.value}}</span></div>
-    <div class="stat"><label>{{localize "VE.Stat.atqMelee"}}</label><span class="value">{{stats.atqMelee}}</span></div>
-    <div class="stat"><label>{{localize "VE.Stat.atqRanged"}}</label><span class="value">{{stats.atqRanged}}</span></div>
-    <div class="stat rollable" data-action="rollInstinct" data-tooltip="{{localize 'VE.Roll.instinctTitle'}}">
-      <label>{{localize "VE.Stat.ins"}}</label><span class="value">{{stats.ins}}</span>
+    <div class="ve-vital" data-tooltip="{{stats.defBreakdown}}">
+      <label>{{localize "VE.Stat.def"}}</label>
+      <span class="ve-value">{{system.def.value}}</span>
+    </div>
+    <div class="ve-vital atq">
+      <label>{{localize "VE.Stat.atqAbbr"}}</label>
+      <div class="ve-split">
+        <span data-tooltip="{{localize 'VE.Stat.atqMelee'}}"><i class="fas fa-khanda"></i> {{stats.atqMelee}}</span>
+        <span data-tooltip="{{localize 'VE.Stat.atqRanged'}}"><i class="fas fa-bow-arrow"></i> {{stats.atqRanged}}</span>
+      </div>
+    </div>
+    <div class="ve-vital rollable" data-action="rollInstinct" data-tooltip="{{localize 'VE.Roll.instinctTitle'}}">
+      <label>{{localize "VE.Stat.ins"}}</label>
+      <span class="ve-value">{{stats.ins}}</span>
     </div>
     {{#if system.magic}}
-      <div class="stat pod">
+      <div class="ve-vital pod">
         <label>{{localize "VE.Stat.pod"}}</label>
-        <div class="hp-values">
+        <div class="ve-pair">
           <input type="number" name="system.pod.value" value="{{system.pod.value}}" data-dtype="Number" />
-          <span>/ {{system.pod.max}}</span>
+          <span class="ve-max">/ {{system.pod.max}}</span>
         </div>
+        <div class="ve-bar pod"><div class="fill" style="width: {{podPercent}}%"></div></div>
       </div>
     {{/if}}
-    <div class="stat"><label>{{localize "VE.Stat.mov"}}</label><span class="value">{{system.mov.value}}</span></div>
-    <div class="stat"><label>{{localize "VE.Stat.hitDie"}}</label><span class="value">{{system.effectiveHitDie}}</span></div>
+    <div class="ve-vital"><label>{{localize "VE.Stat.mov"}}</label><span class="ve-value">{{system.mov.value}}</span></div>
+    <div class="ve-vital"><label>{{localize "VE.Stat.hitDie"}}</label><span class="ve-value">{{system.effectiveHitDie}}</span></div>
   </section>
 
-  <nav class="sheet-tabs tabs" data-group="primary">
-    {{#each tabs}}<a class="item" data-tab="{{id}}">{{label}}</a>{{/each}}
-  </nav>
-
-  <section class="sheet-body">
-    {{#each tabs}}
-      <div class="tab {{id}}" data-group="primary" data-tab="{{id}}">{{> (lookup this "template") @root}}</div>
-    {{/each}}
-  </section>
+  <div class="ve-body">
+    <aside class="ve-sidebar">{{> (lookup @root "sidebarTemplate") @root}}</aside>
+    <main class="ve-main">
+      <nav class="sheet-tabs tabs ve-tabs" data-group="primary">
+        {{#each tabs}}
+          <a class="item" data-tab="{{id}}">{{#if icon}}<i class="{{icon}}"></i>{{/if}}<span>{{label}}</span></a>
+        {{/each}}
+      </nav>
+      <section class="sheet-body">
+        {{#each tabs}}
+          <div class="tab {{id}}" data-group="primary" data-tab="{{id}}">{{> (lookup this "template") @root}}</div>
+        {{/each}}
+      </section>
+    </main>
+  </div>
 </form>

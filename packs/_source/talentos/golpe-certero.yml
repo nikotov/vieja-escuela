@@ -8,27 +8,27 @@ system:
   source: general
   ruleset: aventurados
 effects:
-- _id: veEffGolpeCerter
-  _key: '!items.effects!veTalGolpeCerter.veEffGolpeCerter'
-  name: Golpe certero
-  img: icons/svg/target.svg
-  type: base
-  system: {}
-  transfer: true
-  disabled: false
-  changes:
-  - key: system.critThreshold
-    mode: 3
-    value: '18'
-    priority: null
-  duration: {}
-  description: ''
-  origin: null
-  statuses: []
-  tint: '#ffffff'
-  flags: {}
+  - _id: veEffGolpeCerter
+    _key: '!items.effects!veTalGolpeCerter.veEffGolpeCerter'
+    name: Golpe certero
+    img: icons/svg/target.svg
+    type: base
+    system: {}
+    transfer: true
+    disabled: false
+    changes:
+      - key: system.critThreshold
+        mode: 3
+        value: '18'
+        priority: null
+    duration: {}
+    description: ''
+    origin: null
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
 flags: {}
-folder: null
+folder: veFldTalAventura
 sort: 4000
 ownership:
   default: 0

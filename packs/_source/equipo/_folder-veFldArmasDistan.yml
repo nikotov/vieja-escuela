@@ -1,0 +1,10 @@
+_id: veFldArmasDistan
+_key: '!folders!veFldArmasDistan'
+name: Armas a distancia
+type: Item
+folder: null
+sorting: a
+sort: 200
+color: null
+description: ''
+flags: {}

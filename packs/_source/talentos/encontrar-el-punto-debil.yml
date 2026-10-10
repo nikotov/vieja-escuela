@@ -8,27 +8,27 @@ system:
   source: class
   ruleset: expandido
 effects:
-- _id: veEffEncontrarEl
-  _key: '!items.effects!veTalEncontrarEl.veEffEncontrarEl'
-  name: Encontrar el Punto Débil
-  img: icons/svg/target.svg
-  type: base
-  system: {}
-  transfer: true
-  disabled: false
-  changes:
-  - key: system.critThreshold
-    mode: 3
-    value: '19'
-    priority: null
-  duration: {}
-  description: ''
-  origin: null
-  statuses: []
-  tint: '#ffffff'
-  flags: {}
+  - _id: veEffEncontrarEl
+    _key: '!items.effects!veTalEncontrarEl.veEffEncontrarEl'
+    name: Encontrar el Punto Débil
+    img: icons/svg/target.svg
+    type: base
+    system: {}
+    transfer: true
+    disabled: false
+    changes:
+      - key: system.critThreshold
+        mode: 3
+        value: '19'
+        priority: null
+    duration: {}
+    description: ''
+    origin: null
+    statuses: []
+    tint: '#ffffff'
+    flags: {}
 flags: {}
-folder: null
+folder: veFldTalTipos000
 sort: 1200
 ownership:
   default: 0
