@@ -1,0 +1,17 @@
+_id: veSplLibertadDeM
+_key: '!items!veSplLibertadDeM'
+name: Libertad de movimiento
+type: spell
+img: icons/magic/movement/trail-streak-zigzag-teal.webp
+system:
+  description: <p>El lanzador se mueve sin importar los obstáculos durante 1 hora.</p>
+  level: 4
+  pod: 7
+  divine: true
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 3900
+ownership:
+  default: 0

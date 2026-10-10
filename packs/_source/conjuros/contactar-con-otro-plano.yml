@@ -1,0 +1,17 @@
+_id: veSplContactarCo
+_key: '!items!veSplContactarCo'
+name: Contactar con otro plano
+type: spell
+img: icons/magic/perception/eye-tendrils-web-purple.webp
+system:
+  description: <p>El lanzador puede hacer una pregunta a una entidad extraplanar.</p>
+  level: 5
+  pod: 9
+  divine: false
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 1300
+ownership:
+  default: 0

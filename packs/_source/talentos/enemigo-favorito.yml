@@ -1,0 +1,15 @@
+_id: veTalEnemigoFavo
+_key: '!items!veTalEnemigoFavo'
+name: Enemigo favorito
+type: talent
+img: icons/svg/skull.svg
+system:
+  description: '<p>Elige una palabra clave para describir un tipo de monstruo o facción (ej: trasgos, gigantes, dragones, cultistas, etc). Tienes ventaja en las tiradas contra el enemigo elegido.</p>'
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 3400
+ownership:
+  default: 0

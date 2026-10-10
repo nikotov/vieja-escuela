@@ -1,0 +1,15 @@
+_id: veTalPoliglota00
+_key: '!items!veTalPoliglota00'
+name: Políglota
+type: talent
+img: icons/svg/book.svg
+system:
+  description: <p>Manejas con fluidez varios idiomas y tienes ventaja en las tiradas para descifrar escrituras o palabras en hablas extranjeras.</p>
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 4600
+ownership:
+  default: 0

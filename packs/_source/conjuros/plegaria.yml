@@ -1,0 +1,17 @@
+_id: veSplPlegaria000
+_key: '!items!veSplPlegaria000'
+name: Plegaria
+type: spell
+img: icons/magic/holy/prayer-hands-glowing-yellow-white.webp
+system:
+  description: <p>Aliados +1 a toda tirada, enemigos -1 durante 1 hora.</p>
+  level: 3
+  pod: 5
+  divine: true
+  random: 79-82
+effects: []
+flags: {}
+folder: null
+sort: 4700
+ownership:
+  default: 0

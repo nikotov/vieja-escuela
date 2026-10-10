@@ -1,0 +1,17 @@
+_id: veSplClarividenc
+_key: '!items!veSplClarividenc'
+name: Clarividencia
+type: spell
+img: icons/magic/perception/orb-crystal-ball-scrying-blue.webp
+system:
+  description: <p>Permite ver a grandes distancias durante 1 turno.</p>
+  level: 3
+  pod: 5
+  divine: false
+  random: 20-21
+effects: []
+flags: {}
+folder: null
+sort: 1000
+ownership:
+  default: 0

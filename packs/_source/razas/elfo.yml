@@ -1,0 +1,19 @@
+_id: veRazElfo0000000
+_key: '!items!veRazElfo0000000'
+name: Elfo
+type: race
+img: icons/svg/oak.svg
+system:
+  description: <p>Los elfos suelen habitar en bosques grandes y frondosos. Algunos sabios opinan que son espíritus de la naturaleza y por eso prefieren vivir cerca de ella. Otros afirman que la expansión humana los ha empujado hacia esas zonas y los elfos simplemente se han adaptado.</p><p><strong>Movimiento:</strong> 12.</p><p><strong>Talentos:</strong></p><ul><li><strong>Vista Aguda</strong></li><li><strong>Infravisión</strong></li></ul>
+  mov: 12
+  talents:
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalVistaAguda0
+    level: 1
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalInfravision
+    level: 1
+effects: []
+flags: {}
+folder: null
+sort: 100
+ownership:
+  default: 0

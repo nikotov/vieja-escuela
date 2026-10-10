@@ -1,0 +1,17 @@
+_id: veSplDiscoFlotan
+_key: '!items!veSplDiscoFlotan'
+name: Disco flotante
+type: spell
+img: icons/magic/symbols/ring-circle-smoke-blue.webp
+system:
+  description: <p>Se crea durante 1 hora un disco 1m de diámetro que soporta hasta 50Kg.</p>
+  level: 1
+  pod: 1
+  divine: false
+  random: 32-35
+effects: []
+flags: {}
+folder: null
+sort: 2200
+ownership:
+  default: 0

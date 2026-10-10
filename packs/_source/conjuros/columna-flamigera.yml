@@ -1,0 +1,17 @@
+_id: veSplColumnaFlam
+_key: '!items!veSplColumnaFlam'
+name: Columna flamígera
+type: spell
+img: icons/magic/fire/beam-jet-stream-yellow.webp
+system:
+  description: <p>Quema enemigos 3m radio. 5D6 daño. Mitad de daño Ins (Des).</p>
+  level: 5
+  pod: 9
+  divine: true
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 1100
+ownership:
+  default: 0

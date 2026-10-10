@@ -1,0 +1,27 @@
+_id: veEqpGranHacha00
+_key: '!items!veEqpGranHacha00'
+name: Gran hacha
+type: weapon
+img: icons/weapons/axes/axe-double-simple-black.webp
+system:
+  description: <p>Arma cuerpo a cuerpo.</p><p>Arma a dos manos.</p>
+  damage: 1d10+1
+  kind: melee
+  hands: two
+  addStr: true
+  range: 0
+  shots: 1
+  cost:
+    value: 22
+    unit: mo
+  load: 2
+  quantity: 1
+  equipped: false
+  attackBonus: 0
+  damageBonus: 0
+effects: []
+flags: {}
+folder: null
+sort: 1100
+ownership:
+  default: 0

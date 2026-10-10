@@ -1,0 +1,17 @@
+_id: veSplEsferaLlame
+_key: '!items!veSplEsferaLlame'
+name: Esfera llameante
+type: spell
+img: icons/magic/fire/orb-vortex.webp
+system:
+  description: <p>Rueda y se controla con la mente. 2D6 de daño. Mitad de daño Ins (Des).</p>
+  level: 2
+  pod: 3
+  divine: false
+  random: 52-53
+effects: []
+flags: {}
+folder: null
+sort: 3000
+ownership:
+  default: 0

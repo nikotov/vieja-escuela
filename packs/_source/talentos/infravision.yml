@@ -1,0 +1,15 @@
+_id: veTalInfravision
+_key: '!items!veTalInfravision'
+name: Infravisión
+type: talent
+img: icons/svg/eye.svg
+system:
+  description: <p>Ves en la oscuridad hasta 20 metros. La visión se basa en el calor desprendido por los objetos y los cuerpos.</p>
+  source: race
+  ruleset: ''
+effects: []
+flags: {}
+folder: null
+sort: 200
+ownership:
+  default: 0

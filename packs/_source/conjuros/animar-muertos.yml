@@ -1,0 +1,17 @@
+_id: veSplAnimarMuert
+_key: '!items!veSplAnimarMuert'
+name: Animar muertos
+type: spell
+img: icons/magic/death/undead-skeleton-energy-green.webp
+system:
+  description: <p>Crea 3D6 esqueletos o zombies.</p>
+  level: 4
+  pod: 7
+  divine: false
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 100
+ownership:
+  default: 0

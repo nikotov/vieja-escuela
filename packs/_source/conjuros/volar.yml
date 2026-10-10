@@ -1,0 +1,17 @@
+_id: veSplVolar000000
+_key: '!items!veSplVolar000000'
+name: Volar
+type: spell
+img: icons/magic/control/buff-flight-wings-blue.webp
+system:
+  description: <p>Se vuela durante 1 turno a una velocidad de 10 m/s.</p>
+  level: 3
+  pod: 5
+  divine: false
+  random: 99-00
+effects: []
+flags: {}
+folder: null
+sort: 6000
+ownership:
+  default: 0

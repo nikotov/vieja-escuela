@@ -1,0 +1,17 @@
+_id: veSplToqueVampir
+_key: '!items!veSplToqueVampir'
+name: Toque vampírico
+type: spell
+img: icons/magic/death/mouth-bite-fangs-vampire.webp
+system:
+  description: <p>Si toca roba 2D6 Pv que suma a los suyos.</p>
+  level: 3
+  pod: 5
+  divine: false
+  random: 97-98
+effects: []
+flags: {}
+folder: null
+sort: 5800
+ownership:
+  default: 0

@@ -1,0 +1,17 @@
+_id: veSplVisionVerda
+_key: '!items!veSplVisionVerda'
+name: Visión verdadera
+type: spell
+img: icons/magic/perception/eye-ringed-glow-angry-teal.webp
+system:
+  description: <p>Muestra las cosas como son durante 10 minutos (1 turno).</p>
+  level: 6
+  pod: 11
+  divine: false
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 5900
+ownership:
+  default: 0

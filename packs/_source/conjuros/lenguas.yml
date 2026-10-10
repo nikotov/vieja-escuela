@@ -1,0 +1,17 @@
+_id: veSplLenguas0000
+_key: '!items!veSplLenguas0000'
+name: Lenguas
+type: spell
+img: icons/skills/social/diplomacy-handshake.webp
+system:
+  description: <p>Habla cualquier idioma durante 1 hora.</p>
+  level: 4
+  pod: 7
+  divine: true
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 3700
+ownership:
+  default: 0

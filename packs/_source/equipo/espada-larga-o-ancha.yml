@@ -1,0 +1,27 @@
+_id: veEqpEspadaLarga
+_key: '!items!veEqpEspadaLarga'
+name: Espada larga o ancha
+type: weapon
+img: icons/weapons/swords/sword-guard-engraved.webp
+system:
+  description: <p>Arma cuerpo a cuerpo.</p><p>Puede usarse a una o a dos manos.</p>
+  damage: 1d8
+  kind: melee
+  hands: versatile
+  addStr: true
+  range: 0
+  shots: 1
+  cost:
+    value: 15
+    unit: mo
+  load: 1
+  quantity: 1
+  equipped: false
+  attackBonus: 0
+  damageBonus: 0
+effects: []
+flags: {}
+folder: null
+sort: 800
+ownership:
+  default: 0

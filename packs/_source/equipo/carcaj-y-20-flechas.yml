@@ -1,0 +1,21 @@
+_id: veEqpCarcajY20Fl
+_key: '!items!veEqpCarcajY20Fl'
+name: Carcaj y 20 flechas
+type: gear
+img: icons/containers/ammunition/arrows-quiver-simple-brown.webp
+system:
+  description: <p>Ocupa 1 Punto de carga.</p>
+  quantity: 1
+  bundle: 1
+  load: 1
+  cost:
+    value: 8
+    unit: mp
+  container: false
+  capacity: 0
+effects: []
+flags: {}
+folder: null
+sort: 3000
+ownership:
+  default: 0

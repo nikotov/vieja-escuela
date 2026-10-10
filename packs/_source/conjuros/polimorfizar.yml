@@ -1,0 +1,17 @@
+_id: veSplPolimorfiza
+_key: '!items!veSplPolimorfiza'
+name: Polimorfizar
+type: spell
+img: icons/magic/nature/wolf-paw-glow-large-green.webp
+system:
+  description: <p>Transforma al mago en otra criatura durante 1 hora.</p>
+  level: 4
+  pod: 7
+  divine: false
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 4800
+ownership:
+  default: 0

@@ -1,0 +1,17 @@
+_id: veSplCurarCritic
+_key: '!items!veSplCurarCritic'
+name: Curar heridas críticas
+type: spell
+img: icons/magic/life/heart-cross-strong-flame-green.webp
+system:
+  description: <p>Cura 4d8 de daño +1/nivel (max +20).</p>
+  level: 4
+  pod: 7
+  divine: true
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 1600
+ownership:
+  default: 0

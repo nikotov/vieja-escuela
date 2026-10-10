@@ -1,0 +1,27 @@
+_id: veEqpHonda000000
+_key: '!items!veEqpHonda000000'
+name: Honda
+type: weapon
+img: icons/weapons/slings/slingshot-wood.webp
+system:
+  description: <p>Arma de proyectiles. Alcance 20 m; 1 disparo por asalto.</p><p>Atacar a más de la distancia de alcance implica una penalización de -2 al ataque. No se puede disparar a más del doble del alcance indicado.</p><p>Esta arma permite sumar el modificador por Fuerza al daño.</p>
+  damage: 1d4
+  kind: ranged
+  hands: one
+  addStr: true
+  range: 20
+  shots: 1
+  cost:
+    value: 2
+    unit: mp
+  load: 0
+  quantity: 1
+  equipped: false
+  attackBonus: 0
+  damageBonus: 0
+effects: []
+flags: {}
+folder: null
+sort: 1700
+ownership:
+  default: 0

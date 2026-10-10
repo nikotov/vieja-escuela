@@ -1,0 +1,17 @@
+_id: veSplGolpeDeRayo
+_key: '!items!veSplGolpeDeRayo'
+name: Golpe de rayo
+type: spell
+img: icons/magic/lightning/bolt-forked-blue.webp
+system:
+  description: <p>5D6 daño eléctrico. Mitad de daño Ins (Des).</p>
+  level: 3
+  pod: 5
+  divine: false
+  random: 61-62
+effects: []
+flags: {}
+folder: null
+sort: 3400
+ownership:
+  default: 0

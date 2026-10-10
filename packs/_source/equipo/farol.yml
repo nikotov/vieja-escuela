@@ -1,0 +1,21 @@
+_id: veEqpFarol000000
+_key: '!items!veEqpFarol000000'
+name: Farol
+type: gear
+img: icons/sundries/lights/lantern-iron-lit-yellow.webp
+system:
+  description: <p>Proporciona 4 horas de luz.</p><p>Ocupa 1 Punto de carga.</p>
+  quantity: 1
+  bundle: 1
+  load: 1
+  cost:
+    value: 7
+    unit: mo
+  container: false
+  capacity: 0
+effects: []
+flags: {}
+folder: null
+sort: 3400
+ownership:
+  default: 0

@@ -1,0 +1,17 @@
+_id: veSplDetectarMen
+_key: '!items!veSplDetectarMen'
+name: Detectar mentiras
+type: spell
+img: icons/magic/perception/third-eye-blue-red.webp
+system:
+  description: <p>Revela mentiras durante 1 turno max. Requiere concentración.</p>
+  level: 4
+  pod: 7
+  divine: true
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 2100
+ownership:
+  default: 0

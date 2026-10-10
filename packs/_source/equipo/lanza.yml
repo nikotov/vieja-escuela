@@ -1,0 +1,27 @@
+_id: veEqpLanza000000
+_key: '!items!veEqpLanza000000'
+name: Lanza
+type: weapon
+img: icons/weapons/polearms/spear-flared-steel.webp
+system:
+  description: <p>Arma cuerpo a cuerpo.</p>
+  damage: 1d6
+  kind: melee
+  hands: one
+  addStr: true
+  range: 0
+  shots: 1
+  cost:
+    value: 1
+    unit: mo
+  load: 1
+  quantity: 1
+  equipped: false
+  attackBonus: 0
+  damageBonus: 0
+effects: []
+flags: {}
+folder: null
+sort: 600
+ownership:
+  default: 0

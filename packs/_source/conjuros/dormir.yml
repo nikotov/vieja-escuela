@@ -1,0 +1,17 @@
+_id: veSplDormir00000
+_key: '!items!veSplDormir00000'
+name: Dormir
+type: spell
+img: icons/svg/sleep.svg
+system:
+  description: <p>Hasta 1D6 niveles en criaturas se duermen un turno. Evitar con Ins (Car).</p>
+  level: 1
+  pod: 1
+  divine: false
+  random: 38-41
+effects: []
+flags: {}
+folder: null
+sort: 2400
+ownership:
+  default: 0

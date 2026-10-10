@@ -1,0 +1,19 @@
+_id: veRazMediano0000
+_key: '!items!veRazMediano0000'
+name: Mediano
+type: race
+img: icons/svg/house.svg
+system:
+  description: <p>Los medianos suelen vivir en comunidades agrícolas usualmente alejadas de los núcleos urbanos de la “gente grande”. Son famosos por su humor afable y por no rechazar nunca una comida gratis.</p><p><strong>Movimiento:</strong> 9.</p><p><strong>Talentos:</strong></p><ul><li><strong>Escurridizo</strong></li><li><strong>Certero</strong></li></ul>
+  mov: 9
+  talents:
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalEscurridizo
+    level: 1
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalCertero0000
+    level: 1
+effects: []
+flags: {}
+folder: null
+sort: 300
+ownership:
+  default: 0

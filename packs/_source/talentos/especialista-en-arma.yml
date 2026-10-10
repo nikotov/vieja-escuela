@@ -1,0 +1,15 @@
+_id: veTalEspecialist
+_key: '!items!veTalEspecialist'
+name: Especialista en arma
+type: talent
+img: icons/svg/sword.svg
+system:
+  description: '<p>Elige un arma específica (hacha de batalla, espada a dos manos, etc). El dado de daño de ese arma aumenta en un paso (ej: 1d6 pasa a ser 1d8, 1d10 a 1d12, etc).</p>'
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 3800
+ownership:
+  default: 0

@@ -1,0 +1,17 @@
+<div class="granted-talents">
+  <h3>{{localize "VE.Sheet.grantedTalents"}}</h3>
+  <ol class="item-list">
+    {{#each grantedTalents}}
+      <li class="item flexrow" data-uuid="{{uuid}}" data-index="{{index}}">
+        <a class="name" data-action="talentOpen">{{name}}</a>
+        <label>{{localize "VE.Stat.levelAbbr"}}
+          <input type="number" name="system.talents.{{index}}.level" value="{{level}}" min="1" data-dtype="Number" />
+        </label>
+        <input type="hidden" name="system.talents.{{index}}.uuid" value="{{uuid}}" />
+        {{#if @root.editable}}<a data-action="talentRemove"><i class="fas fa-trash"></i></a>{{/if}}
+      </li>
+    {{else}}
+      <li class="empty">{{localize "VE.Sheet.dropTalents"}}</li>
+    {{/each}}
+  </ol>
+</div>

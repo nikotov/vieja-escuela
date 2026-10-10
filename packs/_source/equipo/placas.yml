@@ -1,0 +1,21 @@
+_id: veEqpPlacas00000
+_key: '!items!veEqpPlacas00000'
+name: Placas
+type: armor
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+system:
+  description: <p>Armadura pesada. Defensa +6.</p><p>Esta armadura solo permite un movimiento base de 6 metros como máximo y el personaje aplica las penalizaciones de estar sobrecargado.</p>
+  category: heavy
+  def: 6
+  heavy: true
+  cost:
+    value: 100
+    unit: mo
+  load: 2
+  equipped: false
+effects: []
+flags: {}
+folder: null
+sort: 2300
+ownership:
+  default: 0

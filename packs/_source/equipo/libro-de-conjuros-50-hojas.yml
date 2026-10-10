@@ -1,0 +1,21 @@
+_id: veEqpLibroDeConj
+_key: '!items!veEqpLibroDeConj'
+name: Libro de conjuros (50 hojas)
+type: gear
+img: icons/sundries/books/book-embossed-bound-brown.webp
+system:
+  description: <p>Ocupa 1 Punto de carga.</p>
+  quantity: 1
+  bundle: 1
+  load: 1
+  cost:
+    value: 25
+    unit: mo
+  container: false
+  capacity: 0
+effects: []
+flags: {}
+folder: null
+sort: 3900
+ownership:
+  default: 0

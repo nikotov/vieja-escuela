@@ -1,0 +1,21 @@
+_id: veEqpMochila0000
+_key: '!items!veEqpMochila0000'
+name: Mochila
+type: gear
+img: icons/containers/bags/pack-leather-brown.webp
+system:
+  description: <p>8 Puntos de carga de capacidad.</p><p>Este objeto no consume Puntos de carga por sí mismo. Sí se cuentan los Puntos de carga de lo que almacene. Su ventaja es permitir a los aventureros desprenderse de este objeto y bajar su carga transportada rápidamente ante cualquier suceso imprevisto.</p>
+  quantity: 1
+  bundle: 1
+  load: 0
+  cost:
+    value: 5
+    unit: mo
+  container: true
+  capacity: 8
+effects: []
+flags: {}
+folder: null
+sort: 4000
+ownership:
+  default: 0

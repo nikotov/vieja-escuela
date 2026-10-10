@@ -1,0 +1,15 @@
+_id: veTalEsquivo0000
+_key: '!items!veTalEsquivo0000'
+name: Esquivo
+type: talent
+img: icons/svg/wing.svg
+system:
+  description: <p>Puedes gastar una acción para anticiparte e intentar evitar el siguiente ataque que se haga contra ti, añadiendo tu INS a tu puntuación de DEF.</p>
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 3900
+ownership:
+  default: 0

@@ -1,0 +1,13 @@
+<div class="vieja-escuela ve-card ve-spell-card">
+  <header class="ve-card-header">
+    <img src="{{item.img}}" alt="" />
+    <h3>{{item.name}}</h3>
+  </header>
+  <div class="tags">
+    <span class="tag">{{localize "VE.Spell.levelAbbr"}} {{spell.level}}</span>
+    <span class="tag">{{localize "VE.Stat.podAbbr"}} {{spell.pod}}</span>
+    {{#if spell.divine}}<span class="tag">{{localize "VE.Spell.divine"}}</span>{{/if}}
+  </div>
+  <div class="ve-card-body">{{{description}}}</div>
+  <p class="hint">{{localize "VE.Spell.resist"}} <strong>{{difficulty}}+</strong></p>
+</div>

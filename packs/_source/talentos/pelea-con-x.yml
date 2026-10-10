@@ -1,0 +1,15 @@
+_id: veTalPeleaConX00
+_key: '!items!veTalPeleaConX00'
+name: Pelea con (x)
+type: talent
+img: icons/svg/sword.svg
+system:
+  description: '<p>Reemplaza X por: arma de una mano y escudo, dos armas, armas a dos manos, armas a distancia o desarmado. +1 a tu ATQ y el daño en ese estilo de pelea.</p>'
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 4400
+ownership:
+  default: 0

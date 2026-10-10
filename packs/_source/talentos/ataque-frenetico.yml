@@ -1,0 +1,15 @@
+_id: veTalAtaqueFrene
+_key: '!items!veTalAtaqueFrene'
+name: Ataque frenético
+type: talent
+img: icons/svg/explosion.svg
+system:
+  description: <p>Puedes elegir hacer un Ataque frenético cuerpo a cuerpo. Realizas la tirada con desventaja y los oponentes ganan ventaja durante esta ronda para atacarte. No obstante, un Ataque frenético satisfactorio cuenta como un Golpe Crítico.</p>
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 3000
+ownership:
+  default: 0

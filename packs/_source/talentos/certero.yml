@@ -1,0 +1,34 @@
+_id: veTalCertero0000
+_key: '!items!veTalCertero0000'
+name: Certero
+type: talent
+img: icons/svg/target.svg
+system:
+  description: <p>Ganas un bono adicional de +1 en todos tus ataques de proyectiles.</p>
+  source: race
+  ruleset: expandido
+effects:
+- _id: veEffCertero0000
+  _key: '!items.effects!veTalCertero0000.veEffCertero0000'
+  name: Certero
+  img: icons/svg/target.svg
+  type: base
+  system: {}
+  transfer: true
+  disabled: false
+  changes:
+  - key: system.atq.ranged.bonus
+    mode: 2
+    value: '1'
+    priority: null
+  duration: {}
+  description: ''
+  origin: null
+  statuses: []
+  tint: '#ffffff'
+  flags: {}
+flags: {}
+folder: null
+sort: 800
+ownership:
+  default: 0

@@ -1,0 +1,25 @@
+<div class="vieja-escuela ve-card ve-attack-card" data-actor-uuid="{{actorUuid}}">
+  <header class="ve-card-header">
+    {{#if item}}<img src="{{item.img}}" alt="" />{{/if}}
+    <h3>{{config.title}}</h3>
+  </header>
+  {{#if targetName}}<div class="target-name"><i class="fas fa-bullseye"></i> {{targetName}}</div>{{/if}}
+  {{> "systems/vieja-escuela/templates/chat/roll-summary.hbs"}}
+  {{#if outcome.critical}}<p class="hint">{{localize "VE.Roll.criticalHint"}}</p>{{/if}}
+  {{#if outcome.fumble}}<p class="hint">{{localize "VE.Roll.fumbleHint"}}</p>{{/if}}
+  <div class="card-buttons">
+    <button type="button" data-ve-action="damage" {{#if item}}data-item-id="{{item.id}}"{{else}}data-attack-index="{{config.flags.attackIndex}}"{{/if}}>
+      <i class="fas fa-burst"></i> {{localize "VE.Roll.damage"}} ({{damage}})
+    </button>
+    {{#if versatile}}
+      <button type="button" data-ve-action="damage" data-item-id="{{item.id}}" data-two-handed="true">
+        <i class="fas fa-hand-fist"></i> {{localize "VE.Roll.damageTwoHanded"}}
+      </button>
+    {{/if}}
+    {{#if outcome.critical}}
+      <button type="button" data-ve-action="damage" {{#if item}}data-item-id="{{item.id}}"{{else}}data-attack-index="{{config.flags.attackIndex}}"{{/if}} data-maximize="true">
+        <i class="fas fa-star"></i> {{localize "VE.Roll.damageMax"}}
+      </button>
+    {{/if}}
+  </div>
+</div>

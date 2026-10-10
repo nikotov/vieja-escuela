@@ -1,0 +1,24 @@
+_id: veClsBribon00000
+_key: '!items!veClsBribon00000'
+name: Bribón
+type: class
+img: icons/svg/cowled.svg
+system:
+  description: '<p>Se mueven entre las zonas grises de la civilización, aprendiendo sus entresijos para sacar el máximo beneficio personal. Son ante todo un superviviente, y se los puede encontrar de todas las formas y tamaños: pícaros, ladrones, saqueadores, bandoleros, etc.</p><p><strong>Dado de aguante:</strong> D6.</p><p><strong>Armas:</strong> Cualquier arma.</p><p><strong>Armaduras:</strong> Solo armaduras ligeras; cualquier escudo.</p><p><strong>Talentos:</strong></p><ul><li><strong>Emboscar (Bribón)</strong> (nivel 1)</li><li><strong>Dedos Ágiles</strong> (nivel 1)</li><li><strong>Leer Magia (Bribón)</strong> (nivel 6)</li></ul>'
+  hitDie: d6
+  progression: bribon
+  weapons: Cualquier arma.
+  armor: Solo armaduras ligeras; cualquier escudo.
+  talents:
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalEmboscarBri
+    level: 1
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalDedosAgiles
+    level: 1
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalLeerMagiaBr
+    level: 6
+effects: []
+flags: {}
+folder: null
+sort: 300
+ownership:
+  default: 0

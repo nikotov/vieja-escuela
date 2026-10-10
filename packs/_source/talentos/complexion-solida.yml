@@ -1,0 +1,38 @@
+_id: veTalComplexionS
+_key: '!items!veTalComplexionS'
+name: Complexión sólida
+type: talent
+img: icons/svg/regen.svg
+system:
+  description: <p>Ganas +2 PV en el primer nivel y tu Dado de Golpe pasa a ser un d8.</p>
+  source: general
+  ruleset: aventurados
+effects:
+- _id: veEffComplexionS
+  _key: '!items.effects!veTalComplexionS.veEffComplexionS'
+  name: Complexión sólida
+  img: icons/svg/regen.svg
+  type: base
+  system: {}
+  transfer: true
+  disabled: false
+  changes:
+  - key: system.hp.bonus
+    mode: 2
+    value: '2'
+    priority: null
+  - key: system.hitDie
+    mode: 5
+    value: d8
+    priority: null
+  duration: {}
+  description: ''
+  origin: null
+  statuses: []
+  tint: '#ffffff'
+  flags: {}
+flags: {}
+folder: null
+sort: 3100
+ownership:
+  default: 0

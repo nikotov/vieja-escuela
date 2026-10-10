@@ -1,0 +1,7 @@
+<div class="form-grid">
+  <label>{{localize "VE.Armor.category"}} <select name="system.category">{{selectOptions config.armorCategories selected=system.category localize=true}}</select></label>
+  <label>{{localize "VE.Stat.def"}} <input type="number" name="system.def" value="{{system.def}}" data-dtype="Number" /></label>
+  <label class="checkbox" data-tooltip="{{localize 'VE.Armor.heavyHint'}}">{{localize "VE.Armor.heavy"}} <input type="checkbox" name="system.heavy" {{checked system.heavy}} /></label>
+  <label class="checkbox">{{localize "VE.Sheet.equipped"}} <input type="checkbox" name="system.equipped" {{checked system.equipped}} /></label>
+  {{> "systems/vieja-escuela/templates/item/parts/common-physical.hbs"}}
+</div>

@@ -1,0 +1,15 @@
+_id: veTalFundirseCon
+_key: '!items!veTalFundirseCon'
+name: Fundirse con la Naturaleza
+type: talent
+img: icons/svg/oak.svg
+system:
+  description: <p>Es prácticamente imposible descubrirte entre la maleza si no lo deseas. Obtienes ventaja en cualquier tirada de Subterfugio relacionada con ocultarse o moverse en silencio entre la maleza.</p>
+  source: class
+  ruleset: expandido
+effects: []
+flags: {}
+folder: null
+sort: 2500
+ownership:
+  default: 0

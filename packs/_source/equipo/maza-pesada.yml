@@ -1,0 +1,27 @@
+_id: veEqpMazaPesada0
+_key: '!items!veEqpMazaPesada0'
+name: Maza pesada
+type: weapon
+img: icons/weapons/maces/mace-flanged-steel.webp
+system:
+  description: <p>Arma cuerpo a cuerpo.</p><p>Puede usarse a una o a dos manos.</p>
+  damage: 1d4+1
+  kind: melee
+  hands: versatile
+  addStr: true
+  range: 0
+  shots: 1
+  cost:
+    value: 1
+    unit: mo
+  load: 1
+  quantity: 1
+  equipped: false
+  attackBonus: 0
+  damageBonus: 0
+effects: []
+flags: {}
+folder: null
+sort: 500
+ownership:
+  default: 0

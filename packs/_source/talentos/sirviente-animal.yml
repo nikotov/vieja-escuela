@@ -1,0 +1,15 @@
+_id: veTalSirvienteAn
+_key: '!items!veTalSirvienteAn'
+name: Sirviente Animal
+type: talent
+img: icons/svg/pawprint.svg
+system:
+  description: <p>Un pequeño animal (como un ratón, un cuervo, etc.) se convierte en tu familiar. Puedes darle órdenes sencillas incluso mentalmente. Aunque en este último caso debes gastar un Punto de poder (Pod) y el familiar no puede estar a más de cinco kilómetros de distancia. Dentro de ese área puedes ver y oír todo lo que perciba tu familiar mientras mantengas la concentración. Si tu familiar muere, no podrás invocar uno nuevo hasta que subas de nivel.</p>
+  source: class
+  ruleset: expandido
+effects: []
+flags: {}
+folder: null
+sort: 1400
+ownership:
+  default: 0

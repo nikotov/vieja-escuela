@@ -1,0 +1,15 @@
+_id: veTalEmboscar000
+_key: '!items!veTalEmboscar000'
+name: Emboscar
+type: talent
+img: icons/svg/cowled.svg
+system:
+  description: <p>+1d6 de daño cuando impactas en ataques sigilosos.</p>
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 3200
+ownership:
+  default: 0

@@ -1,0 +1,17 @@
+_id: veSplArmaduraDeM
+_key: '!items!veSplArmaduraDeM'
+name: Armadura de mago
+type: spell
+img: icons/magic/defensive/shield-barrier-blue.webp
+system:
+  description: <p>+4 a la Defensa durante 1 hora (6 turnos).</p>
+  level: 1
+  pod: 1
+  divine: false
+  random: 01-04
+effects: []
+flags: {}
+folder: null
+sort: 200
+ownership:
+  default: 0

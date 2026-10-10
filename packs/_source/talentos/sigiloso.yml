@@ -1,0 +1,15 @@
+_id: veTalSigiloso000
+_key: '!items!veTalSigiloso000'
+name: Sigiloso
+type: talent
+img: icons/svg/cowled.svg
+system:
+  description: <p>Tienes ventaja en las pruebas de Sigilo para moverte silenciosamente y esconderte.</p>
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 4900
+ownership:
+  default: 0

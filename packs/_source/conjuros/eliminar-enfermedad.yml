@@ -1,0 +1,17 @@
+_id: veSplEliminarEnf
+_key: '!items!veSplEliminarEnf'
+name: Eliminar enfermedad
+type: spell
+img: icons/magic/life/cross-flared-green.webp
+system:
+  description: <p>Cura todas las enfermedades.</p>
+  level: 3
+  pod: 5
+  divine: true
+  random: 42-43
+effects: []
+flags: {}
+folder: null
+sort: 2500
+ownership:
+  default: 0

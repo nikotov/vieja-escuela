@@ -1,0 +1,23 @@
+<section class="spells">
+  <h3>{{localize "VE.Sheet.spells"}}
+    <span class="counter">{{localize "VE.Stat.podAbbr"}} {{system.pod.value}} / {{system.pod.max}}</span>
+    {{#if editable}}<a class="header-control" data-action="itemCreate" data-type="spell"><i class="fas fa-plus"></i></a>{{/if}}
+  </h3>
+  <p class="hint">{{localize "VE.Sheet.spellsHint"}}</p>
+  <ol class="item-list">
+    {{#each spells}}
+      <li class="item spell flexrow" data-item-id="{{item.id}}">
+        <img src="{{item.img}}" alt="" />
+        <a class="name" data-action="itemChat">{{item.name}}</a>
+        <span class="tag">{{localize "VE.Spell.levelAbbr"}} {{system.level}}</span>
+        <a class="pill rollable" data-action="castSpell" data-tooltip="{{localize 'VE.Spell.cast'}}"><i class="fas fa-wand-sparkles"></i> {{system.pod}}</a>
+        <div class="item-controls">
+          <a data-action="itemEdit"><i class="fas fa-edit"></i></a>
+          {{#if @root.editable}}<a data-action="itemDelete"><i class="fas fa-trash"></i></a>{{/if}}
+        </div>
+      </li>
+    {{else}}
+      <li class="empty">{{localize "VE.Sheet.noSpells"}}</li>
+    {{/each}}
+  </ol>
+</section>

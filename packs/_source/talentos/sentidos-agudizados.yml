@@ -1,0 +1,15 @@
+_id: veTalSentidosAgu
+_key: '!items!veTalSentidosAgu'
+name: Sentidos agudizados
+type: talent
+img: icons/svg/eye.svg
+system:
+  description: <p>Tienes ventaja en las pruebas relacionadas con la vista o el oído.</p>
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 4800
+ownership:
+  default: 0

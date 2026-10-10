@@ -1,0 +1,21 @@
+_id: veEqpBalsa000000
+_key: '!items!veEqpBalsa000000'
+name: Balsa
+type: gear
+img: icons/tools/nautical/anchor.webp
+system:
+  description: '<p>Medio de transporte. Recorre 25 - 50 km / día. Carga máxima: 20 Puntos de carga.</p><p>La carga máxima incluye el equipo transportado por los aventureros si van encima.</p>'
+  quantity: 1
+  bundle: 1
+  load: 0
+  cost:
+    value: 20
+    unit: mo
+  container: true
+  capacity: 20
+effects: []
+flags: {}
+folder: null
+sort: 5200
+ownership:
+  default: 0

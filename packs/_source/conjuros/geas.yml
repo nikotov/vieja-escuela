@@ -1,0 +1,17 @@
+_id: veSplGeas0000000
+_key: '!items!veSplGeas0000000'
+name: Geas
+type: spell
+img: icons/magic/control/control-influence-puppet.webp
+system:
+  description: <p>Impone en blanco una tarea concreta. 10 días de duración max.</p>
+  level: 6
+  pod: 11
+  divine: false
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 3300
+ownership:
+  default: 0

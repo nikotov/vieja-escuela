@@ -1,0 +1,12 @@
+<div class="vieja-escuela ve-card ve-damage-card">
+  <header class="ve-card-header">
+    <h3>{{localize "VE.Roll.damage"}}: {{label}}</h3>
+  </header>
+  {{#if maximize}}<div class="edge advantage">{{localize "VE.Roll.damageMax"}}</div>{{/if}}
+  {{#if twoHanded}}<div class="edge">{{localize "VE.Roll.damageTwoHanded"}}</div>{{/if}}
+  {{{rollHTML}}}
+  <div class="card-buttons">
+    <button type="button" data-ve-action="applyDamage" data-multiplier="1"><i class="fas fa-heart-crack"></i> {{localize "VE.Chat.applyDamage"}}</button>
+    <button type="button" data-ve-action="applyDamage" data-multiplier="-1"><i class="fas fa-heart"></i> {{localize "VE.Chat.applyHealing"}}</button>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+_id: veSplFlechaAcida
+_key: '!items!veSplFlechaAcida'
+name: Flecha ácida
+type: spell
+img: icons/magic/acid/projectile-faceted-glob.webp
+system:
+  description: <p>Ignora bono por armadura/escudo. Ataque de proyectiles. 2D6 de daño.</p>
+  level: 2
+  pod: 3
+  divine: false
+  random: 59-60
+effects: []
+flags: {}
+folder: null
+sort: 3200
+ownership:
+  default: 0

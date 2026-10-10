@@ -1,0 +1,15 @@
+_id: veTalVistaAguda0
+_key: '!items!veTalVistaAguda0'
+name: Vista Aguda
+type: talent
+img: icons/svg/eye.svg
+system:
+  description: <p>Ganas ventaja en las tiradas de Alerta basadas en la vista.</p>
+  source: race
+  ruleset: expandido
+effects: []
+flags: {}
+folder: null
+sort: 500
+ownership:
+  default: 0

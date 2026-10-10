@@ -1,0 +1,15 @@
+_id: veTalEntrArmPesa
+_key: '!items!veTalEntrArmPesa'
+name: Entrenamiento con armadura pesada
+type: talent
+img: icons/svg/shield.svg
+system:
+  description: <p>La armadura de placas no te sobrecarga o penaliza tu movimiento.</p>
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 3600
+ownership:
+  default: 0

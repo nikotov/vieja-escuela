@@ -1,0 +1,34 @@
+_id: veTalSensibilida
+_key: '!items!veTalSensibilida'
+name: Sensibilidad Mágica
+type: talent
+img: icons/svg/aura.svg
+system:
+  description: <p>Puedes gastar Puntos de poder (Pod) para realizar conjuros. También puedes lanzar conjuros almacenados en pergaminos (si posees el nivel necesario) y utilizar objetos mágicos especiales como varitas y cetros.</p>
+  source: class
+  ruleset: expandido
+effects:
+- _id: veEffSensibilida
+  _key: '!items.effects!veTalSensibilida.veEffSensibilida'
+  name: Sensibilidad Mágica
+  img: icons/svg/aura.svg
+  type: base
+  system: {}
+  transfer: true
+  disabled: false
+  changes:
+  - key: system.magic
+    mode: 5
+    value: 'true'
+    priority: null
+  duration: {}
+  description: ''
+  origin: null
+  statuses: []
+  tint: '#ffffff'
+  flags: {}
+flags: {}
+folder: null
+sort: 1300
+ownership:
+  default: 0

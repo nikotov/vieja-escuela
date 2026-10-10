@@ -1,0 +1,17 @@
+_id: veSplAyuda000000
+_key: '!items!veSplAyuda000000'
+name: Ayuda
+type: spell
+img: icons/magic/holy/prayer-hands-glowing-yellow.webp
+system:
+  description: <p>+1 Ataque e Ins (Car), +1D8 de Pv temporales.</p>
+  level: 2
+  pod: 3
+  divine: true
+  random: 05-06
+effects: []
+flags: {}
+folder: null
+sort: 300
+ownership:
+  default: 0

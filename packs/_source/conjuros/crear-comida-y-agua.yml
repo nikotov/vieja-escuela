@@ -1,0 +1,17 @@
+_id: veSplCrearComida
+_key: '!items!veSplCrearComida'
+name: Crear comida y agua
+type: spell
+img: icons/magic/nature/cornucopia-orange.webp
+system:
+  description: <p>Crea el sustento suficiente para 3 humanos durante un día.</p>
+  level: 3
+  pod: 5
+  divine: true
+  random: 22-23
+effects: []
+flags: {}
+folder: null
+sort: 1500
+ownership:
+  default: 0

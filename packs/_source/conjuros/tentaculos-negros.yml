@@ -1,0 +1,17 @@
+_id: veSplTentaculosN
+_key: '!items!veSplTentaculosN'
+name: Tentáculos negros
+type: spell
+img: icons/magic/unholy/hand-grasping-green.webp
+system:
+  description: <p>Agarran todo (+4, daño 3d4) en 6m de radio. Dura 1 hora. Liberarse con Ins (Fue).</p>
+  level: 4
+  pod: 7
+  divine: false
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 5700
+ownership:
+  default: 0

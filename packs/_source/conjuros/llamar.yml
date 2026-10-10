@@ -1,0 +1,17 @@
+_id: veSplLlamar00000
+_key: '!items!veSplLlamar00000'
+name: Llamar
+type: spell
+img: icons/sundries/misc/lock-open-yellow.webp
+system:
+  description: <p>Abre una cerradura o puerta. Incluso bloqueada mágicamente.</p>
+  level: 2
+  pod: 3
+  divine: false
+  random: 70-73
+effects: []
+flags: {}
+folder: null
+sort: 4000
+ownership:
+  default: 0

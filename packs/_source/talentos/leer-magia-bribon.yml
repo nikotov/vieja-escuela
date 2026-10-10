@@ -1,0 +1,15 @@
+_id: veTalLeerMagiaBr
+_key: '!items!veTalLeerMagiaBr'
+name: Leer Magia (Bribón)
+type: talent
+img: icons/svg/book.svg
+system:
+  description: <p>Puedes usar pergaminos mágicos como si fueras un hechicero cinco niveles inferior. A nivel 6 podrás utilizar los pergaminos permitidos a los hechiceros de nivel 1.</p>
+  source: class
+  ruleset: expandido
+effects: []
+flags: {}
+folder: null
+sort: 1600
+ownership:
+  default: 0

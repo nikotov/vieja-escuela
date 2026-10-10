@@ -1,0 +1,17 @@
+_id: veSplEliminarPar
+_key: '!items!veSplEliminarPar'
+name: Eliminar parálisis
+type: spell
+img: icons/magic/control/debuff-chains-blue.webp
+system:
+  description: <p>Libera de parálisis o ralentización.</p>
+  level: 2
+  pod: 3
+  divine: true
+  random: 44-45
+effects: []
+flags: {}
+folder: null
+sort: 2700
+ownership:
+  default: 0

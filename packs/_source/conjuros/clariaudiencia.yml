@@ -1,0 +1,17 @@
+_id: veSplClariaudien
+_key: '!items!veSplClariaudien'
+name: Clariaudiencia
+type: spell
+img: icons/magic/sonic/projectile-sound-rings-wave.webp
+system:
+  description: <p>Permite oír a grandes distancias durante 1 turno.</p>
+  level: 3
+  pod: 5
+  divine: false
+  random: 18-19
+effects: []
+flags: {}
+folder: null
+sort: 900
+ownership:
+  default: 0

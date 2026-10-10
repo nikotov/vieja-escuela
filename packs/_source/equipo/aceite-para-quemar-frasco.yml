@@ -1,0 +1,21 @@
+_id: veEqpAceiteParaQ
+_key: '!items!veEqpAceiteParaQ'
+name: Aceite para quemar (frasco)
+type: gear
+img: icons/consumables/potions/bottle-round-corked-orange.webp
+system:
+  description: '<p>Carga: 1 punto cada 2 unidades. Los objetos más pequeños no cuentan para la carga hasta llegar a un cierto número. Por tanto no hay que contar ese peso hasta acumular el límite indicado.</p>'
+  quantity: 1
+  bundle: 2
+  load: 1
+  cost:
+    value: 5
+    unit: mp
+  container: false
+  capacity: 0
+effects: []
+flags: {}
+folder: null
+sort: 2600
+ownership:
+  default: 0

@@ -1,0 +1,27 @@
+_id: veEqpBaston00000
+_key: '!items!veEqpBaston00000'
+name: Bastón
+type: weapon
+img: icons/weapons/staves/staff-simple.webp
+system:
+  description: <p>Arma cuerpo a cuerpo.</p><p>Arma a dos manos.</p>
+  damage: 1d6
+  kind: melee
+  hands: two
+  addStr: true
+  range: 0
+  shots: 1
+  cost:
+    value: 0
+    unit: mo
+  load: 1
+  quantity: 1
+  equipped: false
+  attackBonus: 0
+  damageBonus: 0
+effects: []
+flags: {}
+folder: null
+sort: 700
+ownership:
+  default: 0

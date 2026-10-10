@@ -1,0 +1,17 @@
+_id: veSplContingenci
+_key: '!items!veSplContingenci'
+name: Contingencia
+type: spell
+img: icons/magic/time/hourglass-tilted-glowing-gold.webp
+system:
+  description: <p>Fija una condición para activar otro hechizo. Dura 10 días max.</p>
+  level: 6
+  pod: 11
+  divine: false
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 1400
+ownership:
+  default: 0

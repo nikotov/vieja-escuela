@@ -1,0 +1,25 @@
+_id: veExBarbaro00000
+_key: '!items!veExBarbaro00000'
+name: Bárbaro
+type: class
+img: icons/weapons/axes/axe-battle-black.webp
+system:
+  description: >-
+    <p>Guerreros de las tierras salvajes que luchan dominados por la furia. Clase de ejemplo
+    añadida por <em>ve-example-module</em>.</p><ul><li>Dado de aguante d10.</li><li>Progresión
+    como un guerrero, con +1 a Instintos.</li><li>Pestaña <strong>Furia</strong> en la hoja.</li></ul>
+  hitDie: d10
+  progression: barbaro
+  weapons: Cualquiera
+  armor: Ligeras y medias, escudos
+  talents:
+    - uuid: Compendium.vieja-escuela.talentos.Item.veTalAtaqueFrene
+      level: 1
+    - uuid: Compendium.vieja-escuela.talentos.Item.veTalPiesLigeros
+      level: 6
+effects: []
+flags: {}
+folder: null
+sort: 0
+ownership:
+  default: 0

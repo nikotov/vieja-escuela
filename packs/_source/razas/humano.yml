@@ -1,0 +1,19 @@
+_id: veRazHumano00000
+_key: '!items!veRazHumano00000'
+name: Humano
+type: race
+img: icons/svg/mystery-man.svg
+system:
+  description: <p>Los humanos suelen ser la raza predominante en la mayoría de los mundos de fantasía. Son difíciles de entender para el resto de razas, ya que son capaces de realizar los actos más nobles y también los más ruines.</p><p><strong>Movimiento:</strong> 12.</p><p><strong>Talentos:</strong></p><ul><li><strong>Ímpetu Emprendedor</strong></li><li><strong>Adaptable</strong></li></ul>
+  mov: 12
+  talents:
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalImpetuEmpre
+    level: 1
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalAdaptable00
+    level: 1
+effects: []
+flags: {}
+folder: null
+sort: 400
+ownership:
+  default: 0

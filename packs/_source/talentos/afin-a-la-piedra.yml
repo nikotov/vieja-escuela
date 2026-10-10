@@ -1,0 +1,15 @@
+_id: veTalAfinALaPied
+_key: '!items!veTalAfinALaPied'
+name: Afín a la Piedra
+type: talent
+img: icons/svg/stoned.svg
+system:
+  description: <p>Ganas ventaja en las tiradas de Erudición relacionadas con la piedra trabajada y en las tiradas de Alerta para detectar trampas hechas o montadas sobre roca.</p>
+  source: race
+  ruleset: expandido
+effects: []
+flags: {}
+folder: null
+sort: 600
+ownership:
+  default: 0

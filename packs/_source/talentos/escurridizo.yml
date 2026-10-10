@@ -1,0 +1,15 @@
+_id: veTalEscurridizo
+_key: '!items!veTalEscurridizo'
+name: Escurridizo
+type: talent
+img: icons/svg/cowled.svg
+system:
+  description: <p>Ganas ventaja en las tiradas de Subterfugio relacionadas con moverse en silencio.</p>
+  source: race
+  ruleset: expandido
+effects: []
+flags: {}
+folder: null
+sort: 700
+ownership:
+  default: 0

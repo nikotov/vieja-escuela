@@ -1,0 +1,17 @@
+_id: veSplBendecirAgu
+_key: '!items!veSplBendecirAgu'
+name: Bendecir agua
+type: spell
+img: icons/magic/holy/chalice-glowing-gold-water.webp
+system:
+  description: <p>Crea agua bendita.</p>
+  level: 1
+  pod: 1
+  divine: true
+  random: 09-11
+effects: []
+flags: {}
+folder: null
+sort: 500
+ownership:
+  default: 0

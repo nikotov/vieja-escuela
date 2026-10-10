@@ -1,0 +1,17 @@
+_id: veSplPielDePiedr
+_key: '!items!veSplPielDePiedr'
+name: Piel de piedra
+type: spell
+img: icons/magic/defensive/armor-stone-skin.webp
+system:
+  description: <p>Ignora 10 puntos de daño por cada ataque durante 1 hora.</p>
+  level: 4
+  pod: 7
+  divine: false
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 4600
+ownership:
+  default: 0

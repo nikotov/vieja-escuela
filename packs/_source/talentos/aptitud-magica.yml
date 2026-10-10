@@ -1,0 +1,34 @@
+_id: veTalAptitudMagi
+_key: '!items!veTalAptitudMagi'
+name: Aptitud mágica
+type: talent
+img: icons/svg/aura.svg
+system:
+  description: <p>Puedes gastar POD para lanzar hechizos.</p>
+  source: general
+  ruleset: aventurados
+effects:
+- _id: veEffAptitudMagi
+  _key: '!items.effects!veTalAptitudMagi.veEffAptitudMagi'
+  name: Aptitud mágica
+  img: icons/svg/aura.svg
+  type: base
+  system: {}
+  transfer: true
+  disabled: false
+  changes:
+  - key: system.magic
+    mode: 5
+    value: 'true'
+    priority: null
+  duration: {}
+  description: ''
+  origin: null
+  statuses: []
+  tint: '#ffffff'
+  flags: {}
+flags: {}
+folder: null
+sort: 2800
+ownership:
+  default: 0

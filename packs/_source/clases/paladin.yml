@@ -1,0 +1,24 @@
+_id: veClsPaladin0000
+_key: '!items!veClsPaladin0000'
+name: Paladín
+type: class
+img: icons/svg/holy-shield.svg
+system:
+  description: <p>Los Paladines son guerreros nobles y heroicos que han consagrado su vida a la defensa de la ley y la justicia.</p><p>Tipo de aventurero opcional (Apéndice III). Usa el dado de aguante y la misma progresión que un guerrero.</p><p><strong>Dado de aguante:</strong> D8.</p><p><strong>Armas:</strong> Cualquier arma.</p><p><strong>Armaduras:</strong> Cualquier armadura y escudo.</p><p><strong>Talentos:</strong></p><ul><li><strong>Imposición de Manos</strong> (nivel 1)</li><li><strong>Detectar el Mal</strong> (nivel 1)</li><li><strong>Aura Divina</strong> (nivel 6)</li></ul>
+  hitDie: d8
+  progression: guerrero
+  weapons: Cualquier arma.
+  armor: Cualquier armadura y escudo.
+  talents:
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalImposicionD
+    level: 1
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalDetectarElM
+    level: 1
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalAuraDivina0
+    level: 6
+effects: []
+flags: {}
+folder: null
+sort: 500
+ownership:
+  default: 0

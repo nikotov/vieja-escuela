@@ -1,0 +1,27 @@
+_id: veEqpArcoCorto00
+_key: '!items!veEqpArcoCorto00'
+name: Arco corto
+type: weapon
+img: icons/weapons/bows/shortbow-recurve.webp
+system:
+  description: <p>Arma de proyectiles. Alcance 60 m; 2 disparos por asalto.</p><p>Atacar a más de la distancia de alcance implica una penalización de -2 al ataque. No se puede disparar a más del doble del alcance indicado.</p><p>Esta arma permite sumar el modificador por Fuerza al daño.</p>
+  damage: 1d6
+  kind: ranged
+  hands: two
+  addStr: true
+  range: 60
+  shots: 2
+  cost:
+    value: 15
+    unit: mo
+  load: 1
+  quantity: 1
+  equipped: false
+  attackBonus: 0
+  damageBonus: 0
+effects: []
+flags: {}
+folder: null
+sort: 1200
+ownership:
+  default: 0

@@ -1,0 +1,17 @@
+<div class="ve-roll-summary">
+  {{#if terms.length}}
+    <ul class="terms">
+      {{#each terms}}<li><span>{{label}}</span> <strong>{{signed}}</strong></li>{{/each}}
+    </ul>
+  {{/if}}
+  {{#if edgeLabel}}<div class="edge {{edge}}">{{edgeLabel}}</div>{{/if}}
+  {{{rollHTML}}}
+  <div class="outcome">
+    {{#if config.target}}<span class="target">{{config.targetLabel}}: {{config.target}}</span>{{/if}}
+    {{#if outcome.critical}}<span class="result critical">{{localize "VE.Roll.critical"}}</span>
+    {{else if outcome.fumble}}<span class="result fumble">{{localize "VE.Roll.fumble"}}</span>
+    {{else if (ve-eq outcome.success true)}}<span class="result success">{{localize "VE.Roll.success"}}</span>
+    {{else if (ve-eq outcome.success false)}}<span class="result failure">{{localize "VE.Roll.failure"}}</span>
+    {{/if}}
+  </div>
+</div>

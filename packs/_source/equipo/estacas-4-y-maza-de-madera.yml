@@ -1,0 +1,21 @@
+_id: veEqpEstacasYMaz
+_key: '!items!veEqpEstacasYMaz'
+name: Estacas (4) y maza de madera
+type: gear
+img: icons/sundries/survival/stake-rough-simple-brown.webp
+system:
+  description: <p>Ocupa 1 Punto de carga.</p>
+  quantity: 1
+  bundle: 1
+  load: 1
+  cost:
+    value: 3
+    unit: mo
+  container: false
+  capacity: 0
+effects: []
+flags: {}
+folder: null
+sort: 3300
+ownership:
+  default: 0

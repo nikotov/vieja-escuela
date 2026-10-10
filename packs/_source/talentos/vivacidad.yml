@@ -1,0 +1,15 @@
+_id: veTalVivacidad00
+_key: '!items!veTalVivacidad00'
+name: Vivacidad
+type: talent
+img: icons/svg/upgrade.svg
+system:
+  description: <p>Has llevado una vida intensa. Ganas un trasfondo adicional.</p>
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 5200
+ownership:
+  default: 0

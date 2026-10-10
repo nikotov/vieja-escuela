@@ -1,0 +1,17 @@
+_id: veSplNeutralizar
+_key: '!items!veSplNeutralizar'
+name: Neutralizar veneno
+type: spell
+img: icons/skills/toxins/symbol-poison-drop-skull-green.webp
+system:
+  description: <p>Inmuniza durante 10 min/nivel o neutraliza un veneno de un sujeto.</p>
+  level: 4
+  pod: 7
+  divine: true
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 4100
+ownership:
+  default: 0

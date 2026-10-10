@@ -1,0 +1,21 @@
+_id: veEqpYescaYPeder
+_key: '!items!veEqpYescaYPeder'
+name: Yesca y pedernal
+type: gear
+img: icons/commodities/stone/geode-raw-white.webp
+system:
+  description: <p>Ocupa 1 Punto de carga.</p>
+  quantity: 1
+  bundle: 1
+  load: 1
+  cost:
+    value: 1
+    unit: mp
+  container: false
+  capacity: 0
+effects: []
+flags: {}
+folder: null
+sort: 5100
+ownership:
+  default: 0

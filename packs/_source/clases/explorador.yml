@@ -1,0 +1,24 @@
+_id: veClsExplorador0
+_key: '!items!veClsExplorador0'
+name: Explorador
+type: class
+img: icons/svg/oak.svg
+system:
+  description: <p>Los exploradores (guardabosques) adquieren el compromiso de proteger su cultura y civilización de los peligros que representa la vida salvaje. Suelen exiliarse a zonas inexploradas para aprender sus secretos y estar mejor preparados para cumplir con su cometido.</p><p>Tipo de aventurero opcional (Apéndice III). Usa el dado de aguante y la misma progresión que un guerrero.</p><p><strong>Dado de aguante:</strong> D8.</p><p><strong>Armas:</strong> Cualquier arma.</p><p><strong>Armaduras:</strong> Solo armaduras ligeras (cuero); cualquier escudo.</p><p><strong>Talentos:</strong></p><ul><li><strong>Conocimiento del Enemigo</strong> (nivel 1)</li><li><strong>Guía Experto</strong> (nivel 1)</li><li><strong>Fundirse con la Naturaleza</strong> (nivel 6)</li></ul>
+  hitDie: d8
+  progression: guerrero
+  weapons: Cualquier arma.
+  armor: Solo armaduras ligeras (cuero); cualquier escudo.
+  talents:
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalConocimient
+    level: 1
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalGuiaExperto
+    level: 1
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalFundirseCon
+    level: 6
+effects: []
+flags: {}
+folder: null
+sort: 600
+ownership:
+  default: 0

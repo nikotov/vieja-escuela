@@ -1,0 +1,21 @@
+_id: veEqpCuero000000
+_key: '!items!veEqpCuero000000'
+name: Cuero
+type: armor
+img: icons/equipment/chest/breastplate-layered-leather-brown.webp
+system:
+  description: <p>Armadura ligera. Defensa +2.</p>
+  category: light
+  def: 2
+  heavy: false
+  cost:
+    value: 15
+    unit: mo
+  load: 1
+  equipped: false
+effects: []
+flags: {}
+folder: null
+sort: 2000
+ownership:
+  default: 0

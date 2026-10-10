@@ -1,0 +1,15 @@
+_id: veTalImpetuEmpre
+_key: '!items!veTalImpetuEmpre'
+name: Ímpetu Emprendedor
+type: talent
+img: icons/svg/upgrade.svg
+system:
+  description: <p>Ganas un trasfondo adicional durante la creación del personaje.</p>
+  source: race
+  ruleset: expandido
+effects: []
+flags: {}
+folder: null
+sort: 900
+ownership:
+  default: 0

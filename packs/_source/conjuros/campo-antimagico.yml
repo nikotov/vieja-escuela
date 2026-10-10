@@ -1,0 +1,17 @@
+_id: veSplCampoAntima
+_key: '!items!veSplCampoAntima'
+name: Campo antimágico
+type: spell
+img: icons/magic/defensive/barrier-shield-dome-blue-purple.webp
+system:
+  description: <p>Cancela magia en 3m de radio por 2 horas.</p>
+  level: 6
+  pod: 11
+  divine: false
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 800
+ownership:
+  default: 0

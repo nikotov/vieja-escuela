@@ -1,0 +1,34 @@
+_id: veTalPunteriaMor
+_key: '!items!veTalPunteriaMor'
+name: Puntería mortal
+type: talent
+img: icons/svg/target.svg
+system:
+  description: <p>+1 al bonificador de ATQ a todos los ataques a distancia.</p>
+  source: general
+  ruleset: aventurados
+effects:
+- _id: veEffPunteriaMor
+  _key: '!items.effects!veTalPunteriaMor.veEffPunteriaMor'
+  name: Puntería mortal
+  img: icons/svg/target.svg
+  type: base
+  system: {}
+  transfer: true
+  disabled: false
+  changes:
+  - key: system.atq.ranged.bonus
+    mode: 2
+    value: '1'
+    priority: null
+  duration: {}
+  description: ''
+  origin: null
+  statuses: []
+  tint: '#ffffff'
+  flags: {}
+flags: {}
+folder: null
+sort: 4700
+ownership:
+  default: 0

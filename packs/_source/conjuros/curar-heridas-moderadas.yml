@@ -1,0 +1,17 @@
+_id: veSplCurarModera
+_key: '!items!veSplCurarModera'
+name: Curar heridas moderadas
+type: spell
+img: icons/magic/life/heart-cross-blue.webp
+system:
+  description: <p>Cura 2D6+2 Pv.</p>
+  level: 2
+  pod: 3
+  divine: true
+  random: 30-31
+effects: []
+flags: {}
+folder: null
+sort: 1900
+ownership:
+  default: 0

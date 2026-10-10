@@ -1,0 +1,15 @@
+_id: veTalLeerMagia00
+_key: '!items!veTalLeerMagia00'
+name: Leer magia
+type: talent
+img: icons/svg/book.svg
+system:
+  description: <p>Eres capaz de leer escrituras y tomos mágicos. Puedes lanzar hechizos utilizando pergaminos hasta tu nivel.</p>
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 4200
+ownership:
+  default: 0

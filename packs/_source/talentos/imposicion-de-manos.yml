@@ -1,0 +1,15 @@
+_id: veTalImposicionD
+_key: '!items!veTalImposicionD'
+name: Imposición de Manos
+type: talent
+img: icons/svg/heal.svg
+system:
+  description: <p>Puedes sanar hasta 3D6 Puntos de vida al día a través de tus manos. Puedes repartir estos dados como desees (1D6 tres veces, 3D6 una sola vez o 2D6 y 1D6).</p>
+  source: class
+  ruleset: expandido
+effects: []
+flags: {}
+folder: null
+sort: 2000
+ownership:
+  default: 0

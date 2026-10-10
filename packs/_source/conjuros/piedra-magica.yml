@@ -1,0 +1,17 @@
+_id: veSplPiedraMagic
+_key: '!items!veSplPiedraMagic'
+name: Piedra mágica
+type: spell
+img: icons/magic/earth/projectile-stone-ball-brown.webp
+system:
+  description: <p>3 piedras +1 Ataque y 1D6+1 de daño. Dura 3 turnos max.</p>
+  level: 1
+  pod: 1
+  divine: true
+  random: 74-78
+effects: []
+flags: {}
+folder: null
+sort: 4500
+ownership:
+  default: 0

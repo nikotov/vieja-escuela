@@ -1,0 +1,21 @@
+_id: veEqpCompleta000
+_key: '!items!veEqpCompleta000'
+name: Completa
+type: armor
+img: icons/equipment/chest/breastplate-layered-steel.webp
+system:
+  description: <p>Armadura pesada. Defensa +7.</p><p>Esta armadura solo permite un movimiento base de 6 metros como máximo y el personaje aplica las penalizaciones de estar sobrecargado.</p>
+  category: heavy
+  def: 7
+  heavy: true
+  cost:
+    value: 300
+    unit: mo
+  load: 2
+  equipped: false
+effects: []
+flags: {}
+folder: null
+sort: 2400
+ownership:
+  default: 0

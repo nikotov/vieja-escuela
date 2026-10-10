@@ -1,0 +1,24 @@
+_id: veClsClerigo0000
+_key: '!items!veClsClerigo0000'
+name: Clérigo
+type: class
+img: icons/svg/angel.svg
+system:
+  description: <p>Los clérigos son luchadores devotos que han consagrado su vida al servicio de una religión o deidad, recorriendo los caminos para llegar a aquellos lugares donde los sacerdotes, desde sus templos, no llegan.</p><p>Tipo de aventurero opcional (Apéndice III). Usa el dado de aguante y la misma progresión que un bribón.</p><p><strong>Dado de aguante:</strong> D6.</p><p><strong>Armas:</strong> Solo armas contundentes cuerpo a cuerpo.</p><p><strong>Armaduras:</strong> Cualquier armadura y escudo.</p><p><strong>Talentos:</strong></p><ul><li><strong>Canalizar Milagros</strong> (nivel 1)</li><li><strong>Leer Runas</strong> (nivel 1)</li><li><strong>Espíritu Inquebrantable</strong> (nivel 6)</li></ul>
+  hitDie: d6
+  progression: bribon
+  weapons: Solo armas contundentes cuerpo a cuerpo.
+  armor: Cualquier armadura y escudo.
+  talents:
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalCanalizarMi
+    level: 1
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalLeerRunas00
+    level: 1
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalEspirituInq
+    level: 6
+effects: []
+flags: {}
+folder: null
+sort: 400
+ownership:
+  default: 0

@@ -1,0 +1,21 @@
+_id: veEqpCaballoDeGu
+_key: '!items!veEqpCaballoDeGu'
+name: Caballo de guerra
+type: gear
+img: icons/environment/creatures/horse-brown.webp
+system:
+  description: '<p>Medio de transporte. Recorre hasta 80 km / día. Carga máxima: 22 Puntos de carga.</p><p>La carga máxima incluye el equipo transportado por los aventureros si van encima.</p>'
+  quantity: 1
+  bundle: 1
+  load: 0
+  cost:
+    value: 200
+    unit: mo
+  container: true
+  capacity: 22
+effects: []
+flags: {}
+folder: null
+sort: 5300
+ownership:
+  default: 0

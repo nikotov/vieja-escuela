@@ -1,0 +1,15 @@
+_id: veTalEntrGuerrer
+_key: '!items!veTalEntrGuerrer'
+name: Entrenamiento del guerrero
+type: talent
+img: icons/svg/sword.svg
+system:
+  description: <p>Eres competente en todas las armas y armaduras.</p>
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 3700
+ownership:
+  default: 0

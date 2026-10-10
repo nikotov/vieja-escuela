@@ -1,0 +1,17 @@
+_id: veSplProyectilMa
+_key: '!items!veSplProyectilMa'
+name: Proyectil mágico
+type: spell
+img: icons/magic/light/projectile-bolts-salvo-white.webp
+system:
+  description: <p>Siempre acierta. Causa 1D6 daño.</p>
+  level: 1
+  pod: 1
+  divine: false
+  random: 83-86
+effects: []
+flags: {}
+folder: null
+sort: 4900
+ownership:
+  default: 0

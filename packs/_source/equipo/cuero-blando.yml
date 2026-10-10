@@ -1,0 +1,21 @@
+_id: veEqpCueroBlando
+_key: '!items!veEqpCueroBlando'
+name: Cuero blando
+type: armor
+img: icons/equipment/chest/breastplate-quilted-brown.webp
+system:
+  description: <p>Armadura ligera. Defensa +1.</p>
+  category: light
+  def: 1
+  heavy: false
+  cost:
+    value: 5
+    unit: mo
+  load: 0
+  equipped: false
+effects: []
+flags: {}
+folder: null
+sort: 1900
+ownership:
+  default: 0

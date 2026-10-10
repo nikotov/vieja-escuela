@@ -1,0 +1,21 @@
+_id: veEqpEspejoPeque
+_key: '!items!veEqpEspejoPeque'
+name: Espejo pequeño de acero
+type: gear
+img: icons/sundries/survival/mirror-plain.webp
+system:
+  description: <p>No cuenta para la carga.</p>
+  quantity: 1
+  bundle: 1
+  load: 0
+  cost:
+    value: 20
+    unit: mo
+  container: false
+  capacity: 0
+effects: []
+flags: {}
+folder: null
+sort: 3200
+ownership:
+  default: 0

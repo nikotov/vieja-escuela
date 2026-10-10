@@ -1,0 +1,7 @@
+<div class="form-grid">
+  <label>{{localize "VE.Stat.hitDie"}} <select name="system.hitDie">{{selectOptions config.hitDice selected=system.hitDie}}</select></label>
+  <label data-tooltip="{{localize 'VE.Class.progressionHint'}}">{{localize "VE.Class.progression"}} <select name="system.progression">{{selectOptions progressionKeys selected=system.progression}}</select></label>
+  <label class="wide">{{localize "VE.Class.weapons"}} <input type="text" name="system.weapons" value="{{system.weapons}}" /></label>
+  <label class="wide">{{localize "VE.Class.armor"}} <input type="text" name="system.armor" value="{{system.armor}}" /></label>
+</div>
+{{> "systems/vieja-escuela/templates/item/parts/granted-talents.hbs"}}

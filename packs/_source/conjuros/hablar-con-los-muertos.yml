@@ -1,0 +1,17 @@
+_id: veSplHablarConLo
+_key: '!items!veSplHablarConLo'
+name: Hablar con los muertos
+type: spell
+img: icons/magic/death/skull-humanoid-white-blue.webp
+system:
+  description: <p>Un cadáver responde 3 preguntas. Dura 1 turno max.</p>
+  level: 3
+  pod: 5
+  divine: true
+  random: 63-64
+effects: []
+flags: {}
+folder: null
+sort: 3500
+ownership:
+  default: 0

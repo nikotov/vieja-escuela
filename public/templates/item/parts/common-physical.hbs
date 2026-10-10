@@ -1,0 +1,10 @@
+<label>{{localize "VE.Item.cost"}}
+  <span class="cost">
+    <input type="number" name="system.cost.value" value="{{system.cost.value}}" data-dtype="Number" />
+    <select name="system.cost.unit">{{#each config.currencies as |c key|}}<option value="{{key}}" {{#if (ve-eq key @root.system.cost.unit)}}selected{{/if}}>{{localize c.abbr}}</option>{{/each}}</select>
+  </span>
+</label>
+<label>{{localize "VE.Item.load"}} <input type="number" name="system.load" value="{{system.load}}" step="any" data-dtype="Number" /></label>
+{{#if (ve-eq item.type "armor")}}{{else}}
+<label>{{localize "VE.Item.quantity"}} <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" /></label>
+{{/if}}

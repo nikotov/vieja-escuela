@@ -1,0 +1,75 @@
+<form class="{{cssClass}} ve-sheet" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'Name'}}" /></h1>
+      <div class="statblock">
+        <label>{{localize "VE.Stat.levelAbbr"}} <input type="number" name="system.level" value="{{system.level}}" data-dtype="Number" /></label>
+        <label>{{localize "VE.Stat.initiative"}} <input type="number" name="system.initiative" value="{{system.initiative}}" data-dtype="Number" /></label>
+        <label>{{localize "VE.Stat.movAbbr"}} <input type="number" name="system.mov" value="{{system.mov}}" data-dtype="Number" /></label>
+        <label class="wide"><input type="text" name="system.movNote" value="{{system.movNote}}" placeholder="{{localize 'VE.Monster.movNote'}}" /></label>
+        <label>{{localize "VE.Stat.def"}} <input type="number" name="system.def" value="{{system.def}}" data-dtype="Number" /></label>
+        <label>{{localize "VE.Stat.hp"}}
+          <input type="number" name="system.hp.value" value="{{system.hp.value}}" data-dtype="Number" /> /
+          <input type="number" name="system.hp.max" value="{{system.hp.max}}" data-dtype="Number" />
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <section class="monster-rolls">
+    <a class="pill rollable" data-action="rollInstinct"><i class="fas fa-dice-d20"></i> {{localize "VE.Stat.ins"}} {{ve-signed system.ins}}</a>
+    {{#each config.skills as |skill key|}}
+      <a class="pill rollable" data-action="rollSkill" data-skill="{{key}}">{{localize skill.label}}</a>
+    {{/each}}
+    <a class="pill rollable" data-action="rollMorale"><i class="fas fa-flag"></i> {{localize "VE.Monster.morale"}}</a>
+    <select name="system.morale" data-dtype="Number">{{selectOptions moraleChoices selected=system.morale}}</select>
+  </section>
+
+  <section class="attacks">
+    <h3>{{localize "VE.Sheet.attacks"}} <span class="counter">{{localize "VE.Stat.atqAbbr"}} {{atq}}</span>
+      {{#if editable}}<a class="header-control" data-action="attackAdd"><i class="fas fa-plus"></i></a>{{/if}}
+    </h3>
+    <ol class="attack-list">
+      {{#each attacks}}
+        <li class="attack flexrow" data-index="{{index}}">
+          <input class="count" type="number" name="system.attacks.{{index}}.count" value="{{count}}" min="1" data-dtype="Number" data-tooltip="{{localize 'VE.Monster.count'}}" />
+          <input class="name" type="text" name="system.attacks.{{index}}.name" value="{{name}}" placeholder="{{localize 'VE.Monster.attackName'}}" />
+          <input class="damage" type="text" name="system.attacks.{{index}}.damage" value="{{damage}}" placeholder="1d6" />
+          <input class="bonus" type="number" name="system.attacks.{{index}}.bonus" value="{{bonus}}" data-dtype="Number" data-tooltip="{{localize 'VE.Monster.attackBonus'}}" />
+          <a class="pill rollable" data-action="rollAttack"><i class="fas fa-dice-d20"></i> {{bonusTotal}}</a>
+          <a class="pill rollable" data-action="rollDamage"><i class="fas fa-burst"></i></a>
+          {{#if @root.editable}}<a data-action="attackRemove"><i class="fas fa-trash"></i></a>{{/if}}
+        </li>
+      {{else}}
+        <li class="empty">{{localize "VE.Sheet.noAttacks"}}</li>
+      {{/each}}
+    </ol>
+  </section>
+
+  <section class="editor-section">
+    <h3>{{localize "VE.Sheet.talents"}}</h3>
+    {{editor enriched.talents target="system.talents" button=true editable=editable engine="prosemirror"}}
+  </section>
+  <section class="editor-section">
+    <h3>{{localize "VE.Sheet.description"}}</h3>
+    {{editor enriched.description target="system.description" button=true editable=editable engine="prosemirror"}}
+  </section>
+
+  {{#if otherItems.length}}
+    <section>
+      <h3>{{localize "VE.Sheet.items"}}</h3>
+      <ol class="item-list">
+        {{#each otherItems}}
+          <li class="item flexrow" data-item-id="{{id}}">
+            <img src="{{img}}" alt="" /><a class="name" data-action="itemChat">{{name}}</a>
+            <div class="item-controls">
+              <a data-action="itemEdit"><i class="fas fa-edit"></i></a>
+              {{#if @root.editable}}<a data-action="itemDelete"><i class="fas fa-trash"></i></a>{{/if}}
+            </div>
+          </li>
+        {{/each}}
+      </ol>
+    </section>
+  {{/if}}
+</form>

@@ -1,0 +1,15 @@
+_id: veTalDedosAgiles
+_key: '!items!veTalDedosAgiles'
+name: Dedos Ágiles
+type: talent
+img: icons/tools/hand/lockpicks-steel-grey.webp
+system:
+  description: '<p>Obtienes ventaja en las tiradas de Manipulación relacionadas con actos de precisión (por ejemplo abrir cerraduras o sustraer las posesiones de otra persona).</p><p><em>Aventurados Fabricados:</em> Tienes ventaja en cualquier prueba de Manipulación que requiera precisión (ej: forzar cerraduras, armar/desarmar trampas o hurto).</p>'
+  source: class
+  ruleset: ''
+effects: []
+flags: {}
+folder: null
+sort: 400
+ownership:
+  default: 0

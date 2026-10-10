@@ -1,0 +1,21 @@
+_id: veEqpEscudo00000
+_key: '!items!veEqpEscudo00000'
+name: Escudo
+type: armor
+img: icons/equipment/shield/heater-wooden-steel-boss.webp
+system:
+  description: <p>Escudo. Defensa +1.</p>
+  category: shield
+  def: 1
+  heavy: false
+  cost:
+    value: 15
+    unit: mo
+  load: 1
+  equipped: false
+effects: []
+flags: {}
+folder: null
+sort: 2500
+ownership:
+  default: 0

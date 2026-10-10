@@ -1,0 +1,35 @@
+<section class="skills">
+  <h3>{{localize "VE.Sheet.skills"}} <span class="counter">{{skillPoints}}</span></h3>
+  <ol class="skill-list">
+    {{#each skills}}
+      <li class="skill">
+        <a class="rollable name" data-action="rollSkill" data-skill="{{key}}"><i class="fas fa-dice-d20"></i> {{label}}</a>
+        <input type="number" name="system.skills.{{key}}.value" value="{{value}}" min="0" max="{{@root.config.maxSkill}}" data-dtype="Number" />
+      </li>
+    {{/each}}
+  </ol>
+  <p class="hint">{{localize "VE.Sheet.skillsHint"}}</p>
+</section>
+
+<section class="talents">
+  <h3>
+    {{localize "VE.Sheet.talents"}}
+    {{#if editable}}<a class="header-control" data-action="itemCreate" data-type="talent" data-tooltip="{{localize 'VE.Sheet.add'}}"><i class="fas fa-plus"></i></a>{{/if}}
+  </h3>
+  {{#if ruleset.startingTalents}}<p class="hint">{{localize "VE.Sheet.talentsHint"}}</p>{{/if}}
+  <ol class="item-list">
+    {{#each talents}}
+      <li class="item talent flexrow" data-item-id="{{item.id}}">
+        <img src="{{item.img}}" alt="" />
+        <a class="name" data-action="itemChat">{{item.name}}</a>
+        {{#if granted}}<span class="tag" data-tooltip="{{localize 'VE.Sheet.granted'}}"><i class="fas fa-link"></i></span>{{/if}}
+        <div class="item-controls">
+          <a data-action="itemEdit" data-tooltip="{{localize 'Edit'}}"><i class="fas fa-edit"></i></a>
+          {{#if @root.editable}}<a data-action="itemDelete" data-tooltip="{{localize 'Delete'}}"><i class="fas fa-trash"></i></a>{{/if}}
+        </div>
+      </li>
+    {{else}}
+      <li class="empty">{{localize "VE.Sheet.noTalents"}}</li>
+    {{/each}}
+  </ol>
+</section>

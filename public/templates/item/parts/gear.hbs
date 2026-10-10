@@ -1,0 +1,6 @@
+<div class="form-grid">
+  {{> "systems/vieja-escuela/templates/item/parts/common-physical.hbs"}}
+  <label data-tooltip="{{localize 'VE.Gear.bundleHint'}}">{{localize "VE.Gear.bundle"}} <input type="number" name="system.bundle" value="{{system.bundle}}" min="1" data-dtype="Number" /></label>
+  <label class="checkbox">{{localize "VE.Gear.container"}} <input type="checkbox" name="system.container" {{checked system.container}} /></label>
+  {{#if system.container}}<label>{{localize "VE.Gear.capacity"}} <input type="number" name="system.capacity" value="{{system.capacity}}" data-dtype="Number" /></label>{{/if}}
+</div>

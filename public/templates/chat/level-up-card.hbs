@@ -1,0 +1,16 @@
+<div class="vieja-escuela ve-card ve-level-up-card">
+  <header class="ve-card-header">
+    <h3>{{localize "VE.LevelUp.title"}} {{level}}</h3>
+  </header>
+  <p>{{localize "VE.LevelUp.hpGained"}}: <strong>+{{gain}}</strong></p>
+  {{{rollHTML}}}
+  <div class="tags">
+    <span class="tag">{{localize "VE.Stat.atqAbbr"}} {{atq}}</span>
+    <span class="tag">{{localize "VE.Stat.insAbbr"}} {{ins}}</span>
+    {{#if magic}}<span class="tag">{{localize "VE.Stat.podAbbr"}} {{pod}}</span>{{/if}}
+  </div>
+  {{#if granted.length}}
+    <p>{{localize "VE.LevelUp.granted"}}: {{#each granted}}<strong>{{name}}</strong>{{#unless @last}}, {{/unless}}{{/each}}</p>
+  {{/if}}
+  <ul class="notes">{{#each notes}}<li>{{this}}</li>{{/each}}</ul>
+</div>

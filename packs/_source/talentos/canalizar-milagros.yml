@@ -1,0 +1,15 @@
+_id: veTalCanalizarMi
+_key: '!items!veTalCanalizarMi'
+name: Canalizar Milagros
+type: talent
+img: icons/svg/angel.svg
+system:
+  description: <p>Cada nivel (empezando por el primero) debes acordar con el DJ dos nuevos “milagros” que añadir a tu lista, de la misma forma que un hechicero da forma a sus conjuros. Puedes añadir más de una vez el mismo milagro, ya que solo puedes invocar cada milagro una vez al día. El poder de los milagros debe estar en consonancia con el nivel en el que se ganan, y debe ser aceptado por el DJ. Puedes utilizar la lista del apéndice 2 como guía para diseñar tus milagros.</p>
+  source: class
+  ruleset: expandido
+effects: []
+flags: {}
+folder: null
+sort: 1700
+ownership:
+  default: 0

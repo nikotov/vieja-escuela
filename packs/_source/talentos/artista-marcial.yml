@@ -1,0 +1,15 @@
+_id: veTalArtistaMarc
+_key: '!items!veTalArtistaMarc'
+name: Artista marcial
+type: talent
+img: icons/svg/thrust.svg
+system:
+  description: <p>Tus ataques desarmados hacen 1d6 de daño.</p>
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 2900
+ownership:
+  default: 0

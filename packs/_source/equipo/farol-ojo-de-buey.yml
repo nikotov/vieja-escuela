@@ -1,0 +1,21 @@
+_id: veEqpFarolOjoDeB
+_key: '!items!veEqpFarolOjoDeB'
+name: Farol ojo de buey
+type: gear
+img: icons/sundries/lights/lantern-bullseye-signal-copper.webp
+system:
+  description: <p>Proporciona 4 horas de luz.</p><p>Ocupa 1 Punto de carga.</p>
+  quantity: 1
+  bundle: 1
+  load: 1
+  cost:
+    value: 12
+    unit: mo
+  container: false
+  capacity: 0
+effects: []
+flags: {}
+folder: null
+sort: 3500
+ownership:
+  default: 0

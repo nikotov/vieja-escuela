@@ -1,0 +1,17 @@
+_id: veSplPasaje00000
+_key: '!items!veSplPasaje00000'
+name: Pasaje
+type: spell
+img: icons/svg/door-exit.svg
+system:
+  description: <p>Crea un pasaje a través de madera o piedra. Dura 1 día.</p>
+  level: 5
+  pod: 9
+  divine: false
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 4400
+ownership:
+  default: 0

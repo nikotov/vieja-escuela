@@ -1,0 +1,17 @@
+_id: veSplEscaladaDeA
+_key: '!items!veSplEscaladaDeA'
+name: Escalada de araña
+type: spell
+img: icons/environment/creatures/bug-spider-blue.webp
+system:
+  description: <p>Permite caminar por paredes y techos durante 1 turno (10 minutos).</p>
+  level: 2
+  pod: 3
+  divine: false
+  random: 46-47
+effects: []
+flags: {}
+folder: null
+sort: 2800
+ownership:
+  default: 0

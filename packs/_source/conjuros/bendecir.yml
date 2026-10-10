@@ -1,0 +1,17 @@
+_id: veSplBendecir000
+_key: '!items!veSplBendecir000'
+name: Bendecir
+type: spell
+img: icons/magic/holy/angel-wings-gray.webp
+system:
+  description: <p>3m radio. +1 Ataque e Ins (Car).</p>
+  level: 1
+  pod: 1
+  divine: true
+  random: 07-08
+effects: []
+flags: {}
+folder: null
+sort: 400
+ownership:
+  default: 0

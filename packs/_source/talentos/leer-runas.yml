@@ -1,0 +1,15 @@
+_id: veTalLeerRunas00
+_key: '!items!veTalLeerRunas00'
+name: Leer Runas
+type: talent
+img: icons/svg/book.svg
+system:
+  description: <p>Puedes invocar milagros inscritos en pergaminos siempre que tengas el nivel requerido por el pergamino.</p>
+  source: class
+  ruleset: expandido
+effects: []
+flags: {}
+folder: null
+sort: 1800
+ownership:
+  default: 0

@@ -1,0 +1,11 @@
+<div class="form-grid">
+  <label>{{localize "VE.Weapon.damage"}} <input type="text" name="system.damage" value="{{system.damage}}" /></label>
+  <label>{{localize "VE.Weapon.kind"}} <select name="system.kind">{{selectOptions config.weaponKinds selected=system.kind localize=true}}</select></label>
+  <label>{{localize "VE.Weapon.hands"}} <select name="system.hands">{{selectOptions config.weaponHands selected=system.hands localize=true}}</select></label>
+  <label class="checkbox">{{localize "VE.Weapon.addStr"}} <input type="checkbox" name="system.addStr" {{checked system.addStr}} /></label>
+  <label>{{localize "VE.Weapon.range"}} <input type="number" name="system.range" value="{{system.range}}" data-dtype="Number" /></label>
+  <label>{{localize "VE.Weapon.shots"}} <input type="number" name="system.shots" value="{{system.shots}}" data-dtype="Number" /></label>
+  <label>{{localize "VE.Weapon.attackBonus"}} <input type="number" name="system.attackBonus" value="{{system.attackBonus}}" data-dtype="Number" /></label>
+  <label>{{localize "VE.Weapon.damageBonus"}} <input type="number" name="system.damageBonus" value="{{system.damageBonus}}" data-dtype="Number" /></label>
+  {{> "systems/vieja-escuela/templates/item/parts/common-physical.hbs"}}
+</div>

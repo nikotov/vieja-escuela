@@ -1,0 +1,15 @@
+_id: veTalGuiaExperto
+_key: '!items!veTalGuiaExperto'
+name: Guía Experto
+type: talent
+img: icons/svg/direction.svg
+system:
+  description: <p>Obtienes ventaja en las tiradas de Supervivencia relacionadas con seguir rastros, orientarte o conseguir suministros al aire libre.</p>
+  source: class
+  ruleset: expandido
+effects: []
+flags: {}
+folder: null
+sort: 2400
+ownership:
+  default: 0

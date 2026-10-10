@@ -1,0 +1,17 @@
+_id: veSplDisiparMagi
+_key: '!items!veSplDisiparMagi'
+name: Disipar magia
+type: spell
+img: icons/magic/air/air-burst-spiral-blue-gray.webp
+system:
+  description: <p>Anula hechizos y otros efectos mágicos.</p>
+  level: 3
+  pod: 5
+  divine: false
+  random: 36-37
+effects: []
+flags: {}
+folder: null
+sort: 2300
+ownership:
+  default: 0

@@ -1,0 +1,15 @@
+_id: veTalConocimient
+_key: '!items!veTalConocimient'
+name: Conocimiento del Enemigo
+type: talent
+img: icons/svg/skull.svg
+system:
+  description: <p>Elige un tipo de enemigo contra el que te has especializado (orcos, goblins, kobolds, gigantes, etc.). Cuando atacas a una de esas criaturas obtienes ventaja.</p>
+  source: class
+  ruleset: expandido
+effects: []
+flags: {}
+folder: null
+sort: 2300
+ownership:
+  default: 0

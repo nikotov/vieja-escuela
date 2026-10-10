@@ -1,0 +1,24 @@
+_id: veClsHechicero00
+_key: '!items!veClsHechicero00'
+name: Hechicero
+type: class
+img: icons/svg/book.svg
+system:
+  description: <p>Son pésimos luchadores, con muy poco conocimiento de las armas y su uso. A cambio manejan energías muy poderosas con unos simples gestos. Algunos sirven a dioses o demonios, mientras que otros solo sirven a la magia o a sí mismos.</p><p><strong>Dado de aguante:</strong> D4.</p><p><strong>Armas:</strong> Solo dagas, bastones y hondas.</p><p><strong>Armaduras:</strong> No puede usar armaduras ni escudos.</p><p><strong>Talentos:</strong></p><ul><li><strong>Sensibilidad Mágica</strong> (nivel 1)</li><li><strong>Transferir Esencia</strong> (nivel 1)</li><li><strong>Sirviente Animal</strong> (nivel 6)</li></ul>
+  hitDie: d4
+  progression: hechicero
+  weapons: Solo dagas, bastones y hondas.
+  armor: No puede usar armaduras ni escudos.
+  talents:
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalSensibilida
+    level: 1
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalTransferirE
+    level: 1
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalSirvienteAn
+    level: 6
+effects: []
+flags: {}
+folder: null
+sort: 200
+ownership:
+  default: 0

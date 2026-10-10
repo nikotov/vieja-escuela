@@ -1,0 +1,17 @@
+_id: veSplComunion000
+_key: '!items!veSplComunion000'
+name: Comunión
+type: spell
+img: icons/magic/holy/saint-glass-portrait-halo.webp
+system:
+  description: <p>Una deidad responde sí o no a 3 preguntas.</p>
+  level: 5
+  pod: 9
+  divine: true
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 1200
+ownership:
+  default: 0

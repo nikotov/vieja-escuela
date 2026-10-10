@@ -1,0 +1,62 @@
+<div class="grid-2">
+  <section class="attributes">
+    <h3>{{localize "VE.Sheet.attributes"}}</h3>
+    <ol class="attribute-list">
+      {{#each attributes}}
+        <li class="attribute">
+          <a class="rollable name" data-action="rollAttribute" data-attribute="{{key}}" data-tooltip="{{label}}">{{abbr}}</a>
+          <input type="number" name="system.attributes.{{key}}.value" value="{{value}}" data-dtype="Number" />
+          <span class="mod">{{mod}}</span>
+        </li>
+      {{/each}}
+    </ol>
+  </section>
+
+  <section class="backgrounds">
+    <h3>
+      {{localize "VE.Sheet.backgrounds"}}
+      {{#if editable}}<a class="header-control" data-action="backgroundAdd" data-tooltip="{{localize 'VE.Sheet.add'}}"><i class="fas fa-plus"></i></a>{{/if}}
+    </h3>
+    <ol class="background-list">
+      {{#each system.backgrounds}}
+        <li data-index="{{@index}}">
+          <input type="text" name="system.backgrounds.{{@index}}" value="{{this}}" placeholder="{{localize 'VE.Sheet.backgroundPlaceholder'}}" />
+          {{#if @root.editable}}<a data-action="backgroundRemove" data-tooltip="{{localize 'Delete'}}"><i class="fas fa-trash"></i></a>{{/if}}
+        </li>
+      {{else}}
+        <li class="empty">{{localize "VE.Sheet.noBackgrounds"}}</li>
+      {{/each}}
+    </ol>
+  </section>
+</div>
+
+<section class="weapons">
+  <h3>{{localize "VE.Sheet.attacks"}}</h3>
+  <ol class="item-list">
+    {{#each weapons}}
+      <li class="item weapon flexrow" data-item-id="{{item.id}}">
+        <img src="{{item.img}}" alt="" />
+        <a class="name rollable" data-action="rollAttack">{{item.name}}</a>
+        <span class="tag">{{kindLabel}}</span>
+        <a class="pill rollable" data-action="rollAttack" data-tooltip="{{localize 'VE.Roll.attack'}}"><i class="fas fa-dice-d20"></i> {{atq}}</a>
+        <a class="pill rollable" data-action="rollDamage" data-tooltip="{{localize 'VE.Roll.damage'}}"><i class="fas fa-burst"></i> {{damage}}</a>
+      </li>
+    {{else}}
+      <li class="empty">{{localize "VE.Sheet.noWeapons"}}</li>
+    {{/each}}
+  </ol>
+</section>
+
+<section class="bonuses">
+  <h3>{{localize "VE.Sheet.bonuses"}}</h3>
+  <div class="bonus-grid">
+    <label>{{localize "VE.Stat.hp"}} <input type="number" name="system.hp.bonus" value="{{source.hp.bonus}}" data-dtype="Number" /></label>
+    <label>{{localize "VE.Stat.def"}} <input type="number" name="system.def.bonus" value="{{source.def.bonus}}" data-dtype="Number" /></label>
+    <label>{{localize "VE.Stat.atqAbbr"}} <input type="number" name="system.atq.bonus" value="{{source.atq.bonus}}" data-dtype="Number" /></label>
+    <label>{{localize "VE.Stat.insAbbr"}} <input type="number" name="system.ins.bonus" value="{{source.ins.bonus}}" data-dtype="Number" /></label>
+    <label>{{localize "VE.Stat.movAbbr"}} <input type="number" name="system.mov.bonus" value="{{source.mov.bonus}}" data-dtype="Number" /></label>
+    <label>{{localize "VE.Stat.critThreshold"}} <input type="number" name="system.critThreshold" value="{{source.critThreshold}}" data-dtype="Number" /></label>
+    <label class="checkbox">{{localize "VE.Stat.magic"}} <input type="checkbox" name="system.magic" {{checked source.magic}} /></label>
+  </div>
+  <p class="hint">{{localize "VE.Sheet.bonusesHint"}}</p>
+</section>

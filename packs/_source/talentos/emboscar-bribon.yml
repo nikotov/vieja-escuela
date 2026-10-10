@@ -1,0 +1,15 @@
+_id: veTalEmboscarBri
+_key: '!items!veTalEmboscarBri'
+name: Emboscar (Bribón)
+type: talent
+img: icons/svg/cowled.svg
+system:
+  description: <p>Ganas ventaja en las tiradas de Subterfugio relacionadas con moverse en silencio y ocultarse en las sombras. Añade 1D6 al daño si impactas cuerpo a cuerpo a un blanco desprevenido o sorprendido.</p>
+  source: class
+  ruleset: expandido
+effects: []
+flags: {}
+folder: null
+sort: 1500
+ownership:
+  default: 0

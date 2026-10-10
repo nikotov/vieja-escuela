@@ -1,0 +1,34 @@
+_id: veTalAdaptable00
+_key: '!items!veTalAdaptable00'
+name: Adaptable
+type: talent
+img: icons/svg/upgrade.svg
+system:
+  description: <p>Ganas un bono adicional de +1 a tus tiradas de Instintos.</p><p><em>Aventurados Fabricados:</em> Puedes adaptarte a cualquier entorno o situación. +1 INS.</p>
+  source: race
+  ruleset: ''
+effects:
+- _id: veEffAdaptable00
+  _key: '!items.effects!veTalAdaptable00.veEffAdaptable00'
+  name: Adaptable
+  img: icons/svg/upgrade.svg
+  type: base
+  system: {}
+  transfer: true
+  disabled: false
+  changes:
+  - key: system.ins.bonus
+    mode: 2
+    value: '1'
+    priority: null
+  duration: {}
+  description: ''
+  origin: null
+  statuses: []
+  tint: '#ffffff'
+  flags: {}
+flags: {}
+folder: null
+sort: 100
+ownership:
+  default: 0

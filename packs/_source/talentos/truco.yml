@@ -1,0 +1,15 @@
+_id: veTalTruco000000
+_key: '!items!veTalTruco000000'
+name: Truco
+type: talent
+img: icons/svg/light.svg
+system:
+  description: <p>Conoces un hechizo específico (de coste 1 POD) que puedes lanzar una vez por hora.</p>
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 5100
+ownership:
+  default: 0

@@ -1,0 +1,15 @@
+_id: veTalDetectarElM
+_key: '!items!veTalDetectarElM'
+name: Detectar el Mal
+type: talent
+img: icons/svg/terror.svg
+system:
+  description: <p>Tres veces al día puedes concentrarte y detectar el mal en un radio de 10 metros. El DJ establece la definición exacta de “mal”, que puede ir desde solo detectar criaturas demoníacas o caóticas, hasta identificar a cualquier individuo que quiera dañarte.</p>
+  source: class
+  ruleset: expandido
+effects: []
+flags: {}
+folder: null
+sort: 2100
+ownership:
+  default: 0

@@ -1,0 +1,21 @@
+_id: veEqpPertigaDeMa
+_key: '!items!veEqpPertigaDeMa'
+name: Pértiga de madera (3 metros)
+type: gear
+img: icons/commodities/wood/wood-pole.webp
+system:
+  description: <p>Ocupa 2 Puntos de carga.</p>
+  quantity: 1
+  bundle: 1
+  load: 2
+  cost:
+    value: 2
+    unit: mp
+  container: false
+  capacity: 0
+effects: []
+flags: {}
+folder: null
+sort: 4200
+ownership:
+  default: 0

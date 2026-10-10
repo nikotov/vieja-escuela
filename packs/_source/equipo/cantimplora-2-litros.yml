@@ -1,0 +1,21 @@
+_id: veEqpCantimplora
+_key: '!items!veEqpCantimplora'
+name: Cantimplora (2 litros)
+type: gear
+img: icons/sundries/survival/waterskin-leather-brown.webp
+system:
+  description: <p>Ocupa 1 Punto de carga.</p>
+  quantity: 1
+  bundle: 1
+  load: 1
+  cost:
+    value: 1
+    unit: mo
+  container: false
+  capacity: 0
+effects: []
+flags: {}
+folder: null
+sort: 2900
+ownership:
+  default: 0

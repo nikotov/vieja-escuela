@@ -1,0 +1,15 @@
+_id: veTalAtaquesMult
+_key: '!items!veTalAtaquesMult'
+name: Ataques Múltiples
+type: talent
+img: icons/svg/combat.svg
+system:
+  description: <p>Al abatir a un enemigo ganas un ataque adicional para ese mismo asalto. Puedes acumular de esta forma tantos ataques adicionales para un mismo asalto como nivel tengas.</p>
+  source: class
+  ruleset: expandido
+effects: []
+flags: {}
+folder: null
+sort: 1100
+ownership:
+  default: 0

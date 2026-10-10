@@ -1,0 +1,42 @@
+<form class="ve-roll-form" autocomplete="off">
+  <div class="form-group">
+    <label>{{localize "VE.Roll.edge"}}</label>
+    <div class="radio-row">
+      {{#each edges as |label key|}}
+        <label class="radio"><input type="radio" name="edge" value="{{key}}" {{#if (ve-eq key @root.config.edge)}}checked{{/if}} /> {{localize label}}</label>
+      {{/each}}
+    </div>
+  </div>
+
+  {{#if config.attributeChoice}}
+    <div class="form-group">
+      <label>{{localize "VE.Roll.attribute"}}</label>
+      <select name="attribute">
+        <option value="">—</option>
+        {{selectOptions attributes selected=config.attribute localize=true}}
+      </select>
+    </div>
+  {{/if}}
+
+  {{#if config.showBackground}}
+    <div class="form-group">
+      <label>{{localize "VE.Roll.background"}}</label>
+      <select name="background">{{selectOptions backgrounds selected=config.background localize=true}}</select>
+    </div>
+  {{/if}}
+
+  <div class="form-group">
+    <label>{{localize "VE.Roll.situational"}}</label>
+    <input type="number" name="situational" value="{{config.situational}}" />
+  </div>
+
+  {{#if config.showTarget}}
+    <div class="form-group">
+      <label>{{config.targetLabel}}</label>
+      <input type="number" name="target" value="{{config.target}}" list="ve-difficulties" placeholder="—" />
+      <datalist id="ve-difficulties">
+        {{#each difficulties}}<option value="{{value}}">{{localize label}}</option>{{/each}}
+      </datalist>
+    </div>
+  {{/if}}
+</form>

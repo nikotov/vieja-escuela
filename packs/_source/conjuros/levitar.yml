@@ -1,0 +1,17 @@
+_id: veSplLevitar0000
+_key: '!items!veSplLevitar0000'
+name: Levitar
+type: spell
+img: icons/magic/control/debuff-energy-hold-levitate-blue-yellow.webp
+system:
+  description: <p>Permite flotar hacia arriba y hacia abajo durante 1 turno.</p>
+  level: 2
+  pod: 3
+  divine: false
+  random: 67-69
+effects: []
+flags: {}
+folder: null
+sort: 3800
+ownership:
+  default: 0

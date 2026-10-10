@@ -1,0 +1,17 @@
+_id: veSplFavorDivino
+_key: '!items!veSplFavorDivino'
+name: Favor divino
+type: spell
+img: icons/magic/holy/projectiles-blades-salvo-yellow.webp
+system:
+  description: <p>+2 Ataque y daño durante 6 asaltos.</p>
+  level: 1
+  pod: 1
+  divine: true
+  random: 54-58
+effects: []
+flags: {}
+folder: null
+sort: 3100
+ownership:
+  default: 0

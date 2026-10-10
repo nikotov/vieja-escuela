@@ -1,0 +1,17 @@
+_id: veSplPuertaDimen
+_key: '!items!veSplPuertaDimen'
+name: Puerta dimensional
+type: spell
+img: icons/magic/movement/portal-vortex-orange.webp
+system:
+  description: <p>Teleportación a corta distancia.</p>
+  level: 4
+  pod: 7
+  divine: false
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 5000
+ownership:
+  default: 0

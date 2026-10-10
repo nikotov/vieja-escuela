@@ -1,0 +1,27 @@
+_id: veEqpEspadaCorta
+_key: '!items!veEqpEspadaCorta'
+name: Espada corta
+type: weapon
+img: icons/weapons/swords/shortsword-guard-steel-worn.webp
+system:
+  description: <p>Arma cuerpo a cuerpo.</p>
+  damage: 1d6
+  kind: melee
+  hands: one
+  addStr: true
+  range: 0
+  shots: 1
+  cost:
+    value: 8
+    unit: mo
+  load: 1
+  quantity: 1
+  equipped: false
+  attackBonus: 0
+  damageBonus: 0
+effects: []
+flags: {}
+folder: null
+sort: 900
+ownership:
+  default: 0

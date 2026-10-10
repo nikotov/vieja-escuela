@@ -1,0 +1,21 @@
+_id: veEqpPiquetasDeH
+_key: '!items!veEqpPiquetasDeH'
+name: Piquetas de hierro (10)
+type: gear
+img: icons/tools/fasteners/nails-steel-brown.webp
+system:
+  description: <p>Ocupa 1 Punto de carga.</p>
+  quantity: 1
+  bundle: 1
+  load: 1
+  cost:
+    value: 5
+    unit: mp
+  container: false
+  capacity: 0
+effects: []
+flags: {}
+folder: null
+sort: 4300
+ownership:
+  default: 0

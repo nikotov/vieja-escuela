@@ -1,0 +1,34 @@
+_id: veTalGolpeCerter
+_key: '!items!veTalGolpeCerter'
+name: Golpe certero
+type: talent
+img: icons/svg/target.svg
+system:
+  description: <p>Los resultados de 18, 19, o 20 natural en una prueba de ataque cuentan como Golpes Críticos.</p>
+  source: general
+  ruleset: aventurados
+effects:
+- _id: veEffGolpeCerter
+  _key: '!items.effects!veTalGolpeCerter.veEffGolpeCerter'
+  name: Golpe certero
+  img: icons/svg/target.svg
+  type: base
+  system: {}
+  transfer: true
+  disabled: false
+  changes:
+  - key: system.critThreshold
+    mode: 3
+    value: '18'
+    priority: null
+  duration: {}
+  description: ''
+  origin: null
+  statuses: []
+  tint: '#ffffff'
+  flags: {}
+flags: {}
+folder: null
+sort: 4000
+ownership:
+  default: 0

@@ -1,0 +1,34 @@
+_id: veTalEncontrarEl
+_key: '!items!veTalEncontrarEl'
+name: Encontrar el Punto Débil
+type: talent
+img: icons/svg/target.svg
+system:
+  description: <p>Consigues éxitos críticos cuando atacas con cualquier arma (incluso naturales) y obtienes un resultado natural de 19 o 20 en la tirada de ataque.</p>
+  source: class
+  ruleset: expandido
+effects:
+- _id: veEffEncontrarEl
+  _key: '!items.effects!veTalEncontrarEl.veEffEncontrarEl'
+  name: Encontrar el Punto Débil
+  img: icons/svg/target.svg
+  type: base
+  system: {}
+  transfer: true
+  disabled: false
+  changes:
+  - key: system.critThreshold
+    mode: 3
+    value: '19'
+    priority: null
+  duration: {}
+  description: ''
+  origin: null
+  statuses: []
+  tint: '#ffffff'
+  flags: {}
+flags: {}
+folder: null
+sort: 1200
+ownership:
+  default: 0

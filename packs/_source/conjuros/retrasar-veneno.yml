@@ -1,0 +1,17 @@
+_id: veSplRetrasarVen
+_key: '!items!veSplRetrasarVen'
+name: Retrasar veneno
+type: spell
+img: icons/skills/toxins/poison-bottle-corked-fire-green.webp
+system:
+  description: <p>Detiene el efecto durante 3 horas.</p>
+  level: 2
+  pod: 3
+  divine: true
+  random: 91-94
+effects: []
+flags: {}
+folder: null
+sort: 5400
+ownership:
+  default: 0

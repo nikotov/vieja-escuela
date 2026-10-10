@@ -1,0 +1,21 @@
+_id: veEqpMula0000000
+_key: '!items!veEqpMula0000000'
+name: Mula
+type: gear
+img: icons/environment/creatures/horse-white.webp
+system:
+  description: '<p>Medio de transporte. Recorre hasta 40 km / día. Carga máxima: 15 Puntos de carga.</p><p>La carga máxima incluye el equipo transportado por los aventureros si van encima.</p>'
+  quantity: 1
+  bundle: 1
+  load: 0
+  cost:
+    value: 20
+    unit: mo
+  container: true
+  capacity: 15
+effects: []
+flags: {}
+folder: null
+sort: 5600
+ownership:
+  default: 0

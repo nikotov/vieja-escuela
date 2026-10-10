@@ -1,0 +1,21 @@
+_id: veEqpAnillas0000
+_key: '!items!veEqpAnillas0000'
+name: Anillas
+type: armor
+img: icons/equipment/chest/breastplate-banded-steel.webp
+system:
+  description: <p>Armadura media. Defensa +3.</p>
+  category: medium
+  def: 3
+  heavy: false
+  cost:
+    value: 30
+    unit: mo
+  load: 1
+  equipped: false
+effects: []
+flags: {}
+folder: null
+sort: 2100
+ownership:
+  default: 0

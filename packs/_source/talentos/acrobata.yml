@@ -1,0 +1,15 @@
+_id: veTalAcrobata000
+_key: '!items!veTalAcrobata000'
+name: Acróbata
+type: talent
+img: icons/svg/wingfoot.svg
+system:
+  description: <p>Tienes ventaja en las pruebas de equilibrio, volteretas, escalar paredes, etc...</p>
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 2600
+ownership:
+  default: 0

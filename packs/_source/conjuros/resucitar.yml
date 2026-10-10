@@ -1,0 +1,17 @@
+_id: veSplResucitar00
+_key: '!items!veSplResucitar00'
+name: Resucitar
+type: spell
+img: icons/magic/life/ankh-shadow-green.webp
+system:
+  description: <p>Revive un blanco muerto menos de 7 días.</p>
+  level: 5
+  pod: 9
+  divine: true
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 5300
+ownership:
+  default: 0

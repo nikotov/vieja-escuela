@@ -1,0 +1,27 @@
+_id: veEqpPorra000000
+_key: '!items!veEqpPorra000000'
+name: Porra
+type: weapon
+img: icons/weapons/clubs/club-simple-black.webp
+system:
+  description: <p>Arma cuerpo a cuerpo.</p>
+  damage: 1d4
+  kind: melee
+  hands: one
+  addStr: true
+  range: 0
+  shots: 1
+  cost:
+    value: 0
+    unit: mo
+  load: 1
+  quantity: 1
+  equipped: false
+  attackBonus: 0
+  damageBonus: 0
+effects: []
+flags: {}
+folder: null
+sort: 200
+ownership:
+  default: 0

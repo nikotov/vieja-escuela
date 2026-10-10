@@ -1,0 +1,27 @@
+_id: veEqpBallestaPes
+_key: '!items!veEqpBallestaPes'
+name: Ballesta pesada
+type: weapon
+img: icons/weapons/crossbows/crossbow-heavy-black.webp
+system:
+  description: <p>Arma de proyectiles. Alcance 90 m; 1 disparo por asalto.</p><p>Atacar a más de la distancia de alcance implica una penalización de -2 al ataque. No se puede disparar a más del doble del alcance indicado.</p>
+  damage: 1d6+1
+  kind: ranged
+  hands: two
+  addStr: false
+  range: 90
+  shots: 1
+  cost:
+    value: 25
+    unit: mo
+  load: 2
+  quantity: 1
+  equipped: false
+  attackBonus: 0
+  damageBonus: 0
+effects: []
+flags: {}
+folder: null
+sort: 1500
+ownership:
+  default: 0

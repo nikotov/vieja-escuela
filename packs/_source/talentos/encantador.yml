@@ -1,0 +1,15 @@
+_id: veTalEncantador0
+_key: '!items!veTalEncantador0'
+name: Encantador
+type: talent
+img: icons/svg/card-joker.svg
+system:
+  description: <p>Tienes ventaja en cualquier prueba de Comunicación para persuadir o influenciar a otra persona.</p>
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 3300
+ownership:
+  default: 0

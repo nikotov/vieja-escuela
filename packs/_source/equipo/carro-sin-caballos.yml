@@ -1,0 +1,21 @@
+_id: veEqpCarro000000
+_key: '!items!veEqpCarro000000'
+name: Carro (sin caballos)
+type: gear
+img: icons/environment/settlement/wagon-black.webp
+system:
+  description: '<p>Medio de transporte. Recorre hasta 50 km / día. Carga máxima: 50 Puntos de carga.</p><p>La carga máxima incluye el equipo transportado por los aventureros si van encima.</p>'
+  quantity: 1
+  bundle: 1
+  load: 0
+  cost:
+    value: 50
+    unit: mo
+  container: true
+  capacity: 50
+effects: []
+flags: {}
+folder: null
+sort: 5700
+ownership:
+  default: 0

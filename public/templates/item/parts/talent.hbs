@@ -1,0 +1,7 @@
+<div class="form-grid">
+  <label>{{localize "VE.Talent.source"}} <select name="system.source">{{selectOptions config.talentSources selected=system.source localize=true}}</select></label>
+  <label>{{localize "VE.Talent.ruleset"}}
+    <select name="system.ruleset"><option value="">{{localize "VE.Talent.allRulesets"}}</option>{{selectOptions rulesets selected=system.ruleset}}</select>
+  </label>
+</div>
+<p class="hint">{{localize "VE.Talent.hint"}}</p>

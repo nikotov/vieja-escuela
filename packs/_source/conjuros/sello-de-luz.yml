@@ -1,0 +1,17 @@
+_id: veSplSelloDeLuz0
+_key: '!items!veSplSelloDeLuz0'
+name: Sello de luz
+type: spell
+img: icons/magic/light/beam-rays-yellow.webp
+system:
+  description: <p>Rayo de 5D6 daño contra muertos vivientes.</p>
+  level: 3
+  pod: 5
+  divine: true
+  random: 95-96
+effects: []
+flags: {}
+folder: null
+sort: 5500
+ownership:
+  default: 0

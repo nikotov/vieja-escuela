@@ -1,0 +1,27 @@
+_id: veEqpJabalina000
+_key: '!items!veEqpJabalina000'
+name: Jabalina
+type: weapon
+img: icons/weapons/polearms/javelin-simple.webp
+system:
+  description: <p>Arma de proyectiles. Alcance 8 m; 1 disparo por asalto.</p><p>Atacar a más de la distancia de alcance implica una penalización de -2 al ataque. No se puede disparar a más del doble del alcance indicado.</p><p>Esta arma permite sumar el modificador por Fuerza al daño.</p>
+  damage: 1d6
+  kind: ranged
+  hands: one
+  addStr: true
+  range: 8
+  shots: 1
+  cost:
+    value: 1
+    unit: mo
+  load: 1
+  quantity: 1
+  equipped: false
+  attackBonus: 0
+  damageBonus: 0
+effects: []
+flags: {}
+folder: null
+sort: 1800
+ownership:
+  default: 0

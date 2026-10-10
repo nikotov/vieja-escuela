@@ -1,0 +1,27 @@
+_id: veEqpArcoLargo00
+_key: '!items!veEqpArcoLargo00'
+name: Arco largo
+type: weapon
+img: icons/weapons/bows/longbow-recurve.webp
+system:
+  description: <p>Arma de proyectiles. Alcance 80 m; 2 disparos por asalto.</p><p>Atacar a más de la distancia de alcance implica una penalización de -2 al ataque. No se puede disparar a más del doble del alcance indicado.</p><p>Esta arma permite sumar el modificador por Fuerza al daño.</p>
+  damage: 1d6
+  kind: ranged
+  hands: two
+  addStr: true
+  range: 80
+  shots: 2
+  cost:
+    value: 25
+    unit: mo
+  load: 1
+  quantity: 1
+  equipped: false
+  attackBonus: 0
+  damageBonus: 0
+effects: []
+flags: {}
+folder: null
+sort: 1300
+ownership:
+  default: 0

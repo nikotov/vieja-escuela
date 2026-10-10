@@ -1,0 +1,15 @@
+_id: veTalGolpesMulti
+_key: '!items!veTalGolpesMulti'
+name: Golpes múltiples
+type: talent
+img: icons/svg/combat.svg
+system:
+  description: <p>Haz otro ataque en cuanto derrotes a un enemigo. Puedes usar este talento tantas veces como tu nivel en cada ronda.</p>
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 4100
+ownership:
+  default: 0

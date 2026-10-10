@@ -1,0 +1,15 @@
+_id: veTalPatron00000
+_key: '!items!veTalPatron00000'
+name: Patrón
+type: talent
+img: icons/svg/temple.svg
+system:
+  description: <p>Has hecho un pacto con una entidad sobrenatural (un Dios, Demonio, Espíritu, Inmortal, etc.). A cambio de tu servidumbre, eres bendecido con una reliquia para ayudarte. Si renegases del pacto, el objeto se perderá y podrías ser maldecido.</p>
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 4300
+ownership:
+  default: 0

@@ -1,0 +1,15 @@
+_id: veTalTransferirE
+_key: '!items!veTalTransferirE'
+name: Transferir Esencia
+type: talent
+img: icons/svg/regen.svg
+system:
+  description: <p>Puedes convertir 3 Puntos de vida en un Punto de poder (Pod).</p><p><em>Aventurados Fabricados:</em> Puedes sacrificar 3 PV para ganar 1 POD.</p>
+  source: class
+  ruleset: ''
+effects: []
+flags: {}
+folder: null
+sort: 300
+ownership:
+  default: 0

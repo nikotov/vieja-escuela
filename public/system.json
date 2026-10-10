@@ -1,0 +1,47 @@
+{
+  "id": "vieja-escuela",
+  "title": "Vieja Escuela",
+  "description": "Sistema para <em>Vieja Escuela: el juego de rol</em> (Edición Expandida) con la variante sin clases <em>Aventurados Fabricados</em>.",
+  "version": "0.1.0",
+  "compatibility": { "minimum": "12", "verified": "12.343", "maximum": "12" },
+  "authors": [{ "name": "nikotov" }],
+  "esmodules": ["vieja-escuela.mjs"],
+  "styles": ["vieja-escuela.css"],
+  "languages": [
+    { "lang": "es", "name": "Español", "path": "lang/es.json" },
+    { "lang": "en", "name": "English", "path": "lang/en.json" }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "character": { "htmlFields": ["biography", "ambitions"] },
+      "monster": { "htmlFields": ["description", "talents"] }
+    },
+    "Item": {
+      "weapon": { "htmlFields": ["description"] },
+      "armor": { "htmlFields": ["description"] },
+      "gear": { "htmlFields": ["description"] },
+      "talent": { "htmlFields": ["description"] },
+      "spell": { "htmlFields": ["description"] },
+      "class": { "htmlFields": ["description"] },
+      "race": { "htmlFields": ["description"] }
+    }
+  },
+  "packs": [
+    { "name": "equipo", "label": "Equipo", "path": "packs/equipo", "type": "Item", "system": "vieja-escuela", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "conjuros", "label": "Conjuros", "path": "packs/conjuros", "type": "Item", "system": "vieja-escuela", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "talentos", "label": "Talentos", "path": "packs/talentos", "type": "Item", "system": "vieja-escuela", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "clases", "label": "Tipos de aventurero", "path": "packs/clases", "type": "Item", "system": "vieja-escuela", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "razas", "label": "Razas", "path": "packs/razas", "type": "Item", "system": "vieja-escuela", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } }
+  ],
+  "packFolders": [
+    { "name": "Vieja Escuela", "sorting": "m", "color": "#5a3b1e", "packs": ["clases", "razas", "talentos", "equipo", "conjuros"] }
+  ],
+  "grid": { "distance": 1, "units": "m" },
+  "primaryTokenAttribute": "hp",
+  "secondaryTokenAttribute": "pod",
+  "initiative": "@init",
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "license": "LICENSE"
+}

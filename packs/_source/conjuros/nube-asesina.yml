@@ -1,0 +1,17 @@
+_id: veSplNubeAsesina
+_key: '!items!veSplNubeAsesina'
+name: Nube asesina
+type: spell
+img: icons/magic/air/fog-gas-smoke-dense-green.webp
+system:
+  description: <p>Mata Niv4 o menos. El resto 3D6 daño. Dura 1 hora. Evitar con Ins (Con).</p>
+  level: 5
+  pod: 9
+  divine: false
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 4200
+ownership:
+  default: 0

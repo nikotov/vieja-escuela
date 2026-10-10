@@ -1,0 +1,21 @@
+_id: veEqpCarretaDeMa
+_key: '!items!veEqpCarretaDeMa'
+name: Carreta de mano
+type: gear
+img: icons/environment/settlement/wagon.webp
+system:
+  description: '<p>Medio de transporte. Carga máxima: hasta 10 Puntos de carga. A ritmo normal una persona puede recorrer andando unos 40 km por día.</p><p>La carga máxima incluye el equipo transportado por los aventureros si van encima.</p>'
+  quantity: 1
+  bundle: 1
+  load: 0
+  cost:
+    value: 10
+    unit: mo
+  container: true
+  capacity: 10
+effects: []
+flags: {}
+folder: null
+sort: 5500
+ownership:
+  default: 0

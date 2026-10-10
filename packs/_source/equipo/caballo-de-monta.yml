@@ -1,0 +1,21 @@
+_id: veEqpCaballoDeMo
+_key: '!items!veEqpCaballoDeMo'
+name: Caballo de monta
+type: gear
+img: icons/environment/creatures/horse-tan.webp
+system:
+  description: '<p>Medio de transporte. Recorre hasta 80 km / día. Carga máxima: 20 Puntos de carga.</p><p>La carga máxima incluye el equipo transportado por los aventureros si van encima.</p>'
+  quantity: 1
+  bundle: 1
+  load: 0
+  cost:
+    value: 40
+    unit: mo
+  container: true
+  capacity: 20
+effects: []
+flags: {}
+folder: null
+sort: 5400
+ownership:
+  default: 0

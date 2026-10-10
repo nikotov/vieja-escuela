@@ -1,0 +1,15 @@
+_id: veTalAfinidadPet
+_key: '!items!veTalAfinidadPet'
+name: Afinidad pétrea
+type: talent
+img: icons/svg/stoned.svg
+system:
+  description: <p>Tienes ventaja en cualquier prueba de Erudición relacionada con el trabajo en la piedra. Adicionalmente, puedes hacer tiradas de Alerta para detectar trampas hechas de piedra.</p>
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 2700
+ownership:
+  default: 0

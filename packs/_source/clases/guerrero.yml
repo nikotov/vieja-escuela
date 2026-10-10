@@ -1,0 +1,24 @@
+_id: veClsGuerrero000
+_key: '!items!veClsGuerrero000'
+name: Guerrero
+type: class
+img: icons/svg/sword.svg
+system:
+  description: <p>Dedican su vida al dominio de las armas. El camino del aventurero les ofrece una forma constante de mejorar su arte y alcanzar la fama.</p><p><strong>Dado de aguante:</strong> D8.</p><p><strong>Armas:</strong> Cualquier arma.</p><p><strong>Armaduras:</strong> Cualquier armadura y escudo.</p><p><strong>Talentos:</strong></p><ul><li><strong>Lucha con X</strong> (nivel 1)</li><li><strong>Ataques Múltiples</strong> (nivel 1)</li><li><strong>Encontrar el Punto Débil</strong> (nivel 6)</li></ul>
+  hitDie: d8
+  progression: guerrero
+  weapons: Cualquier arma.
+  armor: Cualquier armadura y escudo.
+  talents:
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalLuchaConX00
+    level: 1
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalAtaquesMult
+    level: 1
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalEncontrarEl
+    level: 6
+effects: []
+flags: {}
+folder: null
+sort: 100
+ownership:
+  default: 0

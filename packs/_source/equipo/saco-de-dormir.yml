@@ -1,0 +1,21 @@
+_id: veEqpSacoDeDormi
+_key: '!items!veEqpSacoDeDormi'
+name: Saco de dormir
+type: gear
+img: icons/sundries/survival/bedroll-brown.webp
+system:
+  description: <p>Ocupa 1 Punto de carga.</p>
+  quantity: 1
+  bundle: 1
+  load: 1
+  cost:
+    value: 2
+    unit: mp
+  container: false
+  capacity: 0
+effects: []
+flags: {}
+folder: null
+sort: 4800
+ownership:
+  default: 0

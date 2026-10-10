@@ -1,0 +1,17 @@
+_id: veSplEscudoDeFe0
+_key: '!items!veSplEscudoDeFe0'
+name: Escudo de fe
+type: spell
+img: icons/magic/holy/barrier-shield-winged-cross.webp
+system:
+  description: <p>+2 a la Defensa durante 6 asaltos.</p>
+  level: 1
+  pod: 1
+  divine: true
+  random: 48-51
+effects: []
+flags: {}
+folder: null
+sort: 2900
+ownership:
+  default: 0

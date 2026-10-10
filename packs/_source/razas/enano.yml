@@ -1,0 +1,19 @@
+_id: veRazEnano000000
+_key: '!items!veRazEnano000000'
+name: Enano
+type: race
+img: icons/svg/mountain.svg
+system:
+  description: <p>Los enanos parecen sentir un gran amor por la piedra, los metales y las joyas. Suelen vivir bajo tierra, en grandes mansiones que amplían y mejoran durante generaciones.</p><p><strong>Movimiento:</strong> 9.</p><p><strong>Talentos:</strong></p><ul><li><strong>Afín a la Piedra</strong></li><li><strong>Infravisión</strong></li></ul>
+  mov: 9
+  talents:
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalAfinALaPied
+    level: 1
+  - uuid: Compendium.vieja-escuela.talentos.Item.veTalInfravision
+    level: 1
+effects: []
+flags: {}
+folder: null
+sort: 200
+ownership:
+  default: 0

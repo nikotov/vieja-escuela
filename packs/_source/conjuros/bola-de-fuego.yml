@@ -1,0 +1,17 @@
+_id: veSplBolaDeFuego
+_key: '!items!veSplBolaDeFuego'
+name: Bola de fuego
+type: spell
+img: icons/magic/fire/explosion-fireball-large-orange.webp
+system:
+  description: <p>Explosión de 5D6 de daño en 5m de radio. Mitad de daño con Ins (Des).</p>
+  level: 3
+  pod: 5
+  divine: false
+  random: 12-13
+effects: []
+flags: {}
+folder: null
+sort: 600
+ownership:
+  default: 0

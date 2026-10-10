@@ -1,0 +1,271 @@
+{
+  "TYPES": {
+    "Actor": {
+      "character": "Personaje",
+      "monster": "Monstruo"
+    },
+    "Item": {
+      "armor": "Armadura",
+      "class": "Tipo de aventurero",
+      "gear": "Equipo",
+      "race": "Raza",
+      "spell": "Conjuro",
+      "talent": "Talento",
+      "weapon": "Arma"
+    }
+  },
+  "VE": {
+    "Armor": {
+      "category": "Tipo",
+      "heavy": "Pesada",
+      "heavyHint": "Limita el movimiento a 6 y sobrecarga al portador.",
+      "light": "Ligera",
+      "medium": "Media",
+      "shield": "Escudo"
+    },
+    "Attribute": {
+      "car": "Carisma",
+      "carAbbr": "CAR",
+      "con": "Constitución",
+      "conAbbr": "CON",
+      "des": "Destreza",
+      "desAbbr": "DES",
+      "fue": "Fuerza",
+      "fueAbbr": "FUE",
+      "int": "Inteligencia",
+      "intAbbr": "INT",
+      "sab": "Sabiduría",
+      "sabAbbr": "SAB"
+    },
+    "Background": {
+      "against": "Juega en contra (-2)",
+      "greatly": "Gran ventaja (ventaja)",
+      "helps": "Juega a favor (+2)",
+      "hinders": "Le penaliza mucho (desventaja)",
+      "none": "Ni a favor ni en contra"
+    },
+    "Chat": {
+      "applied": "{name}: {amount} PV",
+      "applyDamage": "Aplicar daño",
+      "applyHealing": "Curar",
+      "noTokens": "Selecciona uno o más tokens."
+    },
+    "Class": {
+      "armor": "Armaduras",
+      "progression": "Tabla de avance",
+      "progressionHint": "Clave de CONFIG.VE.progression con ATQ, INS y POD por nivel.",
+      "weapons": "Armas"
+    },
+    "Currency": {
+      "mc": "Monedas de cobre",
+      "mcAbbr": "mc",
+      "mo": "Monedas de oro",
+      "moAbbr": "mo",
+      "mp": "Monedas de plata",
+      "mpAbbr": "mp"
+    },
+    "Difficulty": {
+      "complex": "Compleja o apresurada (11+)",
+      "extreme": "Extremadamente difícil (20+)",
+      "hard": "Difícil o bajo estrés (14+)",
+      "veryHard": "Muy difícil (17+)"
+    },
+    "Edge": {
+      "advantage": "Ventaja",
+      "disadvantage": "Desventaja",
+      "normal": "Normal"
+    },
+    "Effect": {
+      "create": "Nuevo efecto",
+      "hint": "Los efectos activos modifican al personaje que posee el objeto (p. ej. system.ins.bonus, system.mov.bonus, system.critThreshold).",
+      "none": "Sin efectos.",
+      "toggle": "Activar/desactivar"
+    },
+    "Gear": {
+      "bundle": "Unidades por bulto",
+      "bundleHint": "Los objetos pequeños solo cuentan al acumular esta cantidad (\"1 cada 4\").",
+      "capacity": "Capacidad (bultos)",
+      "container": "Contenedor"
+    },
+    "Item": {
+      "cost": "Coste",
+      "load": "Carga",
+      "quantity": "Cantidad"
+    },
+    "LevelUp": {
+      "bonusTalent": "Elige un nuevo talento.",
+      "button": "Subir de nivel",
+      "granted": "Nuevos talentos",
+      "hpGained": "Puntos de vida ganados",
+      "newBackground": "Ganas un nuevo trasfondo relacionado con tu fama y estatus.",
+      "notEnoughXp": "Faltan PE: tienes {xp} y necesitas {needed}. Mayús+clic para forzar.",
+      "skillPoints": "Reparte {points} puntos de habilidad (máximo 1 por habilidad).",
+      "title": "Nivel"
+    },
+    "ModifierTable": {
+      "extended": "Ampliada (-3 a +3)",
+      "standard": "Estándar (-2 a +2)"
+    },
+    "Monster": {
+      "attackBonus": "Bono al ataque",
+      "attackName": "Ataque",
+      "count": "Número de ataques",
+      "morale": "Moral",
+      "movNote": "p. ej. 18 volando"
+    },
+    "Morale": {
+      "brave": "Valiente",
+      "cowardly": "Cobarde",
+      "normal": "Normal"
+    },
+    "Roll": {
+      "attack": "Atacar",
+      "attackTitle": "Ataque: {name}",
+      "attribute": "Atributo",
+      "attributeTitle": "Tirada de {attribute}",
+      "background": "Trasfondo",
+      "critical": "¡Crítico!",
+      "criticalHint": "Describe una consecuencia especial (perder el arma, abrir su guardia, desplazarlo...) o elige daño máximo +1.",
+      "damage": "Daño",
+      "damageMax": "Daño máximo +1",
+      "damageTwoHanded": "A dos manos (+1)",
+      "defenseOf": "Defensa de {name}",
+      "difficulty": "Dificultad",
+      "edge": "Tirada",
+      "failure": "Fallo",
+      "fumble": "¡Pifia!",
+      "fumbleHint": "Guardia abierta: los ataques contra ti tienen ventaja hasta tu próximo asalto.",
+      "instinctTitle": "Tirada de Instintos",
+      "moraleTitle": "Tirada de moral",
+      "roll": "Tirar",
+      "situational": "Modificador",
+      "skillTitle": "Tirada de {skill}",
+      "success": "Éxito",
+      "talents": "Talentos"
+    },
+    "Ruleset": {
+      "aventurados": "Aventurados Fabricados (sin clases)",
+      "expandido": "Vieja Escuela: Edición Expandida"
+    },
+    "Setting": {
+      "modifierTable": {
+        "auto": "Automática",
+        "hint": "Automática usa la del reglamento elegido.",
+        "name": "Tabla de modificadores de atributo"
+      },
+      "ruleset": {
+        "hint": "Edición Expandida (razas y tipos de aventurero) o Aventurados Fabricados (talentos a elegir, sin clases).",
+        "name": "Reglamento"
+      }
+    },
+    "Sheet": {
+      "add": "Añadir",
+      "ambitions": "Ambiciones y objetivos",
+      "armor": "Armaduras",
+      "attacks": "Ataques",
+      "attributes": "Atributos",
+      "backgroundPlaceholder": "Soldado del frente norteño...",
+      "backgrounds": "Trasfondos",
+      "biography": "Historia",
+      "bonuses": "Bonificadores",
+      "bonusesHint": "Ajustes manuales; los talentos con efectos activos también los modifican.",
+      "character": "Hoja de personaje",
+      "description": "Descripción",
+      "dropHere": "Arrastra aquí",
+      "dropTalents": "Arrastra talentos aquí.",
+      "equipped": "Equipada",
+      "gear": "Equipo",
+      "granted": "Otorgado por raza o tipo de aventurero",
+      "grantedTalents": "Talentos otorgados",
+      "item": "Hoja de objeto",
+      "items": "Objetos",
+      "load": "Carga",
+      "money": "Monedas",
+      "monster": "Hoja de monstruo",
+      "noAttacks": "Sin ataques.",
+      "noBackgrounds": "Sin trasfondos.",
+      "noSpells": "Sin conjuros.",
+      "noTalents": "Sin talentos.",
+      "noWeapons": "Sin armas.",
+      "overloaded": "Sobrecargado: desventaja en ataques y acciones de rapidez o destreza.",
+      "skills": "Habilidades",
+      "skillsHint": "Nivel 1: 4 puntos (máx. 1 por habilidad). +2 por nivel. Máximo 10.",
+      "spells": "Conjuros",
+      "spellsHint": "Lanzar un conjuro gasta su coste en POD. Se recupera con 8 horas de descanso.",
+      "talents": "Talentos",
+      "talentsHint": "Empiezas con cuatro talentos y ganas uno más a nivel 6.",
+      "weapons": "Armas"
+    },
+    "Skill": {
+      "alerta": "Alerta",
+      "comunicacion": "Comunicación",
+      "erudicion": "Erudición",
+      "manipulacion": "Manipulación",
+      "sigilo": "Sigilo",
+      "subterfugio": "Subterfugio",
+      "supervivencia": "Supervivencia"
+    },
+    "Spell": {
+      "cast": "Lanzar",
+      "divine": "Divino",
+      "level": "Nivel",
+      "levelAbbr": "Niv",
+      "notEnoughPod": "No tienes suficiente POD ({value}/{cost}).",
+      "random": "Tabla aleatoria (1d100)",
+      "resist": "Resistir con Instintos:"
+    },
+    "Stat": {
+      "atqAbbr": "ATQ",
+      "atqMelee": "ATQ c. a c.",
+      "atqRanged": "ATQ dist.",
+      "critThreshold": "Crítico con",
+      "def": "Defensa",
+      "hitDie": "Dado de aguante",
+      "hp": "Puntos de vida",
+      "initiative": "Iniciativa",
+      "ins": "Instintos",
+      "insAbbr": "INS",
+      "level": "Nivel",
+      "levelAbbr": "Niv",
+      "magic": "Aptitud mágica",
+      "mov": "Movimiento",
+      "movAbbr": "MOV",
+      "pod": "Poder",
+      "podAbbr": "POD",
+      "xp": "PE"
+    },
+    "Tab": {
+      "details": "Detalles",
+      "effects": "Efectos",
+      "equipment": "Equipo",
+      "magic": "Magia",
+      "main": "Principal",
+      "notes": "Notas",
+      "skills": "Habilidades y talentos"
+    },
+    "Talent": {
+      "allRulesets": "Todos",
+      "class": "Tipo de aventurero",
+      "general": "General",
+      "hint": "Los efectos mecánicos (p. ej. +1 INS) van en la pestaña Efectos.",
+      "race": "Raza",
+      "ruleset": "Reglamento",
+      "source": "Origen"
+    },
+    "Weapon": {
+      "addStr": "Suma FUE al daño",
+      "attackBonus": "Bono al ataque",
+      "damage": "Daño",
+      "damageBonus": "Bono al daño",
+      "hands": "Manos",
+      "handsOne": "Una mano",
+      "handsTwo": "Dos manos",
+      "handsVersatile": "Una o dos manos",
+      "kind": "Tipo",
+      "melee": "Cuerpo a cuerpo",
+      "range": "Alcance (m)",
+      "ranged": "A distancia",
+      "shots": "Disparos por asalto"
+    }
+  }
+}

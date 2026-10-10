@@ -1,0 +1,17 @@
+_id: veSplTeleportars
+_key: '!items!veSplTeleportars'
+name: Teleportarse
+type: spell
+img: icons/magic/movement/pinwheel-turning-blue.webp
+system:
+  description: <p>Puede teleportar al lanzador hasta 1.000 km.</p>
+  level: 5
+  pod: 9
+  divine: false
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 5600
+ownership:
+  default: 0

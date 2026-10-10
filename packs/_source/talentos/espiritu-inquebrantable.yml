@@ -1,0 +1,15 @@
+_id: veTalEspirituInq
+_key: '!items!veTalEspirituInq'
+name: Espíritu Inquebrantable
+type: talent
+img: icons/svg/holy-shield.svg
+system:
+  description: <p>Tu fe es tan fuerte que te protege de los horrores más terribles. Ganas ventaja en todas las tiradas de Sabiduría para evitar perder salud mental.</p>
+  source: class
+  ruleset: expandido
+effects: []
+flags: {}
+folder: null
+sort: 1900
+ownership:
+  default: 0

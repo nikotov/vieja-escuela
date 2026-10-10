@@ -1,0 +1,271 @@
+{
+  "TYPES": {
+    "Actor": {
+      "character": "Character",
+      "monster": "Monster"
+    },
+    "Item": {
+      "armor": "Armor",
+      "class": "Adventurer type",
+      "gear": "Gear",
+      "race": "Race",
+      "spell": "Spell",
+      "talent": "Talent",
+      "weapon": "Weapon"
+    }
+  },
+  "VE": {
+    "Armor": {
+      "category": "Category",
+      "heavy": "Heavy",
+      "heavyHint": "Caps movement at 6 and overloads the wearer.",
+      "light": "Light",
+      "medium": "Medium",
+      "shield": "Shield"
+    },
+    "Attribute": {
+      "car": "Charisma",
+      "carAbbr": "CHA",
+      "con": "Constitution",
+      "conAbbr": "CON",
+      "des": "Dexterity",
+      "desAbbr": "DEX",
+      "fue": "Strength",
+      "fueAbbr": "STR",
+      "int": "Intelligence",
+      "intAbbr": "INT",
+      "sab": "Wisdom",
+      "sabAbbr": "WIS"
+    },
+    "Background": {
+      "against": "Works against (-2)",
+      "greatly": "Great advantage (advantage)",
+      "helps": "Helps (+2)",
+      "hinders": "Greatly hinders (disadvantage)",
+      "none": "Neutral"
+    },
+    "Chat": {
+      "applied": "{name}: {amount} HP",
+      "applyDamage": "Apply damage",
+      "applyHealing": "Heal",
+      "noTokens": "Select one or more tokens."
+    },
+    "Class": {
+      "armor": "Armor",
+      "progression": "Progression table",
+      "progressionHint": "Key in CONFIG.VE.progression with ATQ, INS and POD per level.",
+      "weapons": "Weapons"
+    },
+    "Currency": {
+      "mc": "Copper coins",
+      "mcAbbr": "cp",
+      "mo": "Gold coins",
+      "moAbbr": "gp",
+      "mp": "Silver coins",
+      "mpAbbr": "sp"
+    },
+    "Difficulty": {
+      "complex": "Complex or hurried (11+)",
+      "extreme": "Extremely hard (20+)",
+      "hard": "Hard or under stress (14+)",
+      "veryHard": "Very hard (17+)"
+    },
+    "Edge": {
+      "advantage": "Advantage",
+      "disadvantage": "Disadvantage",
+      "normal": "Normal"
+    },
+    "Effect": {
+      "create": "New effect",
+      "hint": "Active effects modify the actor that owns the item (e.g. system.ins.bonus, system.mov.bonus, system.critThreshold).",
+      "none": "No effects.",
+      "toggle": "Toggle"
+    },
+    "Gear": {
+      "bundle": "Items per load point",
+      "bundleHint": "Small items only count once you have this many (\"1 per 4\").",
+      "capacity": "Capacity (load points)",
+      "container": "Container"
+    },
+    "Item": {
+      "cost": "Cost",
+      "load": "Load",
+      "quantity": "Quantity"
+    },
+    "LevelUp": {
+      "bonusTalent": "Choose a new talent.",
+      "button": "Level up",
+      "granted": "New talents",
+      "hpGained": "Hit points gained",
+      "newBackground": "You gain a new background tied to your fame and status.",
+      "notEnoughXp": "Not enough XP: you have {xp} and need {needed}. Shift-click to force.",
+      "skillPoints": "Spend {points} skill points (at most 1 per skill).",
+      "title": "Level"
+    },
+    "ModifierTable": {
+      "extended": "Extended (-3 to +3)",
+      "standard": "Standard (-2 to +2)"
+    },
+    "Monster": {
+      "attackBonus": "Attack bonus",
+      "attackName": "Attack",
+      "count": "Number of attacks",
+      "morale": "Morale",
+      "movNote": "e.g. 18 flying"
+    },
+    "Morale": {
+      "brave": "Brave",
+      "cowardly": "Cowardly",
+      "normal": "Normal"
+    },
+    "Roll": {
+      "attack": "Attack",
+      "attackTitle": "Attack: {name}",
+      "attribute": "Attribute",
+      "attributeTitle": "{attribute} check",
+      "background": "Background",
+      "critical": "Critical!",
+      "criticalHint": "Describe a special consequence (disarm, open their guard, push them...) or choose maximum damage +1.",
+      "damage": "Damage",
+      "damageMax": "Maximum damage +1",
+      "damageTwoHanded": "Two-handed (+1)",
+      "defenseOf": "{name}'s Defense",
+      "difficulty": "Difficulty",
+      "edge": "Roll",
+      "failure": "Failure",
+      "fumble": "Fumble!",
+      "fumbleHint": "Guard down: attacks against you have advantage until your next round.",
+      "instinctTitle": "Instincts roll",
+      "moraleTitle": "Morale roll",
+      "roll": "Roll",
+      "situational": "Modifier",
+      "skillTitle": "{skill} check",
+      "success": "Success",
+      "talents": "Talents"
+    },
+    "Ruleset": {
+      "aventurados": "Aventurados Fabricados (classless)",
+      "expandido": "Vieja Escuela: Expanded Edition"
+    },
+    "Setting": {
+      "modifierTable": {
+        "auto": "Automatic",
+        "hint": "Automatic uses the one from the chosen ruleset.",
+        "name": "Attribute modifier table"
+      },
+      "ruleset": {
+        "hint": "Expanded Edition (races and adventurer types) or Aventurados Fabricados (pick talents, no classes).",
+        "name": "Ruleset"
+      }
+    },
+    "Sheet": {
+      "add": "Add",
+      "ambitions": "Ambitions and goals",
+      "armor": "Armor",
+      "attacks": "Attacks",
+      "attributes": "Attributes",
+      "backgroundPlaceholder": "Soldier of the northern front...",
+      "backgrounds": "Backgrounds",
+      "biography": "Biography",
+      "bonuses": "Bonuses",
+      "bonusesHint": "Manual adjustments; talents with active effects also change these.",
+      "character": "Character sheet",
+      "description": "Description",
+      "dropHere": "Drop here",
+      "dropTalents": "Drop talents here.",
+      "equipped": "Equipped",
+      "gear": "Gear",
+      "granted": "Granted by race or adventurer type",
+      "grantedTalents": "Granted talents",
+      "item": "Item sheet",
+      "items": "Items",
+      "load": "Load",
+      "money": "Coins",
+      "monster": "Monster sheet",
+      "noAttacks": "No attacks.",
+      "noBackgrounds": "No backgrounds.",
+      "noSpells": "No spells.",
+      "noTalents": "No talents.",
+      "noWeapons": "No weapons.",
+      "overloaded": "Overloaded: disadvantage on attacks and actions relying on speed or dexterity.",
+      "skills": "Skills",
+      "skillsHint": "Level 1: 4 points (max 1 per skill). +2 per level. Max 10.",
+      "spells": "Spells",
+      "spellsHint": "Casting a spell spends its POD cost. Recovered with 8 hours of rest.",
+      "talents": "Talents",
+      "talentsHint": "You start with four talents and gain one more at level 6.",
+      "weapons": "Weapons"
+    },
+    "Skill": {
+      "alerta": "Alertness",
+      "comunicacion": "Communication",
+      "erudicion": "Lore",
+      "manipulacion": "Manipulation",
+      "sigilo": "Stealth",
+      "subterfugio": "Subterfuge",
+      "supervivencia": "Survival"
+    },
+    "Spell": {
+      "cast": "Cast",
+      "divine": "Divine",
+      "level": "Level",
+      "levelAbbr": "Lvl",
+      "notEnoughPod": "Not enough POD ({value}/{cost}).",
+      "random": "Random table (1d100)",
+      "resist": "Resist with Instincts:"
+    },
+    "Stat": {
+      "atqAbbr": "ATK",
+      "atqMelee": "Melee ATK",
+      "atqRanged": "Ranged ATK",
+      "critThreshold": "Critical on",
+      "def": "Defense",
+      "hitDie": "Hit die",
+      "hp": "Hit points",
+      "initiative": "Initiative",
+      "ins": "Instincts",
+      "insAbbr": "INS",
+      "level": "Level",
+      "levelAbbr": "Lvl",
+      "magic": "Magic aptitude",
+      "mov": "Movement",
+      "movAbbr": "MOV",
+      "pod": "Power",
+      "podAbbr": "POW",
+      "xp": "XP"
+    },
+    "Tab": {
+      "details": "Details",
+      "effects": "Effects",
+      "equipment": "Equipment",
+      "magic": "Magic",
+      "main": "Main",
+      "notes": "Notes",
+      "skills": "Skills & talents"
+    },
+    "Talent": {
+      "allRulesets": "All",
+      "class": "Adventurer type",
+      "general": "General",
+      "hint": "Mechanical effects (e.g. +1 INS) go in the Effects tab.",
+      "race": "Race",
+      "ruleset": "Ruleset",
+      "source": "Source"
+    },
+    "Weapon": {
+      "addStr": "Add STR to damage",
+      "attackBonus": "Attack bonus",
+      "damage": "Damage",
+      "damageBonus": "Damage bonus",
+      "hands": "Hands",
+      "handsOne": "One-handed",
+      "handsTwo": "Two-handed",
+      "handsVersatile": "Versatile",
+      "kind": "Kind",
+      "melee": "Melee",
+      "range": "Range (m)",
+      "ranged": "Ranged",
+      "shots": "Shots per round"
+    }
+  }
+}

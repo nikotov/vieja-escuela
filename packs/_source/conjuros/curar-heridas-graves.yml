@@ -1,0 +1,17 @@
+_id: veSplCurarGraves
+_key: '!items!veSplCurarGraves'
+name: Curar heridas graves
+type: spell
+img: icons/magic/life/heart-cross-strong-green.webp
+system:
+  description: <p>Cura 3D6+3 Pv.</p>
+  level: 3
+  pod: 5
+  divine: true
+  random: 24-25
+effects: []
+flags: {}
+folder: null
+sort: 1700
+ownership:
+  default: 0

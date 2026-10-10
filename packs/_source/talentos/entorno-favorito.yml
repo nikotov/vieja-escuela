@@ -1,0 +1,15 @@
+_id: veTalEntornoFavo
+_key: '!items!veTalEntornoFavo'
+name: Entorno favorito
+type: talent
+img: icons/svg/mountain.svg
+system:
+  description: <p>Elige una palabra clave para describir un tipo de situación (como bosques, áreas urbanas, mazmorras, costas, etc). Cuando estás en este entorno, las tiradas de habilidad relacionadas con él tienen ventaja.</p>
+  source: general
+  ruleset: aventurados
+effects: []
+flags: {}
+folder: null
+sort: 3500
+ownership:
+  default: 0

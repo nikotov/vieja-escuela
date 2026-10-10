@@ -1,0 +1,15 @@
+_id: veTalLuchaConX00
+_key: '!items!veTalLuchaConX00'
+name: Lucha con X
+type: talent
+img: icons/svg/sword.svg
+system:
+  description: '<p>X es un estilo de la siguiente lista: arma de mano y escudo, dos armas de mano, arma a dos manos o armas de proyectiles. Cuando pelees de esa forma obtienes un bono de +1 al ataque y daño.</p>'
+  source: class
+  ruleset: expandido
+effects: []
+flags: {}
+folder: null
+sort: 1000
+ownership:
+  default: 0

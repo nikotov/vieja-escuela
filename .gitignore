@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+
+# Rulebook PDFs: art and layout are not openly licensed
+docs/*.pdf
+
+# Compiled example module packs (sources live in packs/_source)
+examples/ve-example-module/packs/*
+!examples/ve-example-module/packs/_source/

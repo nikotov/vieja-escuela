@@ -1,0 +1,17 @@
+_id: veSplOjoArcano00
+_key: '!items!veSplOjoArcano00'
+name: Ojo arcano
+type: spell
+img: icons/magic/perception/eye-ringed-green.webp
+system:
+  description: <p>Un ojo invisible que se mueve hasta 100 m 1 turno.</p>
+  level: 4
+  pod: 7
+  divine: false
+  random: ''
+effects: []
+flags: {}
+folder: null
+sort: 4300
+ownership:
+  default: 0

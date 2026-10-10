@@ -1,0 +1,17 @@
+_id: veSplCurarLeves0
+_key: '!items!veSplCurarLeves0'
+name: Curar heridas leves
+type: spell
+img: icons/magic/life/heart-cross-green.webp
+system:
+  description: <p>Cura 1D6+1 Pv.</p>
+  level: 1
+  pod: 1
+  divine: true
+  random: 26-29
+effects: []
+flags: {}
+folder: null
+sort: 1800
+ownership:
+  default: 0

@@ -1,0 +1,22 @@
+{
+  "id": "ve-example-module",
+  "title": "Vieja Escuela: módulo de ejemplo",
+  "description": "Demuestra los puntos de extensión del sistema Vieja Escuela: nueva clase y tabla de avance, reglamento, plantilla de chat, pestaña de hoja, acción de hoja y hooks de tirada.",
+  "version": "0.1.0",
+  "compatibility": { "minimum": "12", "verified": "12.343", "maximum": "12" },
+  "authors": [{ "name": "nikotov" }],
+  "relationships": {
+    "systems": [{ "id": "vieja-escuela", "type": "system", "compatibility": {} }]
+  },
+  "esmodules": ["scripts/main.mjs"],
+  "packs": [
+    {
+      "name": "clases-ejemplo",
+      "label": "Clases (ejemplo)",
+      "path": "packs/clases-ejemplo",
+      "type": "Item",
+      "system": "vieja-escuela",
+      "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" }
+    }
+  ]
+}

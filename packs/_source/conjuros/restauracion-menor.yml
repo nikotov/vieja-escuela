@@ -1,0 +1,17 @@
+_id: veSplRestauraMen
+_key: '!items!veSplRestauraMen'
+name: Restauración menor
+type: spell
+img: icons/magic/life/cross-worn-green.webp
+system:
+  description: <p>Restaura 1D4 puntos de atributos.</p>
+  level: 2
+  pod: 3
+  divine: true
+  random: 87-90
+effects: []
+flags: {}
+folder: null
+sort: 5100
+ownership:
+  default: 0

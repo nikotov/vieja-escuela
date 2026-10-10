@@ -1,0 +1,15 @@
+_id: veTalAuraDivina0
+_key: '!items!veTalAuraDivina0'
+name: Aura Divina
+type: talent
+img: icons/svg/aura.svg
+system:
+  description: <p>Un aura de protección contra el mal te rodea de forma constante. Cualquier criatura que el DJ designe como “malvada” te atacará con desventaja. Obtienes ventaja en cualquier tirada de Instintos debida a un ataque o conjuro de una criatura malvada.</p>
+  source: class
+  ruleset: expandido
+effects: []
+flags: {}
+folder: null
+sort: 2200
+ownership:
+  default: 0

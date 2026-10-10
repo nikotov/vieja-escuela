@@ -1,0 +1,37 @@
+Vieja Escuela — Foundry VTT game system
+=======================================
+
+GAME CONTENT
+------------
+The game rules and compendium text in this system (packs/_source, rule tables in src/rulesets)
+are Open Game Content under the Open Game License version 1.0a.
+
+TODO before distributing: paste the full text of the Open Game License v1.0a here. It is
+reproduced in "Vieja Escuela: el juego de rol — Edición Expandida" (pp. 79–80) and published
+by Wizards of the Coast. The license requires a copy to accompany any distributed Open Game
+Content.
+
+Product Identity: the terms "Vieja Escuela" (CC BY-NC-SA 4.0) and "Vieja Escuela: el juego
+de rol" (CC BY-SA 4.0), plus the books' art and layout, are not Open Game Content. No art or
+layout from the books is included in this repository.
+
+Section 15 — COPYRIGHT NOTICE
+Open Game License v 1.0a Copyright 2000, Wizards of the Coast, Inc.
+System Reference Document Copyright 2000-2003, Wizards of the Coast, Inc.; Authors Jonathan
+Tweet, Monte Cook, Skip Williams, Rich Baker, Andy Collins, David Noonan, Rich Redman, Bruce R.
+Cordell, John D. Rateliff, Thomas Reid, James Wyatt, based on original material by E. Gary Gygax
+and Dave Arneson.
+Swords & Wizardry Core Rules, Copyright 2008, Matthew J. Finch.
+Swords & Wizardry Complete Rules, Copyright 2010, Matthew J. Finch.
+Whitehack 2nd Edition Copyright 2015, Christian Mehrstam.
+Vieja Escuela Copyright 2016, Eneko Palencia y Eneko Menica.
+Vieja Escuela: el juego de rol Copyright 2017, Javier García "cabohicks".
+Vieja Escuela Edición Expandida Copyright 2019, Javier García "cabohicks".
+Bestiario para Vieja Escuela Copyright 2019, Héctor D. Ruíz y Javier García "cabohicks".
+Pergaminos (Aventuras) Copyright 2019, Iván "Peronn" Quiroga.
+Aventurados Fabricados: R. E. Davis ("The ChaosGrenade"); Spanish translation by Héctor Franco
+("Perros Cabra"), revised by Eneko Palencia ("Nogarung").
+
+CODE
+----
+TODO: choose a license for the system's source code (src/, scripts/, templates, styles).

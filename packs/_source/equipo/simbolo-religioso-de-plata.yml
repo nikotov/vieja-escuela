@@ -1,0 +1,21 @@
+_id: veEqpSimboloReli
+_key: '!items!veEqpSimboloReli'
+name: Símbolo religioso (de plata)
+type: gear
+img: icons/equipment/neck/amulet-round-silver-blue.webp
+system:
+  description: <p>No cuenta para la carga.</p>
+  quantity: 1
+  bundle: 1
+  load: 0
+  cost:
+    value: 25
+    unit: mo
+  container: false
+  capacity: 0
+effects: []
+flags: {}
+folder: null
+sort: 4900
+ownership:
+  default: 0

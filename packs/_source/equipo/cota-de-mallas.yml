@@ -1,0 +1,21 @@
+_id: veEqpCotaDeMalla
+_key: '!items!veEqpCotaDeMalla'
+name: Cota de mallas
+type: armor
+img: icons/equipment/chest/breastplate-scale-grey.webp
+system:
+  description: <p>Armadura media. Defensa +4.</p>
+  category: medium
+  def: 4
+  heavy: false
+  cost:
+    value: 75
+    unit: mo
+  load: 1
+  equipped: false
+effects: []
+flags: {}
+folder: null
+sort: 2200
+ownership:
+  default: 0

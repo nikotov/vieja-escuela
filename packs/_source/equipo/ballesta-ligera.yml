@@ -1,0 +1,27 @@
+_id: veEqpBallestaLig
+_key: '!items!veEqpBallestaLig'
+name: Ballesta ligera
+type: weapon
+img: icons/weapons/crossbows/crossbow-simple-brown.webp
+system:
+  description: <p>Arma de proyectiles. Alcance 70 m; 1 disparo por asalto.</p><p>Atacar a más de la distancia de alcance implica una penalización de -2 al ataque. No se puede disparar a más del doble del alcance indicado.</p>
+  damage: 1d4+1
+  kind: ranged
+  hands: two
+  addStr: false
+  range: 70
+  shots: 1
+  cost:
+    value: 12
+    unit: mo
+  load: 1
+  quantity: 1
+  equipped: false
+  attackBonus: 0
+  damageBonus: 0
+effects: []
+flags: {}
+folder: null
+sort: 1400
+ownership:
+  default: 0
